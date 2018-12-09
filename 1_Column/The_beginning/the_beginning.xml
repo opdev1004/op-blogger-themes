@@ -11,11 +11,11 @@
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
-* 				
+*
 -->
 
 	<head>
-        <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet'/> 
+        <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet'/>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
 
 		<!-- We are aiming our theme to be responsive web design therefore use these meta tags -->
@@ -511,7 +511,7 @@ article .postTitle {
 #comments .item-control a,
 #comments .comment-actions a {
 	color: $(comment.button.font.color);
-	margin: $(comment.button.margin);
+	margin: $(comment.button.margin) 5px 5px 5px;
 	padding: $(comment.button.padding);
 	color: #000;
 	background-color: $(comment.button.background.color);
@@ -777,7 +777,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
     			  	var windowSize = window.innerWidth - 22;
       				if(windowSize > 855){
 						windowSize = 840;
-					} 
+					}
 					var allIFrames = iframeContainer.getElementsByTagName('iframe');
 					for (var i = 0; i < allIFrames.length; i++) {
     	      			if(allIFrames[i].getAttribute('allow') != null){
@@ -792,7 +792,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 
 			function $_GET(param) {
 				var vars = {};
-				window.location.href.replace( location.hash, '' ).replace( 
+				window.location.href.replace( location.hash, '' ).replace(
 					/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
 					function( m, key, value ) { // callback
 						vars[key] = value !== undefined ? value : '';
@@ -800,7 +800,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 				);
 
 				if ( param ) {
-					return vars[param] ? vars[param] : null;	
+					return vars[param] ? vars[param] : null;
 				}
 				return vars;
 			}
@@ -812,7 +812,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 					return true;
 				}
   			    else{
-					return false;	
+					return false;
 				}
 			}
 
@@ -822,7 +822,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 					return false;
 				}
         		else{
-					return true;	
+					return true;
 				}
 			}
 
@@ -1968,7 +1968,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
             }
         }
 	}
-	
+
 	function fixLabels(){
     	if(checkClass('Label')){
 			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
@@ -2070,7 +2070,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 				aside.style.padding = '0px';
 				aside.style.borderWidth = '0px';
 			}
-			
+
 		}
     }
 	fixAsides();
