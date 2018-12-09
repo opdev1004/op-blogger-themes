@@ -46,3 +46,4 @@ MIT
 * VUW Computer Science student
 * E-mail: falsesage1004@gmail.com
 * Blog: https://www.falsesage.com/
+* Youtube: https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw
