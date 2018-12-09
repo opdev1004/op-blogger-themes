@@ -113,17 +113,17 @@ Version: 		1.0
 </Group>
 
 
-<Group description="Aside">
-	<Variable name="aside.background.color" description="Aside Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="aside.font.color" description="Aside Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="aside.font.hover.color" description="Aside Hover Font Color" type="color" default="#999" value="#999999"/>
-	<Variable name="aside.margin" description="Aside Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="aside.padding.vertical" description="Aside Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="aside.padding.horizontal" description="Aside Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="aside.border.radius" description="Aside Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="aside.border.width" description="Aside Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="aside.border.color" description="Aside Border Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="aside.font" description="Aside Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+<Group description="Aside Widget">
+	<Variable name="widget.background.color" description="Widget Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="widget.font.color" description="Widget Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="widget.font.hover.color" description="Widget Hover Font Color" type="color" default="#999" value="#999999"/>
+	<Variable name="widget.margin" description="Widget Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="widget.padding.vertical" description="Widget Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="widget.padding.horizontal" description="Widget Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="widget.border.radius" description="Widget Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="widget.border.width" description="Widget Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
+	<Variable name="widget.border.color" description="Widget Border Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="widget.font" description="Widget Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Comments">
@@ -143,9 +143,17 @@ Version: 		1.0
 </Group>
 
 <Group description="Category">
+	<Variable name="category.background.color" description="Category Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="category.hover.background.color" description="Category Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
 	<Variable name="category.selected.background.color" description="Category Selected Background Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="category.font.color" description="Category Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="category.font.hover.color" description="Category Hover Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="category.margin" description="Category Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="category.padding.vertical" description="Category Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="category.padding.horizontal" description="Category Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="category.border.radius" description="Category Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="category.border.width" description="Category Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
+	<Variable name="category.border.color" description="Category Border Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="category.font" description="Category Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
@@ -535,59 +543,57 @@ article .postTitle {
     text-decoration: none;
 }
 
-aside {
-	font: $(aside.font);
-	width: calc($(width) - $(aside.border.width) * 2 - $(aside.padding.horizontal) * 2);
-	background-color: $(aside.background.color);
-	color: $(aside.font.color);
+aside .widget {
+	font: $(widget.font);
+	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
+	background-color: $(widget.background.color);
+	color: $(widget.font.color);
 	height:auto;
-	margin: $(aside.margin) auto;
-	padding: $(aside.padding.vertical) $(aside.padding.horizontal);
-	border: $(aside.border.width) solid $(aside.border.color);
-    border-radius: $(aside.border.radius);
+	margin: $(widget.margin) auto;
+	padding: $(widget.padding.vertical) $(widget.padding.horizontal);
+	border: $(widget.border.width) solid $(widget.border.color);
+    border-radius: $(widget.border.radius);
 	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
 }
 
-aside a:link,
-aside a:visited,
-aside a:active {
-	color: $(aside.font.color);
+aside .widget a:link,
+aside .widget a:visited,
+aside .widget a:active {
+	color: $(widget.font.color);
 	text-decoration:none;
 }
-aside a:hover {
-	color: $(aside.font.hover.color);
+aside .widget a:hover {
+	color: $(widget.font.hover.color);
 	text-decoration: none;
 }
 
-aside h1,
-aside h2,
-aside h3,
-aside h4,
-aside h5
+aside .widget h1,
+aside .widget h2,
+aside .widget h3,
+aside .widget h4,
+aside .widget h5
 {
-	color: $(aside.font.color);
+	color: $(widget.font.color);
 	padding:0px;
 	margin:0px;
 	overflow-wrap: break-word;
 }
 
-aside h1 a,
-aside h2 a,
-aside h3 a,
-aside h4 a,
-aside h5 a { color: $(aside.font.color); overflow-wrap: break-word; }
+aside .widget h1 a,
+aside .widget h2 a,
+aside .widget h3 a,
+aside .widget h4 a,
+aside .widget h5 a { color: $(widget.font.color); overflow-wrap: break-word; }
 
-aside h1 a:hover,
-aside h2 a:hover,
-aside h3 a:hover,
-aside h4 a:hover,
-aside h5 a:hover { color: $(aside.font.hover.color); text-decoration: none;}
+aside .widget h1 a:hover,
+aside .widget h2 a:hover,
+aside .widget h3 a:hover,
+aside .widget h4 a:hover,
+aside .widget h5 a:hover { color: $(widget.font.hover.color); text-decoration: none;}
 
 
 /* Where it gives margin to the left and right of webpage */
 .section{ margin: 0px 5px;}
-
-.widget{ margin: 0px;}
 
 .Label{
 	padding: 0px;
@@ -597,16 +603,70 @@ aside h5 a:hover { color: $(aside.font.hover.color); text-decoration: none;}
 	font: $(category.font);
 }
 
-aside #Category,
+aside #Category {
+	font: $(category.font);
+	width: calc($(width) - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
+	background-color: $(category.background.color);
+	color: $(category.font.color);
+	height:auto;
+	margin: $(category.margin) auto;
+	padding: $(category.padding.vertical) $(category.padding.horizontal);
+	border: $(category.border.width) solid $(category.border.color);
+    border-radius: $(category.border.radius);
+	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
+}
+
+aside #Category a:link,
+aside #Category a:visited,
+aside #Category a:active {
+	color: $(category.font.color);
+	text-decoration:none;
+}
+aside #Category a:hover {
+	color: $(category.font.hover.color);
+	text-decoration: none;
+}
+
 aside #Category h1,
 aside #Category h2,
 aside #Category h3,
 aside #Category h4,
 aside #Category h5,
-aside #Category h6,
-aside #Category a {
+aside #Category h6 {
 	color: $(category.font.color);
+	padding:0px;
+	margin:0px;
+	overflow-wrap: break-word;
 }
+
+aside #Category h1 a,
+aside #Category h2 a,
+aside #Category h3 a,
+aside #Category h4 a,
+aside #Category h5 a,
+aside #Category h6 a { color: $(category.font.color); overflow-wrap: break-word; }
+
+aside #Category h1 a:hover,
+aside #Category h2 a:hover,
+aside #Category h3 a:hover,
+aside #Category h4 a:hover,
+aside #Category h5 a:hover,
+aside #Category h6 a:hover { color: $(category.font.hover.color); text-decoration: none;}
+
+aside #Category .widget {
+	font: $(category.font);
+	width: auto;
+	background-color: $(category.background.color);
+	color: $(category.font.color);
+	height:auto;
+	margin: 0px;
+	padding: 0px;
+	border-width: 0px;
+    border-radius: 0px;
+	box-shadow: 0px 0px #ffffff;
+}
+
+
 .Label h1 { color: $(category.font.color); }
 .Label h2 { color: $(category.font.color); }
 .Label h3 { color: $(category.font.color); }
@@ -1951,7 +2011,6 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 </b:includable>
   </b:widget>
 </b:section>
-</aside>
 
 
 <script type='text/javascript'>
@@ -1992,7 +2051,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
 
-<aside>
+
 <b:section class='AboveFooter' id='AboveFooter' name='Above Footer' showaddelement='yes'>
   <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
     <b:widget-settings>
