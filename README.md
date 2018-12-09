@@ -4,6 +4,7 @@
 OP Blogger Themes are for Blogger Theme development.
 Main purpose of this project is to have clean base blogger theme for people to develope theme easily.
 There is no problem using the OP Blogger Themes without extra theme development.
+Each directories contains a different blogger theme.
 
 ## Basic Features:
 1. Responsive Web design
