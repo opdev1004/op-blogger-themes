@@ -143,7 +143,7 @@ Version: 		1.0
 </Group>
 
 <Group description="Category">
-	<Variable name="category.title.border.width" description="Category Title Underline Width" type="length" min="0px" max="100px" default="3px"  value="3px"/>
+	<Variable name="category.title.border.width" description="Category Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="category.title.border.color" description="Category Title Underline Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="category.background.color" description="Category Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="category.hover.background.color" description="Category Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
