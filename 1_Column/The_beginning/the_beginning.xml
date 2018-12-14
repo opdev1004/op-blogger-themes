@@ -138,7 +138,8 @@ Version: 		1.0
 	<Variable name="comment.button.padding" description="Comment Button Padding" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="comment.button.border.radius" description="Comment Button Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="comment.button.border.width" description="Comment Button Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="comment.button.border.color" description="Comment Button Border Color" type="color" default="#000"  value="#000000"/>
+	<Variable name="comment.button.border.color" description="Comment Button Border Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="comment.button.border.hover.color" description="Comment Button Border Hover Color" type="color" default="#000"  value="#000000"/>
 	<Variable name="comments.font" description="Comments Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
@@ -190,7 +191,8 @@ Version: 		1.0
 	<Variable name="nav.padding.horizontal" description="Nav Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="nav.border.radius" description="Nav Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="nav.border.width" description="Nav Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="nav.border.color" description="Nav Border Color" type="color" default="#000"  value="#000000"/>
+	<Variable name="nav.border.color" description="Nav Border Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="nav.border.hover.color" description="Nav Border Hover Color" type="color" default="#000"  value="#000000"/>
 	<Variable name="nav.font" description="Nav Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
@@ -386,6 +388,7 @@ nav span {
 
 nav span:hover {
 	background-color: $(nav.hover.background.color);
+	border-color: $(nav.border.hover.color);
 }
 
 nav span a,
@@ -534,7 +537,7 @@ article .postTitle {
 #comments .comment-actions a:hover {
 	color: $(comment.button.font.hover.color);
 	background-color: $(comment.button.hover.background.color);
-
+	border-color: $(comment.button.border.hover.color);
 }
 
 #comments .avatar-image-container{
