@@ -23,6 +23,7 @@ Each directories contains a different blogger theme.
   * Enable Blogger meta tag
   * HTTPS redirection-Yes
   * Same time stamps
+  * Disable Mobile version in theme (OP blogger theme supports responsive web design)
 
 2. In blogger theme HTML edit:
 
