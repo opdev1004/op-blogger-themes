@@ -791,6 +791,14 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
 	word-break: normal
 }
 
+.coding p {
+	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+	font-size: 10pt;
+	color: #fff;
+	margin: 0px;
+	padding: 0px;
+}
+
 /* Animations */
 
 .slideInDown {
@@ -903,12 +911,22 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 			}
 
 			function checkID(x){
-				var theClass = document.getElementById(x);
-				if (theClass === null) {
+				var theID = document.getElementById(x);
+				if (theID === null) {
 					return false;
 				}
         		else{
 					return true;
+				}
+			}
+
+			function checkTag(x){
+				var theTag = document.getElementsByTagName(x);
+				if (theTag.length > 0) {
+					return true;
+				}
+  			    else{
+					return false;
 				}
 			}
 
@@ -1981,19 +1999,69 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
 <script type='text/javascript'>
 //<![CDATA[
 // Functions for the Post
-	function removeBr(){
+
+  	function BrToP(contents){
+		var splitContents = contents.split(/<br\s*\/?>/);
+		var fixedHTML = '';
+		for(var i = 0; i < splitContents.length; i++){
+			var content = splitContents[i];
+			fixedHTML += '<p>'+ content + '</p>';
+        }
+		return fixedHTML;
+	}
+
+	function replaceBr(){
     	if(checkClass('post-body')){
-			var postBody = document.getElementsByClassName('post-body')[0].innerHTML;
-			var postContents = postBody.split(/<br\s*\/?>/);
-			var fixedPostBody = '';
-			for(var i = 0; i < postContents.length; i++){
-				var postContent = postContents[i];
-				fixedPostBody += '<p>'+ postContent + '</p>';
-			}
-			document.getElementsByClassName('post-body')[0].innerHTML = fixedPostBody;
+			var postBodies = document.getElementsByClassName('post-body');
+			for(var i = 0; i < postBodies.length; i++){
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('strong').length; j++){
+					postBodies[i].getElementsByTagName('strong')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('strong')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('i').length; j++){
+					postBodies[i].getElementsByTagName('i')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('i')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('u').length; j++){
+					postBodies[i].getElementsByTagName('u')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('u')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('s').length; j++){
+					postBodies[i].getElementsByTagName('s')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('s')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('b').length; j++){
+					postBodies[i].getElementsByTagName('b')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('b')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('span').length; j++){
+					postBodies[i].getElementsByTagName('span')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('span')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('a').length; j++){
+					postBodies[i].getElementsByTagName('a')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('a')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('small').length; j++){
+					postBodies[i].getElementsByTagName('small')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('small')[j].innerHTML);
+				}
+   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('q').length; j++){
+					postBodies[i].getElementsByTagName('q')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('q')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('cite').length; j++){
+					postBodies[i].getElementsByTagName('cite')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('cite')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('code').length; j++){
+					postBodies[i].getElementsByTagName('code')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('code')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('p').length; j++){
+					postBodies[i].getElementsByTagName('p')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('p')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('li').length; j++){
+					postBodies[i].getElementsByTagName('li')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('li')[j].innerHTML);
+				}
+            	for(var j = 0; j < postBodies[i].getElementsByTagName('div').length; j++){
+					postBodies[i].getElementsByTagName('div')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('div')[j].innerHTML);
+				}
+
+				document.getElementsByClassName('post-body')[i].innerHTML = BrToP(postBodies[i].innerHTML);
+	        }
         }
     }
-	removeBr();
+	replaceBr();
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
