@@ -107,9 +107,13 @@ Version: 		1.0
 	<Variable name="article.info.border.radius" description="Article Info Border Radius" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.width" description="Article Info Border Width" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.color" description="Article Info Border Color" type="color" default="#ddd"  value="#dddddd"/>
-	<Variable name="article.underline.border.width" description="Article Info Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="article.underline.border.color" description="Article Info Underline Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="article.info.font" description="Article Info Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+</Group>
+
+<Group description="Article">
+	<Variable name="article.underline.border.width" description="Article Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
+	<Variable name="article.underline.border.color" description="Article Title Underline Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="article.font.size" description="Article Body Font Size" type="length" min="8px" max="48px" default="16px"  value="16px"/>
 </Group>
 
 
@@ -460,8 +464,15 @@ article .post-info h4 a:hover,
 article .post-info h5 a:hover { color: $(article.info.font.hover.color); text-decoration: none;}
 
 article .postTitle {
+	font-size: calc($(article.font.size) * 1.5);
 	border-bottom: $(article.underline.border.width) solid $(article.underline.border.color);
 }
+
+.post-body p {
+	font-size: $(article.font.size);
+	min-height: $(article.font.size);
+}
+
 
 .indexpostlist h2 {
 	overflow-wrap: break-word;
@@ -515,6 +526,8 @@ article .postTitle {
 
 .indexpostlist a:hover {color: #000;}
 .indexpostlist a div:hover {background-color: $(index.hover.background.color);}
+
+
 
 #comments {
 	font: $(comments.font);
@@ -1957,6 +1970,34 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
   </b:widget>
 </b:section>
 </main>
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+//<![CDATA[
+// Functions for the Post
+	function removeBr(){
+    	if(checkClass('post-body')){
+			var postBody = document.getElementsByClassName('post-body')[0].innerHTML;
+			var postContents = postBody.split(/<br\s*\/?>/);
+			var fixedPostBody = '';
+			for(var i = 0; i < postContents.length; i++){
+				var postContent = postContents[i];
+				fixedPostBody += '<p>'+ postContent + '</p>';
+			}
+			document.getElementsByClassName('post-body')[0].innerHTML = fixedPostBody;
+        }
+    }
+	removeBr();
+//]]>
+</script>
+<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
+
 
 <aside>
 <b:section class='Category' id='Category' name='Category' showaddelement='yes'>
