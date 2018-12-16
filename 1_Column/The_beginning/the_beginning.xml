@@ -1983,7 +1983,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
       <b:widget-setting name='display'>LIST</b:widget-setting>
       <b:widget-setting name='selectedLabelsList'/>
       <b:widget-setting name='showType'>ALL</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
@@ -2045,6 +2045,7 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
     	if(checkClass('Label')){
 			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
 			var titleTag = 'h3';
+			// The 'labels' used as multible label widgets. label as a 1 label widget.
 			var labels = document.getElementsByClassName('Label');
 			for(var i = 0; i < labels.length; i++){
         		var label = labels[i];
@@ -2052,10 +2053,25 @@ header, main, aside, #footer-inner { border-width: 0px; width: calc(100% - 10px)
                 if(titleTag != 'h2') {
 					label.getElementsByTagName('h2')[0].outerHTML = '<' + titleTag + '>' + label.getElementsByTagName('h2')[0].innerHTML + '</' + titleTag + '>';
                 }
+				// adding attributes to tag
 				var title = label.getElementsByTagName(titleTag)[0];
 				title.setAttribute('onclick', 'OCLabels(' + i + ');');
 				var labelContent = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
 				labelContent.className += 'slideInDown';
+				// fixing each list items for number of posts in label.
+				// Use 'category' as a single category list item.
+				var categories = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+              	for(var j = 0; j < categories.length; j++){
+					var category = categories[j];
+                  	if(category.getElementsByTagName('a')[0] !== undefined){
+						category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
+						category.getElementsByTagName('span')[0].outerHTML = '';
+					}
+                  	else {
+						category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
+						category.getElementsByTagName('span')[1].outerHTML = '';
+					}
+				}
 			}
         }
     }
