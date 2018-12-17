@@ -14,7 +14,7 @@ Each directories contains a different blogger theme.
 5. Resizing iframe media(Youtube) for responsive web design, BBT Zero is based on width: 840~850px. Other versions that will come out later will have different sizes.
 6. Better Categories
 7. Pretty google search box
-8. Thumbnails (Requires some modification)
+8. Thumbnails (Requires some modification)/No Thumbnails too
 
 ## Setting up:
 
