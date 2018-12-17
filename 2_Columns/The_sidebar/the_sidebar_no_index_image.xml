@@ -3,7 +3,7 @@
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 1 Column, The beginning
+* Name: OP Blogger Themes - 2 Columns, The sidebar
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
 * Blog: https://www.falsesage.com/
@@ -48,7 +48,7 @@
 /*
 -----------------------------------------------
 Blogger Template Style
-Name:     		The beginning
+Name:     		The sidebar
 Designer: 		Victor Chanil Park
 URL:      		https://github.com/treezi1004/op-blogger-themes
 License:  		MIT
@@ -216,6 +216,7 @@ Version: 		1.0
 
 <Group description="Width">
 	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="840px"  value="840px"/>
+	<Variable name="sidebar.width" description="Sidebar Width" type="length" min="200px" max="500px" default="280px"  value="280px"/>
 </Group>
 
 html {
@@ -338,6 +339,28 @@ header h3 a:hover,
 header h4 a:hover,
 header h5 a:hover { color: $(header.font.color2); text-decoration: none;}
 
+#blogMiddle {
+	padding: 0px;
+	margin: 5px auto;
+	width: $(width);
+}
+
+#blogMain {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px 5px 0px 0px;
+	width: calc(100% - $(sidebar.width) - 10px);
+	vertical-align: top;
+}
+
+#blogSidebar{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	width: $(sidebar.width);
+	vertical-align: top;
+}
+
 #SearchBar{ margin: 0px; padding: 0px; width: 100%;}
 .SearchBar .gsc-search-box { margin: 10px; auto; padding: 0px; width: auto; }
 .SearchBar .gsc-input { background-color: $(search.background.color); color: $(search.font.color); border-color: $(search.border.color); margin: 0px; padding: 10px; width: calc(100% - 100px); height: 30px; }
@@ -347,7 +370,7 @@ header h5 a:hover { color: $(header.font.color2); text-decoration: none;}
 
 main {
 	font: $(main.font);
-	width: calc($(width) - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
+	width: calc(100% - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
 	background-color: $(main.background.color);
 	color: $(main.font.color);
 	height:auto;
@@ -513,7 +536,7 @@ article .postTitle {
 	height: auto;
 }
 .indexpostlist .post-index-item .post-index-info {
-	width: calc(80% - 20px);
+	width: calc(100% - 20px);
 	height: auto;
 	display: inline-block;
 	vertical-align: top;
@@ -575,11 +598,12 @@ article .postTitle {
 }
 
 
+
 aside .section { margin: 0px;}
 
 aside .widget {
 	font: $(widget.font);
-	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
+	width: calc(100% - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
 	background-color: $(widget.background.color);
 	color: $(widget.font.color);
 	height:auto;
@@ -641,7 +665,7 @@ aside .widget h5 a:hover { color: $(widget.font.hover.color); text-decoration: n
 
 aside #Category {
 	font: $(category.font);
-	width: calc($(width) - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
+	width: calc(100% - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
 	background-color: $(category.background.color);
 	color: $(category.font.color);
 	height:auto;
@@ -874,9 +898,9 @@ footer #footer-line  {width: 100%;}
 
 @media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
 header, main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
-#blog-pager, .comments-area .nav-links {font-size: 11pt;}
-#BottomLeft{ width: auto; display: block; }
-#BottomRight{ width: auto; display: block; }
+#blogMiddle { width: 100%; }
+#blogMain, #blogSidebar { width: 100%; margin: 0px; display: block; }
+
 }
 
 ]]></b:skin>
@@ -1056,12 +1080,9 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </a>
 
 
-<aside>
-	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='true'/>
-</aside>
+<div class='blogMiddle' id='blogMiddle'>
+<b:section class='MiddleTop' id='MiddleTop' name='Middle Top' showaddelement='yes'/>
 
-
-<main>
 <b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='yes'>
   <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch' version='1'>
     <b:includable id='main'>
@@ -1086,7 +1107,13 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
   </b:widget>
 </b:section>
 
+	<div class='blogMain' id='blogMain'>
 
+<aside>
+	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='yes'/>
+</aside>
+
+<main>
 <b:section class='Content' id='Content' name='Content' showaddelement='no'>
   <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
     <b:widget-settings>
@@ -1137,6 +1164,9 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
+						<nav>
+							<b:include name='nextprev'/>
+               			</nav>
 						<h2>Recent posts</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
@@ -1149,19 +1179,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
-											<!--
-											<b:if cond='data:post.firstImageUrl'>
-            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
-													<div class='post-index-image'>
-               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
-                                           		 	</div>
-                  								</b:with>
-                							<b:else/>
-													<div class='post-index-image'>
-														<img alt='Post Image' src=''/>
-													</div>
-											</b:if>
-											-->
 											<div class='post-index-info'>
 												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
 												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
@@ -1174,6 +1191,9 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 								</b:if>
 							</article>
       					</b:loop>
+						<nav>
+							<b:include name='nextprev'/>
+               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
@@ -1219,19 +1239,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
-											<!--
-											<b:if cond='data:post.firstImageUrl'>
-            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
-													<div class='post-index-image'>
-               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
-                                           		 	</div>
-                  								</b:with>
-                							<b:else/>
-													<div class='post-index-image'>
-														<img alt='Post Image' src=''/>
-													</div>
-											</b:if>
-											-->
 											<div class='post-index-info'>
 												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
 												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
@@ -2026,12 +2033,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </main>
 
 
-
-
-
-
-
-
 <script type='text/javascript'>
 //<![CDATA[
 // Functions for the Post
@@ -2124,6 +2125,16 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 
 
 <aside>
+	<b:section class='UnderMain' id='UnderMain' name='Under Main' showaddelement='yes'/>
+</aside>
+	</div>
+
+
+	<div class='blogSidebar' id='blogSidebar'>
+
+<aside>
+<b:section class='AboveCategory' id='AboveCategory' name='Above Category' showaddelement='yes'/>
+
 <b:section class='Category' id='Category' name='Category' showaddelement='yes'>
   <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
     <b:widget-settings>
@@ -2250,7 +2261,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
 
 
-<b:section class='AboveFooter' id='AboveFooter' name='Above Footer' showaddelement='yes'>
+<b:section class='UnderCategory' id='UnderCategory' name='Under Category' showaddelement='yes'>
   <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
     <b:widget-settings>
       <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
@@ -2277,6 +2288,12 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
   </b:widget>
 </b:section>
 </aside>
+
+	</div>
+
+<b:section class='MiddleBottom' id='MiddleBottom' name='Middle Bottom' showaddelement='yes'/>
+</div>
+
 
 
 <footer>

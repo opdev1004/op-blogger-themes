@@ -513,7 +513,7 @@ article .postTitle {
 	height: auto;
 }
 .indexpostlist .post-index-item .post-index-info {
-	width: 100%;
+	width: calc(100% - 20px);
 	height: auto;
 	display: inline-block;
 	vertical-align: top;
@@ -573,6 +573,9 @@ article .postTitle {
 .comments .comment-block .comment-actions a:hover {
     text-decoration: none;
 }
+
+
+aside .section { margin: 0px;}
 
 aside .widget {
 	font: $(widget.font);
@@ -2200,12 +2203,16 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
               	for(var j = 0; j < categories.length; j++){
 					var category = categories[j];
                   	if(category.getElementsByTagName('a')[0] !== undefined){
-						category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
-						category.getElementsByTagName('span')[0].outerHTML = '';
+						if(category.getElementsByTagName('span')[0] !== undefined){
+							category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
+							category.getElementsByTagName('span')[0].outerHTML = '';
+                        }
 					}
                   	else {
-						category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
-						category.getElementsByTagName('span')[1].outerHTML = '';
+						if(category.getElementsByTagName('span')[0] !== undefined){
+							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
+							category.getElementsByTagName('span')[1].outerHTML = '';
+                        }
 					}
 				}
 			}
