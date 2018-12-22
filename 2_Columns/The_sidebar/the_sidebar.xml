@@ -92,7 +92,7 @@ Version: 		1.0
 </Group>
 
 <Group description="Index Items">
-	<Variable name="index.hover.background.color" description="Index Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="index.hover.background.color" description="Index Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="index.line.border.width" description="Index Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="index.line.border.color" description="Index  Title Underline Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="index.border.width" description="Index Item Border Width" type="length" min="0px" max="50px" default="3px"  value="3px"/>
@@ -106,7 +106,7 @@ Version: 		1.0
 	<Variable name="article.info.padding" description="Article Info Padding" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.radius" description="Article Info Border Radius" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.width" description="Article Info Border Width" type="length" min="0px" max="100px" default="0px"  value="0px"/>
-	<Variable name="article.info.border.color" description="Article Info Border Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="article.info.border.color" description="Article Info Border Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="article.info.font" description="Article Info Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
@@ -121,7 +121,7 @@ Version: 		1.0
 	<Variable name="numbers.font.color" description="Numbers Font Color" type="color" default="#fff" value="#ffffff"/>
 	<Variable name="codes.background.color" description="Codes Background Color" type="color" default="#444"  value="#444444"/>
 	<Variable name="codes.font.color" description="Codes Font Color" type="color" default="#fff" value="#ffffff"/>
-	<Variable name="coding.border.color" description="Main Border Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="coding.border.color" description="Main Border Color" type="color" default="#ccc"  value="#cccccc"/>
 </Group>
 
 
@@ -131,7 +131,7 @@ Version: 		1.0
 	<Variable name="widget.font.hover.color" description="Widget Hover Font Color" type="color" default="#999" value="#999999"/>
 	<Variable name="widget.margin" description="Widget Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="widget.padding.vertical" description="Widget Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="widget.padding.horizontal" description="Widget Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="widget.padding.horizontal" description="Widget Padding Horizontal" type="length" min="0px" max="100px" default="11px"  value="11px"/>
 	<Variable name="widget.border.radius" description="Widget Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="widget.border.width" description="Widget Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="widget.border.color" description="Widget Border Color" type="color" default="#999"  value="#999999"/>
@@ -143,7 +143,7 @@ Version: 		1.0
 	<Variable name="comments.border.top.width" description="Comments Border Top Width" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="comments.border.img.radius" description="Comments Image Border Radius" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="comment.button.background.color" description="Comment Button Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="comment.button.hover.background.color" description="Comment Button Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="comment.button.hover.background.color" description="Comment Button Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="comment.button.font.color" description="Comment Button Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="comment.button.font.hover.color" description="Comment Button Hover Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="comment.button.margin" description="Comment Button Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
@@ -159,7 +159,7 @@ Version: 		1.0
 	<Variable name="category.title.border.width" description="Category Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="category.title.border.color" description="Category Title Underline Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="category.background.color" description="Category Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="category.hover.background.color" description="Category Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="category.hover.background.color" description="Category Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="category.selected.background.color" description="Category Selected Background Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="category.font.color" description="Category Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="category.font.hover.color" description="Category Hover Font Color" type="color" default="#000" value="#000000"/>
@@ -174,7 +174,7 @@ Version: 		1.0
 
 <Group description="Search">
 	<Variable name="search.background.color" description="Search Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="search.border.color" description="Search Border Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="search.border.color" description="Search Border Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="search.font.color" description="Search Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="search.button.background.color" description="Search Button Background Color" type="color" default="#444"  value="#444444"/>
 	<Variable name="search.button.hover.background.color" description="Search Button Hover Background Color" type="color" default="#000"  value="#000000"/>
@@ -196,7 +196,7 @@ Version: 		1.0
 
 <Group description="Nav">
 	<Variable name="nav.background.color" description="Nav Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="nav.hover.background.color" description="Nav Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
+	<Variable name="nav.hover.background.color" description="Nav Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="nav.font.color" description="Nav Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="nav.font.hover.color" description="Nav Hover Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="nav.padding.vertical" description="Nav Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
@@ -1121,7 +1121,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
       <b:widget-setting name='authorLabel'>By</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#dddddd</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#cccccc</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
