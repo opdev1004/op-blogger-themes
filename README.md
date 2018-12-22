@@ -11,7 +11,7 @@ Each directories contains a different blogger theme.
 2. Flexible control of minor theme designs
 3. Blogger CSS variables
 4. Open graph meta tags (Requires some modification)
-5. Resizing iframe media(Youtube) for responsive web design,
+5. Resizing iframe media(Youtube) for responsive web design
 6. Better Categories
 7. Pretty google search
 8. Thumbnails (Requires some modification)/No Thumbnails
@@ -19,7 +19,7 @@ Each directories contains a different blogger theme.
 ## Setting up:
 
 1. In blogger setting:
-  * Blog describtions
+  * Blog descriptions
   * Enable Blogger meta tag
   * HTTPS redirection-Yes
   * Same time stamps
@@ -34,11 +34,11 @@ Each directories contains a different blogger theme.
   * Setting up default post thumbnails' image and default popular posts thumbnails' image
     * It needs default image to display a thumbnail for the case of no image in the post. Recommended size is around 250px x 250px. There are tags that are commented. Put src link into the empty img attributes. Popular post uses 72px x 72px of image size.
   * Setting URL for home in PageList1 widget
-    * Default is blogger.com, it does not make any problem and it will work properly even though it is not editted. However it seems it supposed to be the current blog's home url.
-    
+    * Default is blogger.com, it does not make any problem and it will work properly even though it is not edited. However it seems it supposed to be the current blog's home url.
+
 
 ## Problems & Solve:
-1. Blogger css variable, margin in Comments :
+1. Blogger CSS variable, margin in Comments :
   * It does not support for now. However it is not really an issue for using the themes.
 
 ## License:
@@ -46,7 +46,6 @@ MIT
 
 ## Author:
 * Name: Chanil Park
-* VUW Computer Science student
 * E-mail: falsesage1004@gmail.com
 * Blog: https://www.falsesage.com/
 * Youtube: https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw
