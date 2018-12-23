@@ -121,15 +121,6 @@ Version: 		1.0
 	<Variable name="article.font.size" description="Article Body Font Size" type="length" min="8px" max="48px" default="17px"  value="17px"/>
 </Group>
 
-<Group description="Coding">
-	<Variable name="numbers.background.color" description="Numbers Background Color" type="color" default="#444"  value="#444444"/>
-	<Variable name="numbers.font.color" description="Numbers Font Color" type="color" default="#fff" value="#ffffff"/>
-	<Variable name="codes.background.color" description="Codes Background Color" type="color" default="#444"  value="#444444"/>
-	<Variable name="codes.font.color" description="Codes Font Color" type="color" default="#fff" value="#ffffff"/>
-	<Variable name="coding.border.color" description="Main Border Color" type="color" default="#ccc"  value="#cccccc"/>
-</Group>
-
-
 <Group description="Aside Widget">
 	<Variable name="widget.background.color" description="Widget Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="widget.background.hover.color" description="Widget Background Hover Color" type="color" default="#ccc"  value="#cccccc"/>
@@ -215,7 +206,7 @@ body{
 	margin:0px;
 	height: auto;
 	width: 100%;
-	word-break: break-all;
+	word-break: normal;
 	overflow-wrap: break-word;
 }
 
@@ -793,16 +784,22 @@ article .postTitle {
 
 aside .section { margin: 0px;}
 
+aside {
+	width: $(width);
+	height:auto;
+	margin: 0px auto;
+	padding: 0px;
+}
+
 aside .widget {
-	font: $(widget.font);
 	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
+	font: $(widget.font);
 	background-color: $(widget.background.color);
 	color: $(widget.font.color);
-	height:auto;
-	margin: $(widget.margin) auto;
+	margin: $(widget.margin) 0px;
 	padding: $(widget.padding.vertical) $(widget.padding.horizontal);
 	border: $(widget.border.width) solid $(widget.border.color);
-    border-radius: $(widget.border.radius);
+  border-radius: $(widget.border.radius);
 	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
 }
 
@@ -874,15 +871,25 @@ aside .widget a:hover {
 
 .widget ul { line-height: 1; }
 
-#BottomLeft{
-	width:49%;
+aside #BottomLeft{
+	width: calc(49% - 10px);
+	margin: $(widget.margin) 10px $(widget.margin) 0px;
 	display: inline-block;
 	vertical-align: top;
 }
-#BottomRight{
-	width:49%;
+aside #BottomLeft .widget {
+	width:100%;
+}
+
+aside #BottomRight{
+	width: calc(49% - 10px);
+	margin: $(widget.margin) 0px $(widget.margin) 10px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+aside #BottomRight .widget {
+	width:100%;
 }
 
 footer {
@@ -926,50 +933,9 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
 #PageList1 .widget-content ul {margin: 0px; padding: 0px; list-style: none; display: inline-block;}
 #PageList1 .widget-content ul li {margin: 0px; padding: 0px; display: inline-block;}
 #PageList1 .widget-content ul li a:hover {
-	color:#999;
+	color: $(footer.font.hover.color);
 	text-decoration: none;
 }
-
-.coding {
-	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-	font-size: 11pt;
-	color: $(codes.font.color);
-	background-color: $(codes.background.color);
-	padding: 0px;
-	margin: 5px;
-	border: 2px solid #999;
-	overflow-wrap: normal;
-	word-break: normal;
-	overflow-x: auto;
-}
-
-.coding .numbers{
-	background-color: $(numbers.background.color);
-	color: $(numbers.font.color);
-	padding: 5px;
-	margin: 0px;
-	width: 50px;
-	display: inline-block;
-	border-right: 1px solid $(coding.border.color);
-}
-
-.coding .codes{
-	background-color: $(codes.background.color);
-	color: $(codes.font.color);
-	padding: 5px 5px 5px 10px;
-	margin: 0px;
-	width: calc(100% - 77px);
-	display: inline-block;
-}
-
-.coding p {
-	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-	font-size: 11pt;
-	color: #fff;
-	margin: 0px;
-	padding: 0px;
-}
-
 
 /* Animations */
 
@@ -1261,7 +1227,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <div class='spaceBlock' id='spaceBlock'/>
 
-<div class='UnderHeader slideInDown' id='UnderHeader' style='display: block;'>
+<div class='UnderHeader slideInDown' id='UnderHeader' style='display: none;'>
 <div class='UnderHeaderBox' id='UnderHeaderBox'>
 <b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
   <b:widget id='Stats1' locked='false' title='Page views' type='Stats' version='1'>
@@ -1492,7 +1458,6 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
         }
     }
 	fixLabels();
-	catbar();
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
@@ -2415,104 +2380,6 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
   </b:widget>
 </b:section>
 </main>
-
-
-
-
-
-
-
-
-<script type='text/javascript'>
-//<![CDATA[
-// Functions for the Post
-
-  	function BrToP(contents){
-		var splitContents = contents.split(/<br\s*\/?>/);
-		var fixedHTML = '';
-		for(var i = 0; i < splitContents.length; i++){
-			var content = splitContents[i];
-			fixedHTML += '<p>'+ content + '</p>';
-        }
-		return fixedHTML;
-	}
-
-	function replaceBr(){
-    	if(checkClass('post-body')){
-			var postBodies = document.getElementsByClassName('post-body');
-			for(var i = 0; i < postBodies.length; i++){
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('strong').length; j++){
-					postBodies[i].getElementsByTagName('strong')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('strong')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('i').length; j++){
-					postBodies[i].getElementsByTagName('i')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('i')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('u').length; j++){
-					postBodies[i].getElementsByTagName('u')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('u')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('s').length; j++){
-					postBodies[i].getElementsByTagName('s')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('s')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('b').length; j++){
-					postBodies[i].getElementsByTagName('b')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('b')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('span').length; j++){
-					postBodies[i].getElementsByTagName('span')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('span')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('a').length; j++){
-					postBodies[i].getElementsByTagName('a')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('a')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('small').length; j++){
-					postBodies[i].getElementsByTagName('small')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('small')[j].innerHTML);
-				}
-   	         	for(var j = 0; j < postBodies[i].getElementsByTagName('q').length; j++){
-					postBodies[i].getElementsByTagName('q')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('q')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('cite').length; j++){
-					postBodies[i].getElementsByTagName('cite')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('cite')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('code').length; j++){
-					postBodies[i].getElementsByTagName('code')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('code')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('p').length; j++){
-					postBodies[i].getElementsByTagName('p')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('p')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('li').length; j++){
-					postBodies[i].getElementsByTagName('li')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('li')[j].innerHTML);
-				}
-            	for(var j = 0; j < postBodies[i].getElementsByTagName('div').length; j++){
-					postBodies[i].getElementsByTagName('div')[j].innerHTML = BrToP(postBodies[i].getElementsByTagName('div')[j].innerHTML);
-				}
-
-				document.getElementsByClassName('post-body')[i].innerHTML = BrToP(postBodies[i].innerHTML);
-	        }
-        }
-    }
-
-	function fixCoding(){
-    	if(checkClass('coding')){
-			var codings = document.getElementsByClassName('coding');
-			for(var i = 0; i < codings.length; i++){
-				var coding = codings[i];
-				var codes = coding.getElementsByTagName('p');
-				var numbers = '';
-            	for(var j = 0; j < codes.length; j++){
-					var number = '<p>' + (j + 1) + '</p>';
-					numbers += number;
-				}
-				coding.innerHTML = '<div id="codes" class="codes">' + coding.innerHTML + '</div>';
-				numbers = '<div id="numbers" class="numbers">' + numbers + '</div>';
-				document.getElementsByClassName('coding')[i].innerHTML = numbers + coding.innerHTML;
-	        }
-        }
-	}
-
-	replaceBr();
-	fixCoding();
-//]]>
-</script>
-<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
-
 
 <aside>
 <b:section class='UnderMain' id='UnderMain' name='Under Main' showaddelement='yes'/>
