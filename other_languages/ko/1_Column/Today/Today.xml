@@ -1588,7 +1588,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>Archive</h2>
+							<h2>아카이브</h2>
 						<b:else/>
 						</b:if>
 
