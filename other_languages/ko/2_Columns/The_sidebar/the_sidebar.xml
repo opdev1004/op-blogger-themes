@@ -6,8 +6,8 @@
 * Name: OP Blogger Themes - 2 Columns, The sidebar
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
+* Blog: https://www.treezi.org/
+* E-mail: treezi1004@gmail.com
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
@@ -895,6 +895,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 					}
 			}
 
+
 			function $_GET(param) {
 				var vars = {};
 				window.location.href.replace( location.hash, '' ).replace(
@@ -1048,7 +1049,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       						<div expr:id='data:widget.instanceId + &quot;_form&quot;'>
        		 					<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
        		   						<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-        								<input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder='Search' size='10' title='search' type='text'/>
+        								<input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder='검색' size='10' title='search' type='text'/>
                   						<input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
         						</form>
       						</div>
@@ -1071,19 +1072,19 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='authorLabel'>작성자: </b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#cccccc</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
       <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>카테고리: </b:widget-setting>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -1110,7 +1111,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>Page not found</h2></div>
+			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
@@ -1118,7 +1119,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 						<nav>
 							<b:include name='nextprev'/>
                			</nav>
-						<h2>Recent posts</h2>
+						<h2>최신 포스트</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1144,8 +1145,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1168,7 +1169,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1178,17 +1179,17 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "Search result of '" + searchWords + "'"
+											searchWords = "'" + searchWords + "'의 검색 결과";
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>No search result</h2></div>
+								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>Archive</h2>
+							<h2>아카이브</h2>
 						<b:else/>
 						</b:if>
 
@@ -1217,8 +1218,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2023,7 +2024,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <b:section class='Category' id='Category' name='Category' showaddelement='yes'>
   <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2147,7 +2148,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 
 
 <b:section class='UnderCategory' id='UnderCategory' name='Under Category' showaddelement='yes'>
-  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
+  <b:widget id='Stats1' locked='false' title='전체 페이지뷰' type='Stats'>
     <b:widget-settings>
       <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
       <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
@@ -2188,8 +2189,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <b:section class='FooterPageSection' id='FooterPageSection' name='Footer Page Section' showaddelement='yes'>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2211,7 +2212,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:section>
 	<div id='footer-line'> </div>
 	<div id='footer-info'>
-       		<p>Design: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
+       		<p>디자인: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
 			<p>&#169;<a expr:href='data:blog.homepageUrl'><data:blog.title/></a></p>
     </div>
 </div>

@@ -685,6 +685,11 @@ article .postTitle {
 	border-bottom: $(article.underline.border.width) solid $(article.underline.border.color);
 }
 
+.post-body {
+	margin: 10px auto;
+	padding: 0px;
+}
+
 .post-body p {
 	font-size: $(article.font.size);
 	min-height: $(article.font.size);
@@ -1084,25 +1089,22 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 			}
 
 
-  			function resizeIframes(){
-    			if(checkID('postarea')){
-					var iframeContainer = document.getElementById('postarea');
-					var resRatio = 9/16;
-    			  	var windowSize = window.innerWidth - 22;
-      				if(windowSize > 855){
-						windowSize = 840;
+			function resizeIframes(){
+				if(checkClass('post-body')){
+				var iframeContainer = document.getElementsByClassName('post-body')[0];
+				var resRatio = 9/16;
+						var windowSize = iframeContainer.offsetWidth;
+				var allIFrames = iframeContainer.getElementsByTagName('iframe');
+				for (var i = 0; i < allIFrames.length; i++) {
+								if(allIFrames[i].getAttribute('allow') != null){
+									if(allIFrames[i].getAttribute('allow').includes('autoplay')){
+							allIFrames[i].setAttribute('width', windowSize);
+							allIFrames[i].setAttribute('height', windowSize*resRatio);
+									}
+							}
+				}
 					}
-					var allIFrames = iframeContainer.getElementsByTagName('iframe');
-					for (var i = 0; i < allIFrames.length; i++) {
-    	      			if(allIFrames[i].getAttribute('allow') != null){
-    	    		    	if(allIFrames[i].getAttribute('allow').includes('autoplay')){
-								allIFrames[i].setAttribute('width', windowSize);
-								allIFrames[i].setAttribute('height', windowSize*resRatio);
-    	        			}
-    	    			}
-					}
-        		}
-    		}
+			}
 
 			function searchbar(){
 				if(document.getElementById("menu1").style.display == "none"){
@@ -1230,7 +1232,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 <div class='UnderHeader slideInDown' id='UnderHeader' style='display: none;'>
 <div class='UnderHeaderBox' id='UnderHeaderBox'>
 <b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
-  <b:widget id='Stats1' locked='false' title='Page views' type='Stats' version='1'>
+  <b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
     <b:widget-settings>
       <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
       <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
@@ -1247,7 +1249,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       <b:if cond='data:showSparkline'>
         <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
       </b:if>
-      <h3>Page views: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
+      <h3>Pageviews: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
       <b:include name='quickedit'/>
     </div>
   </div>
@@ -1448,7 +1450,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
                         }
 					}
                   	else {
-						if(category.getElementsByTagName('span')[0] !== undefined){
+						if(category.getElementsByTagName('span')[1] !== undefined){
 							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
 							category.getElementsByTagName('span')[1].outerHTML = '';
                         }

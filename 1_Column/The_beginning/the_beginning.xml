@@ -469,6 +469,11 @@ article .postTitle {
 	border-bottom: $(article.underline.border.width) solid $(article.underline.border.color);
 }
 
+.post-body {
+	margin: 10px auto;
+	padding: 0px;
+}
+
 .post-body p {
 	font-size: $(article.font.size);
 	min-height: $(article.font.size);
@@ -850,25 +855,22 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 			}
 
 
-  			function resizeIframes(){
-    			if(checkID('postarea')){
-					var iframeContainer = document.getElementById('postarea');
-					var resRatio = 9/16;
-    			  	var windowSize = window.innerWidth - 22;
-      				if(windowSize > 855){
-						windowSize = 840;
+			function resizeIframes(){
+				if(checkClass('post-body')){
+				var iframeContainer = document.getElementsByClassName('post-body')[0];
+				var resRatio = 9/16;
+						var windowSize = iframeContainer.offsetWidth;
+				var allIFrames = iframeContainer.getElementsByTagName('iframe');
+				for (var i = 0; i < allIFrames.length; i++) {
+								if(allIFrames[i].getAttribute('allow') != null){
+									if(allIFrames[i].getAttribute('allow').includes('autoplay')){
+							allIFrames[i].setAttribute('width', windowSize);
+							allIFrames[i].setAttribute('height', windowSize*resRatio);
+									}
+							}
+				}
 					}
-					var allIFrames = iframeContainer.getElementsByTagName('iframe');
-					for (var i = 0; i < allIFrames.length; i++) {
-    	      			if(allIFrames[i].getAttribute('allow') != null){
-    	    		    	if(allIFrames[i].getAttribute('allow').includes('autoplay')){
-								allIFrames[i].setAttribute('width', windowSize);
-								allIFrames[i].setAttribute('height', windowSize*resRatio);
-    	        			}
-    	    			}
-					}
-        		}
-    		}
+			}
 
 			function $_GET(param) {
 				var vars = {};
@@ -2087,7 +2089,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
                         }
 					}
                   	else {
-						if(category.getElementsByTagName('span')[0] !== undefined){
+						if(category.getElementsByTagName('span')[1] !== undefined){
 							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
 							category.getElementsByTagName('span')[1].outerHTML = '';
                         }

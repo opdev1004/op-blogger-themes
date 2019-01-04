@@ -3,11 +3,11 @@
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 2 Columns, The sidebar
+* Name: OP Blogger Themes - 1 Column, Today
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
+* Blog: https://www.treezi.org/
+* E-mail: treezi1004@gmail.com
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
@@ -48,7 +48,7 @@
 /*
 -----------------------------------------------
 Blogger Template Style
-Name:     		The sidebar
+Name:     		Today
 Designer: 		Victor Chanil Park
 URL:      		https://github.com/treezi1004/op-blogger-themes
 License:  		MIT
@@ -61,34 +61,39 @@ Version: 		1.0
 	<Variable name="body.background.color" description="Body Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="body.font.color1" description="Body Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="body.font.color2" description="Body Hover Font Color" type="color" default="#999" value="#999999"/>
-	<Variable name="body.font" description="Body Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="body.font" description="Body Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Header">
-	<Variable name="header.background.color" description="Header Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="header.font.color1" description="Header Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="header.font.color2" description="Header Hover Font Color" type="color" default="#999" value="#999999"/>
-	<Variable name="header.margin" description="Header Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="header.padding.vertical" description="Header Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="header.padding.horizontal" description="Header Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="header.height" description="Header Height" type="length" min="50px" max="1080px" default="100px"  value="100px"/>
-	<Variable name="header.border.radius" description="Header Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="header.border.width" description="Header Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="header.border.color" description="Header Border Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="header.background.color" description="Header Background Color" type="color" default="#222"  value="#222222"/>
+	<Variable name="header.background.gradient.color" description="Header Background Gradient Color" type="color" default="#000"  value="#000000"/>
+	<Variable name="header.font.color" description="Header Font Color" type="color" default="#fff" value="#ffffff"/>
 	<Variable name="header.font" description="Header Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="search.background.color" description="Search Background Color" type="color" default="#444"  value="#4d4d4d"/>
+	<Variable name="search.font.color" description="Search Font Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+
+<Group description="UnderHeaderBox">
+	<Variable name="underheaderbox.background.color" description="UnderHeaderBox Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="underheaderbox.hover.background.color" description="UnderHeaderBox Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheaderbox.selected.background.color" description="UnderHeaderBox Selected Background Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="underheaderbox.border.color" description="UnderHeaderBox Border Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheaderbox.font.color" description="UnderHeaderBox Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheaderbox.font.hover.color" description="UnderHeaderBox Hover Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheaderbox.font" description="UnderHeaderBox Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
 </Group>
 
 <Group description="Main">
 	<Variable name="main.background.color" description="Main Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="main.font.color" description="Main Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="main.font.hover.color" description="Main Hover Font Color" type="color" default="#999" value="#999999"/>
-	<Variable name="main.margin" description="Main Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="main.margin" description="Main Margin" type="length" min="0px" max="100px" default="10px"  value="10px"/>
 	<Variable name="main.padding.vertical" description="Main Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="main.padding.horizontal" description="Main Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="main.border.radius" description="Main Border Radius" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="main.border.width" description="Main Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="main.border.color" description="Main Border Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="main.font" description="Main Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="main.font" description="Main Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Index Items">
@@ -107,17 +112,18 @@ Version: 		1.0
 	<Variable name="article.info.border.radius" description="Article Info Border Radius" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.width" description="Article Info Border Width" type="length" min="0px" max="100px" default="0px"  value="0px"/>
 	<Variable name="article.info.border.color" description="Article Info Border Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="article.info.font" description="Article Info Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="article.info.font" description="Article Info Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Article">
 	<Variable name="article.underline.border.width" description="Article Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="article.underline.border.color" description="Article Title Underline Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="article.font.size" description="Article Body Font Size" type="length" min="8px" max="48px" default="16px"  value="16px"/>
+	<Variable name="article.font.size" description="Article Body Font Size" type="length" min="8px" max="48px" default="17px"  value="17px"/>
 </Group>
 
 <Group description="Aside Widget">
 	<Variable name="widget.background.color" description="Widget Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="widget.background.hover.color" description="Widget Background Hover Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="widget.font.color" description="Widget Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="widget.font.hover.color" description="Widget Hover Font Color" type="color" default="#999" value="#999999"/>
 	<Variable name="widget.margin" description="Widget Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
@@ -126,7 +132,8 @@ Version: 		1.0
 	<Variable name="widget.border.radius" description="Widget Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
 	<Variable name="widget.border.width" description="Widget Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="widget.border.color" description="Widget Border Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="widget.font" description="Widget Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="widget.line.border.color" description="Widget Line Border Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="widget.font" description="Widget Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Comments">
@@ -143,33 +150,7 @@ Version: 		1.0
 	<Variable name="comment.button.border.width" description="Comment Button Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="comment.button.border.color" description="Comment Button Border Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="comment.button.border.hover.color" description="Comment Button Border Hover Color" type="color" default="#000"  value="#000000"/>
-	<Variable name="comments.font" description="Comments Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
-</Group>
-
-<Group description="Category">
-	<Variable name="category.title.border.width" description="Category Title Underline Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="category.title.border.color" description="Category Title Underline Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="category.background.color" description="Category Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="category.hover.background.color" description="Category Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="category.selected.background.color" description="Category Selected Background Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="category.font.color" description="Category Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="category.font.hover.color" description="Category Hover Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="category.margin" description="Category Margin" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="category.padding.vertical" description="Category Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="category.padding.horizontal" description="Category Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="category.border.radius" description="Category Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
-	<Variable name="category.border.width" description="Category Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
-	<Variable name="category.border.color" description="Category Border Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="category.font" description="Category Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
-</Group>
-
-<Group description="Search">
-	<Variable name="search.background.color" description="Search Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="search.border.color" description="Search Border Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="search.font.color" description="Search Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="search.button.background.color" description="Search Button Background Color" type="color" default="#444"  value="#444444"/>
-	<Variable name="search.button.hover.background.color" description="Search Button Hover Background Color" type="color" default="#000"  value="#000000"/>
-	<Variable name="search.button.font.color" description="Search Button Font Color" type="color" default="#fff" value="#ffffff"/>
+	<Variable name="comments.font" description="Comments Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Footer">
@@ -196,18 +177,17 @@ Version: 		1.0
 	<Variable name="nav.border.width" description="Nav Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
 	<Variable name="nav.border.color" description="Nav Border Color" type="color" default="#999"  value="#999999"/>
 	<Variable name="nav.border.hover.color" description="Nav Border Hover Color" type="color" default="#000"  value="#000000"/>
-	<Variable name="nav.font" description="Nav Font" type="font" default="normal normal 16px 'Roboto', sans-serif"  value="normal normal 16px &#39;Roboto&#39;, sans-serif"/>
+	<Variable name="nav.font" description="Nav Font" type="font" default="normal normal 17px 'Roboto', sans-serif"  value="normal normal 17px &#39;Roboto&#39;, sans-serif"/>
 </Group>
 
 <Group description="Shadow">
 	<Variable name="shadow.x" description="Shadow Horizontal Position" type="length" min="0px" max="1920px" default="0px"  value="0px"/>
 	<Variable name="shadow.y" description="Shadow Vertical Position" type="length" min="0px" max="1080px" default="0px"  value="0px"/>
-	<Variable name="shadow.color" description="Shadow Color" type="color" default="#000"  value="#000000"/>
+	<Variable name="shadow.color" description="Shadow Color" type="color" default="#ccc"  value="#cccccc"/>
 </Group>
 
 <Group description="Width">
 	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="840px"  value="840px"/>
-	<Variable name="sidebar.width" description="Sidebar Width" type="length" min="200px" max="500px" default="280px"  value="280px"/>
 </Group>
 
 html {
@@ -283,26 +263,29 @@ h4 a:hover,
 h5 a:hover { color: $(body.font.color2); text-decoration: none;}
 
 header {
-	font: $(header.font);
-	width: calc($(width) - $(header.border.width) * 2 - $(header.padding.horizontal) * 2);
-	height: $(header.height);
-	margin: $(header.margin) auto;
-	padding: $(header.padding.vertical) $(header.padding.horizontal);
-	color: $(header.font.color1);
+	font-size: 0px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin: 0px;
+	padding: 0px;
+	color: $(header.font.color);
+	background:linear-gradient(to bottom, $(header.background.color) 5%, $(header.background.gradient.color) 100%);
 	background-color: $(header.background.color);
-	border: $(header.border.width) solid $(header.border.color);
-    border-radius: $(header.border.radius);
-	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
+	box-shadow: 0px 5px 5px $(shadow.color);
+	position: fixed;
+	z-index: 99;
+	box-sizing: border-box
 }
 
 header a:link,
 header a:visited,
 header a:active {
-	color: $(header.font.color1);
+	color: $(header.font.color);
 	text-decoration:none;
 }
 header a:hover {
-	color: $(header.font.color2);
+	color: $(header.font.color);
 	text-decoration: none;
 }
 
@@ -312,7 +295,10 @@ header h3,
 header h4,
 header h5
 {
-	color: $(header.font.color1);
+	line-height:50px;
+	vertical-align: middle;
+	text-align: center;
+	color: $(header.font.color);
 	padding:0px;
 	margin:0px;
 	overflow-wrap: break-word;
@@ -322,50 +308,257 @@ header h1 a,
 header h2 a,
 header h3 a,
 header h4 a,
-header h5 a { color: $(header.font.color1); overflow-wrap: break-word; }
+header h5 a { color: $(header.font.color); overflow-wrap: break-word; }
 
 header h1 a:hover,
 header h2 a:hover,
 header h3 a:hover,
 header h4 a:hover,
-header h5 a:hover { color: $(header.font.color2); text-decoration: none;}
+header h5 a:hover { color: $(header.font.color); text-decoration: none;}
 
-#blogMiddle {
-	padding: 0px;
-	margin: 5px auto;
-	width: $(width);
+header span {
+	line-height: 50px;
 }
 
-#blogMain {
+#menu1{
+	font: $(header.font);
+	font-size: 10pt;
+	background:linear-gradient(to bottom, $(header.background.color) 5%, $(header.background.gradient.color) 100%);
+	background-color: $(header.background.color);
 	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
 	padding: 0px;
-	margin: 0px 5px 0px 0px;
-	width: calc(100% - $(sidebar.width) - 10px);
+	font-weight:bold;
+}
+#menu1:hover{
+	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
+	background-color: $(header.background.gradient.color);
+ 	cursor: pointer;
+}
+#menu2{
+	font: $(header.font);
+	font-size: 11pt;
+	background:linear-gradient(to bottom, $(header.background.color) 5%, $(header.background.gradient.color) 100%);
+	background-color: $(header.background.color);
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: calc(100% - 100px);
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	font-weight:bold;
+}
+#menu2 a:hover{text-decoration: none;}
+#menu2:hover{
+	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
+	background-color: $(header.background.gradient.color);
+}
+#menu2 h1 {
+	height:50px;
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#menu3{
+	font: $(header.font);
+	font-size: 10pt;
+	background:linear-gradient(to bottom, $(header.background.color) 5%, $(header.background.gradient.color) 100%);
+	background-color: $(header.background.color);
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	font-weight:bold;
+}
+#menu3:hover{
+	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
+	background-color: $(header.background.gradient.color);
+	cursor: pointer;
+}
+#menu3 #searchBtn{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu3 #backBtn{
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#SearchBar{ margin: 0px; padding: 0px; width: calc(100% - 50px); display: none; }
+.SearchBar .gsc-input { width:100%; margin: 0px; padding: 0px;}
+.SearchBar .widget {margin: 0px;}
+
+#search{
+	padding:0px;
+	margin: 0px;
+	border-style: none;
+	color: $(search.font.color);
+	background-color: $(search.background.color);
+	width: 100%;
+	height: 50px;
+	font-size:30px;
+	font-weight:bold;
+}
+
+#spaceBlock{ width: 100%; height: 50px; margin: 0; padding: 0;}
+
+#UnderHeader{
+	font: $(underheaderbox.font);
+	width: 100%;
+	height: calc(100vh - 50px);
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow-y: scroll;
+	position: fixed;
+	display: none;
+	z-index: 98;
+}
+
+#UnderHeaderBox {
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
+	color: $(underheaderbox.font.color);
+	background-color: $(underheaderbox.background.color);
+	width: 400px;
+	height: auto;
+	min-height: calc(100vh - 50px);
+	box-shadow: 0px 10px 15px #000;
+	display: inline-block;
 	vertical-align: top;
 }
 
-#blogSidebar{
-	display: inline-block;
+#UnderHeaderBox a,
+#UnderHeaderBox a:link,
+#UnderHeaderBox a:visited,
+#UnderHeaderBox a:active {
+		color: $(underheaderbox.font.color);
+}
+
+#UnderHeaderBox a:hover {
+		color: $(underheaderbox.font.hover.color);
+}
+
+#UnderHeaderBox h1,
+#UnderHeaderBox h3,
+#UnderHeaderBox h4,
+#UnderHeaderBox h5,
+#UnderHeaderBox h6 {
+	color: $(underheaderbox.font.color);
+}
+
+#UnderHeaderBox h2 {
+	color: $(underheaderbox.font.color);
+	border-bottom: 5px dotted $(underheaderbox.border.color);
+	margin: 0px;
+	padding: 0px;
+}
+
+#UnderHeaderBox .widget {
+	width: 100%;
+	margin: 10px 0px;
+	padding: 5px 0px;
+	border-bottom: 1px solid $(underheaderbox.border.color);
+}
+
+#Category {
+	border-bottom: 1px solid $(underheaderbox.border.color);
+	width: calc(100% - 10px);
+	margin: 10px 5px;
+	padding: 5px 0px;
+}
+
+#Category #HTML999 {
+	border-width: 0px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+}
+
+#Category .Label {
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.Label h1 { color: $(underheaderbox.font.color); }
+.Label h2 { color: $(underheaderbox.font.color); }
+.Label h3 { color: $(underheaderbox.font.color); }
+.Label h4 { color: $(underheaderbox.font.color); }
+.Label h5 { color: $(underheaderbox.font.color); }
+.Label h6 { color: $(underheaderbox.font.color); }
+#UnderHeaderBox .Label a { color: $(underheaderbox.font.color); }
+
+.Label h1:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h2:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h3:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h4:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h5:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h6:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+#UnderHeaderBox .Label a:hover { color: $(underheaderbox.font.color); }
+
+.Label img{display: none;}
+
+.Label a:hover{text-decoration:none;}
+
+.Label ul{
+	display: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.Label ul li {
+	width: 100%;
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+}
+.Label ul li span {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	background-color: $(underheaderbox.selected.background.color);
+}
+.Label ul li a { color: $(underheaderbox.font.color); display: block; margin: 0px; padding: 0px; }
+.Label ul li a:hover { color: $(underheaderbox.font.color); }
+.Label ul li:hover { background-color: $(underheaderbox.hover.background.color);}
+
+#UnderHeaderSpace {
 	padding: 0px;
 	margin: 0px;
-	width: $(sidebar.width);
-	vertical-align: top;
+	height: calc(100vh - 50px);
+	width: calc(100% - 400px);
+	display: inline-block;
 }
 
-#SearchBar{ margin: 0px; padding: 0px; width: 100%;}
-.SearchBar .gsc-search-box { margin: 10px; auto; padding: 0px; width: auto; }
-.SearchBar .gsc-input { background-color: $(search.background.color); color: $(search.font.color); border-color: $(search.border.color); margin: 0px; padding: 10px; width: calc(100% - 100px); height: 30px; }
-.SearchBar .gsc-search-button { background-color: $(search.button.background.color); color: $(search.button.font.color); margin: 0px; padding: 0px; width: 74px; height: 52px; }
-.SearchBar .gsc-search-button:hover { background-color: $(search.button.hover.background.color); }
-.SearchBar .widget { margin: 0px; }
 
 main {
 	font: $(main.font);
-	width: calc(100% - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
+	width: calc($(width) - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
 	background-color: $(main.background.color);
 	color: $(main.font.color);
 	height:auto;
-	min-height:calc(100vh - 400px);
+	min-height:calc(100vh - $(footer.height));
 	margin: $(main.margin) auto;
 	padding: $(main.padding.vertical) $(main.padding.horizontal);
 	border: $(main.border.width) solid $(main.border.color);
@@ -596,16 +789,22 @@ article .postTitle {
 
 aside .section { margin: 0px;}
 
+aside {
+	width: $(width);
+	height:auto;
+	margin: 0px auto;
+	padding: 0px;
+}
+
 aside .widget {
+	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
 	font: $(widget.font);
-	width: calc(100% - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
 	background-color: $(widget.background.color);
 	color: $(widget.font.color);
-	height:auto;
-	margin: $(widget.margin) auto;
+	margin: $(widget.margin) 0px;
 	padding: $(widget.padding.vertical) $(widget.padding.horizontal);
 	border: $(widget.border.width) solid $(widget.border.color);
-    border-radius: $(widget.border.radius);
+  border-radius: $(widget.border.radius);
 	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
 }
 
@@ -622,14 +821,21 @@ aside .widget a:hover {
 
 aside .widget h1,
 aside .widget h2,
-aside .widget h3,
 aside .widget h4,
 aside .widget h5
 {
 	color: $(widget.font.color);
-	padding:0px;
+	padding: 0px 0px 5px 0px;
 	margin:0px;
 	overflow-wrap: break-word;
+}
+
+aside .widget h3 {
+	color: $(widget.font.color);
+	padding: 0px 0px 5px 0px;
+	margin:0px;
+	overflow-wrap: break-word;
+	border-bottom: 1px solid $(widget.line.border.color);
 }
 
 aside .widget h1 a,
@@ -644,129 +850,52 @@ aside .widget h3 a:hover,
 aside .widget h4 a:hover,
 aside .widget h5 a:hover { color: $(widget.font.hover.color); text-decoration: none;}
 
+aside .widget ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+aside .widget ul li {
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 3px dotted $(widget.line.border.color);
+}
+
+aside .widget li:hover {
+	background-color: $(widget.background.hover.color);
+}
+
+aside .widget a:hover {
+	color: $(widget.font.color);
+}
 
 /* Where it gives margin to the left and right of webpage */
 .section { margin: 0px 5px;}
 
 .widget { line-height: 1; }
 
-.Label{
-	padding: 0px;
-	margin: 0px;
-	overflow: auto;
-	width: 100%;
-	font: $(category.font);
-}
+.widget ul { line-height: 1; }
 
-aside #Category {
-	font: $(category.font);
-	width: calc(100% - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
-	background-color: $(category.background.color);
-	color: $(category.font.color);
-	height:auto;
-	margin: $(category.margin) auto;
-	padding: $(category.padding.vertical) $(category.padding.horizontal);
-	border: $(category.border.width) solid $(category.border.color);
-    border-radius: $(category.border.radius);
-	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
-}
-
-aside #Category a:link,
-aside #Category a:visited,
-aside #Category a:active {
-	color: $(category.font.color);
-	text-decoration:none;
-}
-aside #Category a:hover {
-	color: $(category.font.hover.color);
-	text-decoration: none;
-}
-
-aside #Category h1,
-aside #Category h2,
-aside #Category h3,
-aside #Category h4,
-aside #Category h5,
-aside #Category h6 {
-	color: $(category.font.color);
-	padding:0px;
-	margin:0px;
-	overflow-wrap: break-word;
-}
-
-aside #Category h1 a,
-aside #Category h2 a,
-aside #Category h3 a,
-aside #Category h4 a,
-aside #Category h5 a,
-aside #Category h6 a { color: $(category.font.color); overflow-wrap: break-word; }
-
-aside #Category h1 a:hover,
-aside #Category h2 a:hover,
-aside #Category h3 a:hover,
-aside #Category h4 a:hover,
-aside #Category h5 a:hover,
-aside #Category h6 a:hover { color: $(category.font.hover.color); text-decoration: none;}
-
-aside #Category .widget {
-	font: $(category.font);
-	width: auto;
-	background-color: $(category.background.color);
-	color: $(category.font.color);
-	height:auto;
-	margin: 0px;
-	padding: 0px;
-	border-width: 0px;
-    border-radius: 0px;
-	box-shadow: 0px 0px #ffffff;
-}
-
-aside #Category #categoryTitle {
-	margin: 0px 0px 7px 0px;
-	padding: 0px;
-	border-bottom: $(category.title.border.width) solid $(category.title.border.color);
-}
-
-.Label h1 { color: $(category.font.color); }
-.Label h2 { color: $(category.font.color); }
-.Label h3 { color: $(category.font.color); }
-.Label h4 { color: $(category.font.color); }
-.Label h5 { color: $(category.font.color); }
-.Label h6 { color: $(category.font.color); }
-
-.Label h1:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-.Label h2:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-.Label h3:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-.Label h4:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-.Label h5:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-.Label h6:hover { background-color: $(category.hover.background.color); cursor: pointer;}
-
-.Label img{display: none;}
-
-.Label a:hover{text-decoration:none;}
-
-.Label ul{
-	display: none;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-}
-.Label ul li {
-	width: 100%;
-	font-size: 1.0em;
-	margin: 0px;
-	padding: 0px;
+aside #BottomLeft{
+	width: calc(49% - 10px);
+	margin: $(widget.margin) 10px $(widget.margin) 0px;
+	display: inline-block;
 	vertical-align: top;
 }
-.Label ul li span {
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	background-color: $(category.selected.background.color);
+aside #BottomLeft .widget {
+	width:100%;
 }
-.Label ul li a { color: $(category.font.color); display: block; margin: 0px; padding: 0px; }
-.Label ul li a:hover { color: $(category.font.color); }
-.Label ul li:hover { background-color: $(category.hover.background.color);}
+
+aside #BottomRight{
+	width: calc(49% - 10px);
+	margin: $(widget.margin) 0px $(widget.margin) 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+aside #BottomRight .widget {
+	width:100%;
+}
 
 footer {
 	width: 100%;
@@ -815,6 +944,66 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
 
 /* Animations */
 
+.slideInLeft{
+  -webkit-animation-name: slideInLeft;
+  -webkit-animation-duration: 0.1s;
+  animation-name: slideInLeft;
+  animation-duration: 0.1s
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight{
+  -webkit-animation-name: slideInRight;
+  -webkit-animation-duration: 0.1s;
+  animation-name: slideInRight;
+  animation-duration: 0.1s
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
 .slideInDown {
   -webkit-animation-name: slideInDown;
   -webkit-animation-duration: 0.1s;
@@ -844,17 +1033,39 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
   }
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
 /* Responsive Web */
 
 @media all and (min-width: 0px) and (max-width: calc($(footer.line.width) + 20px)) {
 footer #footer-line  {width: 100%;}
 }
 
-@media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
-header, main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
-#blogMiddle { width: 100%; }
-#blogMain, #blogSidebar { width: 100%; margin: 0px; display: block; }
+@media all and (min-width: 0px) and (max-width: 500px) {
+#UnderHeaderBox { width: 100%; }
+}
 
+@media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
+header { width: 100%; }
+main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
+#blog-pager, .comments-area .nav-links {font-size: 11pt;}
+#BottomLeft{ width: auto; display: block; }
+#BottomRight{ width: auto; display: block; }
 }
 
 ]]></b:skin>
@@ -893,6 +1104,37 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 							}
 				}
 					}
+			}
+
+			function searchbar(){
+				if(document.getElementById("menu1").style.display == "none"){
+  					document.getElementById("menu1").style.display = "inline-block";
+					document.getElementById("menu2").style.display = "inline-block";
+					document.getElementById("SearchBar").style.display = "none";
+					document.getElementById("search").value = "";
+					document.getElementById("searchBtn").style.display = "inline-block";
+					document.getElementById("backBtn").style.display = "none";
+				}
+				else{
+    				document.getElementById("menu1").style.display = "none";
+					document.getElementById("menu2").style.display = "none";
+					document.getElementById("SearchBar").style.display = "inline-block";
+					document.getElementById("search").focus();
+					document.getElementById("searchBtn").style.display = "none";
+					document.getElementById("backBtn").style.display = "inline-block";
+				}
+			}
+
+			function catbar(){
+				var cat = document.getElementById("UnderHeader");
+				if(cat.style.display == "none"){
+   		   			cat.style.display = "block";
+					document.documentElement.style.overflowY = 'hidden';
+				}
+				else{
+		    		cat.style.display = "none";
+					document.documentElement.style.overflowY = 'auto';
+				}
 			}
 
 			function $_GET(param) {
@@ -949,120 +1191,284 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 
 <body>
 
-<a expr:href='data:blog.homepageUrl'>
+
 <header>
-<b:section class='Header' id='Header' name='Header' showaddelement='no'>
-  <b:widget id='Header1' locked='false' title='Testing (Header)' type='Header' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='displayUrl'/>
-      <b:widget-setting name='displayHeight'>0</b:widget-setting>
-      <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
-      <b:widget-setting name='useImage'>false</b:widget-setting>
-      <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-      <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
-      <b:widget-setting name='displayWidth'>0</b:widget-setting>
-    </b:widget-settings>
+	<div class='slideInLeft' id='menu1' onclick='catbar(); return false'>
+    	<span>메뉴</span>
+	</div>
+	<div class='slideInLeft' id='menu2'>
+		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
+	</div>
+	<div id='menu3' onclick='searchbar();return false'>
+		<div class='slideInLeft' id='searchBtn'><span>검색</span></div>
+		<div class='slideInRight' id='backBtn'><span>뒤로</span></div>
+	</div>
+
+<b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
+  <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='1'>
     <b:includable id='main'>
-
-  <b:if cond='data:useImage'>
-    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
-      <!--
-      Show image as background to text. You can't really calculate the width
-      reliably in JS because margins are not taken into account by any of
-      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-      width if the user is using shrink to fit.
-      This results in a margin-width's worth of pixels being cropped. If the
-      user is not using shrink to fit then we expand the header.
-      -->
-      <b:if cond='data:mobile'>
-        <div id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <h1 class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </h1>
-          </div>
-          <b:include name='description'/>
-        </div>
-      <b:else/>
-        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <h1 class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </h1>
-          </div>
-          <b:include name='description'/>
-        </div>
-      </b:if>
-    <b:else/>
-      <!--Show the image only-->
-      <div id='header-inner'>
-        <a expr:href='data:blog.homepageUrl' style='display: block'>
-          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-        </a>
-        <!--Show the description-->
-        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-          <b:include name='description'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <!--No header image -->
-    <div id='header-inner'>
-      <div class='titlewrapper'>
-        <h1 class='title'>
-          <b:include name='title'/>
-        </h1>
-      </div>
-      <b:include name='description'/>
-    </div>
-  </b:if>
-</b:includable>
-    <b:includable id='description'>
-  <div class='descriptionwrapper'>
-    <p class='description'><span><data:description/></span></p>
-  </div>
-</b:includable>
-    <b:includable id='title'>
-    <data:title/>
-</b:includable>
-  </b:widget>
-</b:section>
-</header>
-</a>
-
-
-<div class='blogMiddle' id='blogMiddle'>
-<b:section class='MiddleTop' id='MiddleTop' name='Middle Top' showaddelement='yes'/>
-
-<b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='yes'>
-  <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch' version='1'>
-    <b:includable id='main'>
-					<!-- We are not putting title, it is ugly. -->
-	   	 			<!-- only display title if it's non-empty -->
-					<!--
-   		 				<b:if cond='data:title != &quot;&quot;'>
+						<!-- only display title if it's non-empty -->
+						<!--
+						<b:if cond='data:title != &quot;&quot;'>
       						<h3 class='title'><data:title/></h3>
     					</b:if>
-					-->
-						<div class='widget-content'>
+						-->
+						<div class='widget-content slideInRight'>
       						<div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-       		 					<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
-       		   						<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-        								<input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder='Search' size='10' title='search' type='text'/>
-                  						<input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
+        						<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+          							<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+        							<input autocomplete='off' autofocus='autofocus' class='search' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder=' 검색' size='10' title='search' type='text'/>
         						</form>
       						</div>
     					</div>
-					<!--<b:include name='quickedit'/>-->
-					</b:includable>
+    					<!-- <b:include name='quickedit'/> -->
+  					</b:includable>
   </b:widget>
 </b:section>
+</header>
 
-	<div class='blogMain' id='blogMain'>
+<div class='spaceBlock' id='spaceBlock'/>
+
+<div class='UnderHeader slideInDown' id='UnderHeader' style='display: none;'>
+<div class='UnderHeaderBox' id='UnderHeaderBox'>
+<b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
+  <b:widget id='Stats1' locked='false' title='Page views' type='Stats' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
+      <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
+      <b:widget-setting name='showSparkline'>false</b:widget-setting>
+      <b:widget-setting name='sparklineStyle'>BLACK_TRANSPARENT</b:widget-setting>
+      <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- <b:if cond='data:title != &quot;&quot;'><h3><data:title/></h3></b:if> -->
+  <div class='widget-content'>
+    <!-- Content is going to be visible when data will be fetched from server. -->
+    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
+      <!-- Counter and image will be injected later via AJAX call. -->
+      <b:if cond='data:showSparkline'>
+        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
+      </b:if>
+      <h3>페이지뷰: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
+      <b:include name='quickedit'/>
+    </div>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section>
+<b:section class='Category' id='Category' name='카테고리' showaddelement='true'>
+  <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+
+  <!-- <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if> -->
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='Label1' locked='false' title='All' type='Label'>
+    <b:widget-settings>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>LIST</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'/>
+      <b:widget-setting name='showType'>ALL</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section>
+<b:section class='BoxBottom' id='BoxBottom' name='Box Bottom' showaddelement='true'>
+  <b:widget id='BlogArchive1' locked='false' title='아카이브' type='BlogArchive'>
+    <b:widget-settings>
+      <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+      <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+      <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+      <b:widget-setting name='monthPattern'>MM</b:widget-setting>
+      <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+      <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+      <b:widget-setting name='chronological'>false</b:widget-setting>
+      <b:widget-setting name='showPosts'>true</b:widget-setting>
+      <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+  <div id='ArchiveList'>
+  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+  </div>
+  </div>
+  <b:include name='quickedit'/>
+  </div>
+</b:includable>
+    <b:includable id='flat' var='data'>
+  <ul class='flat'>
+    <b:loop values='data:data' var='i'>
+      <li class='archivedate'>
+        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+    <b:includable id='interval' var='intervalData'>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
+  </b:loop>
+</b:includable>
+    <b:includable id='menu' var='data'>
+  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+    <option value=''><data:title/></option>
+    <b:loop values='data:data' var='i'>
+      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+    </b:loop>
+  </select>
+</b:includable>
+    <b:includable id='posts' var='posts'>
+  <ul class='posts'>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
+    </b:loop>
+  </ul>
+</b:includable>
+    <b:includable id='toggle' var='interval'>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
+</b:includable>
+  </b:widget>
+</b:section>
+</div><div class='UnderHeaderSpace' id='UnderHeaderSpace' onclick='catbar(); return false'/>
+</div>
+
+<script type='text/javascript'>
+//<![CDATA[
+// Functions for categories
+	function OCLabels(n){
+   		if(checkClass('Label')){
+			var labels = document.getElementsByClassName('Label');
+        	var labelContent = labels[n].getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
+            if (labelContent.style.display == 'block'){
+				labelContent.style.display = 'none';
+            } else {
+				labelContent.style.display = 'block';
+            }
+        }
+	}
+
+	function fixLabels(){
+    	if(checkClass('Label')){
+			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
+			var titleTag = 'h3';
+			// The 'labels' used as multible label widgets. label as a 1 label widget.
+			var labels = document.getElementsByClassName('Label');
+			for(var i = 0; i < labels.length; i++){
+        		var label = labels[i];
+				// change tag of title.
+                if(titleTag != 'h2') {
+					label.getElementsByTagName('h2')[0].outerHTML = '<' + titleTag + '>' + label.getElementsByTagName('h2')[0].innerHTML + '</' + titleTag + '>';
+                }
+				// adding attributes to tag
+				var title = label.getElementsByTagName(titleTag)[0];
+				title.setAttribute('onclick', 'OCLabels(' + i + ');');
+				var labelContent = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
+				labelContent.className += 'slideInDown';
+				// fixing each list items for number of posts in label.
+				// Use 'category' as a single category list item.
+				var categories = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+              	for(var j = 0; j < categories.length; j++){
+					var category = categories[j];
+                  	if(category.getElementsByTagName('a')[0] !== undefined){
+						if(category.getElementsByTagName('span')[0] !== undefined){
+							category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
+							category.getElementsByTagName('span')[0].outerHTML = '';
+                        }
+					}
+                  	else {
+						if(category.getElementsByTagName('span')[1] !== undefined){
+							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
+							category.getElementsByTagName('span')[1].outerHTML = '';
+                        }
+					}
+				}
+			}
+        }
+    }
+	fixLabels();
+//]]>
+</script>
+<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
+
 
 <aside>
-	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='yes'/>
+	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='true'/>
 </aside>
+
 
 <main>
 <b:section class='Content' id='Content' name='Content' showaddelement='no'>
@@ -1071,19 +1477,19 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='authorLabel'>작성자: </b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#cccccc</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#dddddd</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
       <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>카테고리:</b:widget-setting>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -1110,15 +1516,12 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>Page not found</h2></div>
+			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
-						<nav>
-							<b:include name='nextprev'/>
-               			</nav>
-						<h2>Recent posts</h2>
+						<h2>최신 포스트</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1144,8 +1547,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1155,9 +1558,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 								</b:if>
 							</article>
       					</b:loop>
-						<nav>
-							<b:include name='nextprev'/>
-               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
@@ -1168,7 +1568,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1178,14 +1578,14 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "Search result of '" + searchWords + "'"
+											searchWords = "'" + searchWords + "'의 검색 결과";
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>No search result</h2></div>
+								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
 							<h2>Archive</h2>
@@ -1217,8 +1617,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2010,175 +2410,72 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </main>
 
 <aside>
-	<b:section class='UnderMain' id='UnderMain' name='Under Main' showaddelement='yes'/>
-</aside>
-	</div>
+<b:section class='UnderMain' id='UnderMain' name='Under Main' showaddelement='yes'/>
 
+<b:section class='BottomLeft' id='BottomLeft' name='Bottom Left' showaddelement='yes'/>
+<b:section class='BottomRight' id='BottomRight' name='Bottom Right' showaddelement='yes'/>
 
-	<div class='blogSidebar' id='blogSidebar'>
-
-<aside>
-<b:section class='AboveCategory' id='AboveCategory' name='Above Category' showaddelement='yes'/>
-
-<b:section class='Category' id='Category' name='Category' showaddelement='yes'>
-  <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
+<b:section class='AboveFooter' id='AboveFooter' name='Above Footer' showaddelement='yes'>
+  <b:widget id='PopularPosts1' locked='false' title='인기 포스트' type='PopularPosts' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-
-  <!-- <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if> -->
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
-  <b:widget id='Label1' locked='false' title='All' type='Label'>
-    <b:widget-settings>
-      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-      <b:widget-setting name='display'>LIST</b:widget-setting>
-      <b:widget-setting name='selectedLabelsList'/>
-      <b:widget-setting name='showType'>ALL</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-        <b:loop values='data:labels' var='label'>
-          <li>
-            <b:if cond='data:blog.url == data:label.url'>
-              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-            <b:else/>
-              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-            </b:if>
-            <b:if cond='data:showFreqNumbers'>
-              <span dir='ltr'>(<data:label.count/>)</span>
-            </b:if>
-          </li>
-        </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
-
-
-<script type='text/javascript'>
-//<![CDATA[
-// Functions for categories
-	function OCLabels(n){
-   		if(checkClass('Label')){
-			var labels = document.getElementsByClassName('Label');
-        	var labelContent = labels[n].getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
-            if (labelContent.style.display == 'block'){
-				labelContent.style.display = 'none';
-            } else {
-				labelContent.style.display = 'block';
-            }
-        }
-	}
-
-	function fixLabels(){
-    	if(checkClass('Label')){
-			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
-			var titleTag = 'h3';
-			// The 'labels' used as multible label widgets. label as a 1 label widget.
-			var labels = document.getElementsByClassName('Label');
-			for(var i = 0; i < labels.length; i++){
-        		var label = labels[i];
-				// change tag of title.
-                if(titleTag != 'h2') {
-					label.getElementsByTagName('h2')[0].outerHTML = '<' + titleTag + '>' + label.getElementsByTagName('h2')[0].innerHTML + '</' + titleTag + '>';
-                }
-				// adding attributes to tag
-				var title = label.getElementsByTagName(titleTag)[0];
-				title.setAttribute('onclick', 'OCLabels(' + i + ');');
-				var labelContent = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
-				labelContent.className += 'slideInDown';
-				// fixing each list items for number of posts in label.
-				// Use 'category' as a single category list item.
-				var categories = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
-              	for(var j = 0; j < categories.length; j++){
-					var category = categories[j];
-                  	if(category.getElementsByTagName('a')[0] !== undefined){
-						if(category.getElementsByTagName('span')[0] !== undefined){
-							category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
-							category.getElementsByTagName('span')[0].outerHTML = '';
-                        }
-					}
-                  	else {
-						if(category.getElementsByTagName('span')[1] !== undefined){
-							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
-							category.getElementsByTagName('span')[1].outerHTML = '';
-                        }
-					}
-				}
-			}
-        }
-    }
-	fixLabels();
-//]]>
-</script>
-<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
-
-
-<b:section class='UnderCategory' id='UnderCategory' name='Under Category' showaddelement='yes'>
-  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
-    <b:widget-settings>
-      <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
-      <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
-      <b:widget-setting name='showSparkline'>false</b:widget-setting>
-      <b:widget-setting name='sparklineStyle'>BLACK_TRANSPARENT</b:widget-setting>
+      <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>true</b:widget-setting>
       <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <!-- Content is going to be visible when data will be fetched from server. -->
-    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
-      <!-- Counter and image will be injected later via AJAX call. -->
-      <b:if cond='data:showSparkline'>
-        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
-      </b:if>
-      <span expr:class='&quot;counter-wrapper &quot; + (data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'>
-      </span>
-      <b:include name='quickedit'/>
-    </div>
-  </div>
+  <b:if cond='data:title != &quot;&quot;'><h3><data:title/></h3></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><li><data:post.title/></li></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+			<li>
+				<a expr:href='data:post.href'>
+		            <div class='item-title'><h4><data:post.title/></h4></div>
+    		        <div class='item-snippet'><data:post.snippet/></div>
+				</a>
+            </li>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+		<li>
+		  <a expr:href='data:post.href'>
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                  <b:with value='data:post.featuredImage.isResizable? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;) : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+              </div>
+            <b:else/>
+              <div class='item-thumbnail'>
+					<!--
+					<img alt='' border='0' src='72x72 size image link goes here'/>
+					-->
+              </div>
+            </b:if>
+            <div class='item-title'><h4><data:post.title/></h4></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+		  </a>
+        </li>
+        </b:if>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+	</div>
 </b:includable>
   </b:widget>
 </b:section>
 </aside>
-
-	</div>
-
-<b:section class='MiddleBottom' id='MiddleBottom' name='Middle Bottom' showaddelement='yes'/>
-</div>
-
 
 
 <footer>
@@ -2188,8 +2485,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <b:section class='FooterPageSection' id='FooterPageSection' name='Footer Page Section' showaddelement='yes'>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2211,7 +2508,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:section>
 	<div id='footer-line'> </div>
 	<div id='footer-info'>
-       		<p>Design: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
+       		<p>디자인: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
 			<p>&#169;<a expr:href='data:blog.homepageUrl'><data:blog.title/></a></p>
     </div>
 </div>
@@ -2228,6 +2525,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
             if(aside.getElementsByTagName('div')[0].getElementsByTagName('div')[0] == null){
 				aside.style.padding = '0px';
 				aside.style.borderWidth = '0px';
+				aside.style.lineHeight  = '0px';
 			}
 
 		}

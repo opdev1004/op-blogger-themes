@@ -3,11 +3,11 @@
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 2 Columns, The sidebar
+* Name: OP Blogger Themes - 1 Column, The beginning
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
+* Blog: https://www.treezi.org/
+* E-mail: treezi1004@gmail.com
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
@@ -48,7 +48,7 @@
 /*
 -----------------------------------------------
 Blogger Template Style
-Name:     		The sidebar
+Name:     		The beginning
 Designer: 		Victor Chanil Park
 URL:      		https://github.com/treezi1004/op-blogger-themes
 License:  		MIT
@@ -207,7 +207,6 @@ Version: 		1.0
 
 <Group description="Width">
 	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="840px"  value="840px"/>
-	<Variable name="sidebar.width" description="Sidebar Width" type="length" min="200px" max="500px" default="280px"  value="280px"/>
 </Group>
 
 html {
@@ -330,28 +329,6 @@ header h3 a:hover,
 header h4 a:hover,
 header h5 a:hover { color: $(header.font.color2); text-decoration: none;}
 
-#blogMiddle {
-	padding: 0px;
-	margin: 5px auto;
-	width: $(width);
-}
-
-#blogMain {
-	display: inline-block;
-	padding: 0px;
-	margin: 0px 5px 0px 0px;
-	width: calc(100% - $(sidebar.width) - 10px);
-	vertical-align: top;
-}
-
-#blogSidebar{
-	display: inline-block;
-	padding: 0px;
-	margin: 0px;
-	width: $(sidebar.width);
-	vertical-align: top;
-}
-
 #SearchBar{ margin: 0px; padding: 0px; width: 100%;}
 .SearchBar .gsc-search-box { margin: 10px; auto; padding: 0px; width: auto; }
 .SearchBar .gsc-input { background-color: $(search.background.color); color: $(search.font.color); border-color: $(search.border.color); margin: 0px; padding: 10px; width: calc(100% - 100px); height: 30px; }
@@ -361,7 +338,7 @@ header h5 a:hover { color: $(header.font.color2); text-decoration: none;}
 
 main {
 	font: $(main.font);
-	width: calc(100% - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
+	width: calc($(width) - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
 	background-color: $(main.background.color);
 	color: $(main.font.color);
 	height:auto;
@@ -598,7 +575,7 @@ aside .section { margin: 0px;}
 
 aside .widget {
 	font: $(widget.font);
-	width: calc(100% - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
+	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
 	background-color: $(widget.background.color);
 	color: $(widget.font.color);
 	height:auto;
@@ -660,7 +637,7 @@ aside .widget h5 a:hover { color: $(widget.font.hover.color); text-decoration: n
 
 aside #Category {
 	font: $(category.font);
-	width: calc(100% - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
+	width: calc($(width) - $(category.border.width) * 2 - $(category.padding.horizontal) * 2);
 	background-color: $(category.background.color);
 	color: $(category.font.color);
 	height:auto;
@@ -852,9 +829,9 @@ footer #footer-line  {width: 100%;}
 
 @media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
 header, main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
-#blogMiddle { width: 100%; }
-#blogMain, #blogSidebar { width: 100%; margin: 0px; display: block; }
-
+#blog-pager, .comments-area .nav-links {font-size: 11pt;}
+#BottomLeft{ width: auto; display: block; }
+#BottomRight{ width: auto; display: block; }
 }
 
 ]]></b:skin>
@@ -1031,9 +1008,12 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </a>
 
 
-<div class='blogMiddle' id='blogMiddle'>
-<b:section class='MiddleTop' id='MiddleTop' name='Middle Top' showaddelement='yes'/>
+<aside>
+	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='true'/>
+</aside>
 
+
+<main>
 <b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='yes'>
   <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch' version='1'>
     <b:includable id='main'>
@@ -1048,7 +1028,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       						<div expr:id='data:widget.instanceId + &quot;_form&quot;'>
        		 					<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
        		   						<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-        								<input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder='Search' size='10' title='search' type='text'/>
+        								<input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder='검색' size='10' title='search' type='text'/>
                   						<input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
         						</form>
       						</div>
@@ -1058,32 +1038,26 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
   </b:widget>
 </b:section>
 
-	<div class='blogMain' id='blogMain'>
 
-<aside>
-	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='yes'/>
-</aside>
-
-<main>
 <b:section class='Content' id='Content' name='Content' showaddelement='no'>
   <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='authorLabel'>작성자: </b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#cccccc</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
       <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>카테고리: </b:widget-setting>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -1110,15 +1084,12 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>Page not found</h2></div>
+			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
-						<nav>
-							<b:include name='nextprev'/>
-               			</nav>
-						<h2>Recent posts</h2>
+						<h2>최신 포스트</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1144,8 +1115,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1155,9 +1126,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 								</b:if>
 							</article>
       					</b:loop>
-						<nav>
-							<b:include name='nextprev'/>
-               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
@@ -1168,7 +1136,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1178,17 +1146,17 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "Search result of '" + searchWords + "'"
+											searchWords = "'" + searchWords + "'의 검색 결과";
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>No search result</h2></div>
+								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>Archive</h2>
+							<h2>아카이브</h2>
 						<b:else/>
 						</b:if>
 
@@ -1217,8 +1185,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2010,20 +1978,10 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </main>
 
 <aside>
-	<b:section class='UnderMain' id='UnderMain' name='Under Main' showaddelement='yes'/>
-</aside>
-	</div>
-
-
-	<div class='blogSidebar' id='blogSidebar'>
-
-<aside>
-<b:section class='AboveCategory' id='AboveCategory' name='Above Category' showaddelement='yes'/>
-
 <b:section class='Category' id='Category' name='Category' showaddelement='yes'>
   <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2146,8 +2104,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
 
 
-<b:section class='UnderCategory' id='UnderCategory' name='Under Category' showaddelement='yes'>
-  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
+<b:section class='AboveFooter' id='AboveFooter' name='Above Footer' showaddelement='yes'>
+  <b:widget id='Stats1' locked='false' title='전체 페이지뷰' type='Stats'>
     <b:widget-settings>
       <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
       <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
@@ -2174,12 +2132,6 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:section>
 </aside>
 
-	</div>
-
-<b:section class='MiddleBottom' id='MiddleBottom' name='Middle Bottom' showaddelement='yes'/>
-</div>
-
-
 
 <footer>
 <div id='footer-inner'>
@@ -2188,8 +2140,8 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 <b:section class='FooterPageSection' id='FooterPageSection' name='Footer Page Section' showaddelement='yes'>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2211,7 +2163,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 </b:section>
 	<div id='footer-line'> </div>
 	<div id='footer-info'>
-       		<p>Design: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
+       		<p>디자인: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
 			<p>&#169;<a expr:href='data:blog.homepageUrl'><data:blog.title/></a></p>
     </div>
 </div>
