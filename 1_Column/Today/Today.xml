@@ -431,7 +431,6 @@ header span {
 	background-color: rgba(0, 0, 0, 0.7);
 	overflow-y: scroll;
 	position: fixed;
-	display: none;
 	z-index: 98;
 }
 
@@ -1229,7 +1228,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <div class='spaceBlock' id='spaceBlock'/>
 
-<div class='UnderHeader slideInDown' id='UnderHeader' style='display: none;'>
+<div class='UnderHeader slideInDown' id='UnderHeader'>
 <div class='UnderHeaderBox' id='UnderHeaderBox'>
 <b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
   <b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
@@ -1460,6 +1459,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
         }
     }
 	fixLabels();
+	catbar();
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
