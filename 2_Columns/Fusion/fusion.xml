@@ -3,7 +3,7 @@
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 1 Column, RT
+* Name: OP Blogger Themes - 1 Column, Fusion
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
 * Blog: https://www.falsesage.com/
@@ -48,7 +48,7 @@
 /*
 -----------------------------------------------
 Blogger Template Style
-Name:     		RT
+Name:     		Fusion
 Designer: 		Victor Chanil Park
 URL:      		https://github.com/treezi1004/op-blogger-themes
 License:  		MIT
@@ -73,14 +73,24 @@ Version: 		1.0
 	<Variable name="search.font.color" description="Search Font Color" type="color" default="#fff" value="#ffffff"/>
 </Group>
 
-<Group description="UnderHeader">
-	<Variable name="underheader.background.color" description="UnderHeader Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="underheader.hover.background.color" description="UnderHeader Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="underheader.selected.background.color" description="UnderHeader Selected Background Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="underheader.border.color" description="UnderHeader Border Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="underheader.font.color" description="UnderHeader Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="underheader.font.hover.color" description="UnderHeader Hover Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="underheader.font" description="UnderHeader Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
+<Group description="Search2">
+	<Variable name="search2.background.color" description="Search 2 Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="search2.border.color" description="Search 2 Border Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="search2.font.color" description="Search 2 Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="search2.button.background.color" description="Search 2 Button Background Color" type="color" default="#444"  value="#444444"/>
+	<Variable name="search2.button.hover.background.color" description="Search 2 Button Hover Background Color" type="color" default="#000"  value="#000000"/>
+	<Variable name="search2.button.font.color" description="Search 2 Button Font Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+
+<Group description="UnderHeaderBox">
+	<Variable name="underheaderbox.width" description="UnderHeaderBox Width" type="length" min="200px" max="450px" default="300px"  value="300px"/>
+	<Variable name="underheaderbox.background.color" description="UnderHeaderBox Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="underheaderbox.hover.background.color" description="UnderHeaderBox Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheaderbox.selected.background.color" description="UnderHeaderBox Selected Background Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="underheaderbox.border.color" description="UnderHeaderBox Border Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheaderbox.font.color" description="UnderHeaderBox Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheaderbox.font.hover.color" description="UnderHeaderBox Hover Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheaderbox.font" description="UnderHeaderBox Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
 </Group>
 
 <Group description="Main">
@@ -187,7 +197,7 @@ Version: 		1.0
 </Group>
 
 <Group description="Width">
-	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="840px"  value="840px"/>
+	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="1280px"  value="1280px"/>
 </Group>
 
 html {
@@ -199,6 +209,7 @@ html {
 
 body{
 	font: $(body.font);
+	font-size: 0;
 	line-height: 1.5;
 	color: $(body.font.color1);
 	background-color: $(body.background.color);
@@ -325,7 +336,7 @@ header span {
 	font-size: 10pt;
 	background:linear-gradient(to bottom, $(header.background.color) 5%, $(header.background.gradient.color) 100%);
 	background-color: $(header.background.color);
-	display: inline-block;
+	display: none;
 	text-align: center;
 	vertical-align: top;
 	width: 50px;
@@ -347,7 +358,7 @@ header span {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	width: calc(100% - 100px);
+	width: calc(100% - 50px);
 	height: 50px;
 	margin: 0px;
 	padding: 0px;
@@ -408,7 +419,7 @@ header span {
 .SearchBar .gsc-input { width:100%; margin: 0px; padding: 0px;}
 .SearchBar .widget {margin: 0px;}
 
-#search{
+#SearchBar #search{
 	padding:0px;
 	margin: 0px;
 	border-style: none;
@@ -422,53 +433,82 @@ header span {
 
 #spaceBlock{ width: 100%; height: 50px; margin: 0; padding: 0;}
 
-#UnderHeader{
-	font: $(underheader.font);
-	width: auto;
-	padding: 10px 0px 0px 10px;
-	margin: 0px;
-	color: $(underheader.font.color);
-	background-color: $(underheader.background.color);
-	display: none;
+#MainSide {
+	width: $(width);
+	padding: 0px;
+	margin: 0px auto;
+}
+
+#LeftSide {
+	width: $(underheaderbox.width);
+	display: inline-block;
 	vertical-align: top;
-	box-shadow: 0px 10px 15px #000;
+	padding: 0px;
+	margin: 0px 5px 0px 0px;
 }
 
-#UnderHeader a,
-#UnderHeader a:link,
-#UnderHeader a:visited,
-#UnderHeader a:active {
-		color: $(underheader.font.color);
+#RightSide {
+	width: calc(100% - $(underheaderbox.width) - 15px);
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
 }
 
-#UnderHeader a:hover {
-		color: $(underheader.font.hover.color);
-}
 
-#UnderHeader h1,
-#UnderHeader h3,
-#UnderHeader h4,
-#UnderHeader h5,
-#UnderHeader h6 {
-	color: $(underheader.font.color);
-}
 
-#UnderHeader h2 {
-	color: $(underheader.font.color);
-	border-bottom: 5px dotted $(underheader.border.color);
+#UnderHeader{
+	font: $(underheaderbox.font);
+	width: 100%;
+	height: auto;
 	margin: 0px;
 	padding: 0px;
 }
 
-#UnderHeader .widget {
+#UnderHeaderBox {
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	color: $(underheaderbox.font.color);
+	background-color: $(underheaderbox.background.color);
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+#UnderHeaderBox a,
+#UnderHeaderBox a:link,
+#UnderHeaderBox a:visited,
+#UnderHeaderBox a:active {
+		color: $(underheaderbox.font.color);
+}
+
+#UnderHeaderBox a:hover {
+		color: $(underheaderbox.font.hover.color);
+}
+
+#UnderHeaderBox h1,
+#UnderHeaderBox h3,
+#UnderHeaderBox h4,
+#UnderHeaderBox h5,
+#UnderHeaderBox h6 {
+	color: $(underheaderbox.font.color);
+}
+
+#UnderHeaderBox h2 {
+	color: $(underheaderbox.font.color);
+	border-bottom: 5px dotted $(underheaderbox.border.color);
+	margin: 0px;
+	padding: 0px;
+}
+
+#UnderHeaderBox .widget {
 	width: 100%;
 	margin: 10px 0px;
 	padding: 5px 0px;
-	border-bottom: 1px solid $(underheader.border.color);
+	border-bottom: 1px solid $(underheaderbox.border.color);
 }
 
 #Category {
-	border-bottom: 1px solid $(underheader.border.color);
+	border-bottom: 1px solid $(underheaderbox.border.color);
 	width: calc(100% - 10px);
 	margin: 10px 5px;
 	padding: 5px 0px;
@@ -486,21 +526,21 @@ header span {
 	padding: 0px;
 }
 
-.Label h1 { color: $(underheader.font.color); }
-.Label h2 { color: $(underheader.font.color); }
-.Label h3 { color: $(underheader.font.color); }
-.Label h4 { color: $(underheader.font.color); }
-.Label h5 { color: $(underheader.font.color); }
-.Label h6 { color: $(underheader.font.color); }
-#UnderHeader .Label a { color: $(underheader.font.color); }
+.Label h1 { color: $(underheaderbox.font.color); }
+.Label h2 { color: $(underheaderbox.font.color); }
+.Label h3 { color: $(underheaderbox.font.color); }
+.Label h4 { color: $(underheaderbox.font.color); }
+.Label h5 { color: $(underheaderbox.font.color); }
+.Label h6 { color: $(underheaderbox.font.color); }
+#UnderHeaderBox .Label a { color: $(underheaderbox.font.color); }
 
-.Label h1:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-.Label h2:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-.Label h3:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-.Label h4:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-.Label h5:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-.Label h6:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
-#UnderHeader .Label a:hover { color: $(underheader.font.color); }
+.Label h1:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h2:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h3:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h4:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h5:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+.Label h6:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
+#UnderHeaderBox .Label a:hover { color: $(underheaderbox.font.color); }
 
 .Label img{display: none;}
 
@@ -523,16 +563,29 @@ header span {
 	display: block;
 	margin: 0px;
 	padding: 0px;
-	background-color: $(underheader.selected.background.color);
+	background-color: $(underheaderbox.selected.background.color);
 }
-.Label ul li a { color: $(underheader.font.color); display: block; margin: 0px; padding: 0px; }
-.Label ul li a:hover { color: $(underheader.font.color); }
-.Label ul li:hover { background-color: $(underheader.hover.background.color);}
+.Label ul li a { color: $(underheaderbox.font.color); display: block; margin: 0px; padding: 0px; }
+.Label ul li a:hover { color: $(underheaderbox.font.color); }
+.Label ul li:hover { background-color: $(underheaderbox.hover.background.color);}
 
+#UnderHeaderSpace {
+	padding: 0px;
+	margin: 0px;
+	height: calc(100vh - 50px);
+	width: calc(100% - 400px);
+	display: none;
+}
+#BlogSearch2 { margin: 0px; padding: 0px; width: 100%; display: block; }
+#BlogSearch2 .gsc-search-box { margin: 10px; auto; padding: 0px; width: auto; }
+#BlogSearch2 .gsc-input { background-color: $(search2.background.color); color: $(search2.font.color); border-color: $(search2.border.color); margin: 0px; padding: 10px; width: calc(100% - 100px); height: 30px; }
+#BlogSearch2 .gsc-search-button { background-color: $(search2.button.background.color); color: $(search2.button.font.color); margin: 0px; padding: 0px; width: 74px; height: 52px; }
+#BlogSearch2 .gsc-search-button:hover { background-color: $(search2.button.hover.background.color); }
+#BlogSearch2 .widget { margin: 0px; }
 
 main {
 	font: $(main.font);
-	width: calc($(width) - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
+	width: calc(100% - $(main.border.width) * 2 - $(main.padding.horizontal) * 2);
 	background-color: $(main.background.color);
 	color: $(main.font.color);
 	height:auto;
@@ -578,6 +631,8 @@ main h2 a:hover,
 main h3 a:hover,
 main h4 a:hover,
 main h5 a:hover { color: $(main.font.hover.color); text-decoration: none;}
+
+main .widget { line-height: 1.5; }
 
 nav span {
 	font: $(nav.font);
@@ -768,14 +823,14 @@ article .postTitle {
 aside .section { margin: 0px;}
 
 aside {
-	width: $(width);
+	width: 100%;
 	height:auto;
 	margin: 0px auto;
 	padding: 0px;
 }
 
 aside .widget {
-	width: calc($(width) - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
+	width: calc(100% - $(widget.border.width) * 2 - $(widget.padding.horizontal) * 2);
 	font: $(widget.font);
 	background-color: $(widget.background.color);
 	color: $(widget.font.color);
@@ -848,7 +903,7 @@ aside .widget a:hover {
 }
 
 /* Where it gives margin to the left and right of webpage */
-.section { margin: 0px 5px;}
+.section { margin: 0px;}
 
 .widget { line-height: 1; }
 
@@ -1034,7 +1089,70 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
 footer #footer-line  {width: 100%;}
 }
 
+@media all and (min-width: 0px) and (max-width: 500px) {
+
+#UnderHeaderBox {
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
+	width: 100%;
+	color: $(underheaderbox.font.color);
+	background-color: $(underheaderbox.background.color);
+	height: auto;
+	min-height: calc(100vh - 50px);
+	box-shadow: 0px 10px 15px #000;
+	display: inline-block;
+	vertical-align: top;
+}
+
+}
+
+@media all and (min-width: 500px) and (max-width: calc($(width) + 16px) ) {
+
+#UnderHeaderBox {
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
+	width: 400px;
+	color: $(underheaderbox.font.color);
+	background-color: $(underheaderbox.background.color);
+	height: auto;
+	min-height: calc(100vh - 50px);
+	box-shadow: 0px 10px 15px #000;
+	display: inline-block;
+	vertical-align: top;
+}
+
+}
+
 @media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
+
+.section { margin: 0px 5px;}
+
+#menu1{ display: inline-block; }
+#menu2{ width: calc(100% - 100px); display: inline-block; }
+#menu3{	display: inline-block; }
+
+#UnderHeader{
+	font: $(underheaderbox.font);
+	width: 100%;
+	height: calc(100vh - 50px);
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow-y: scroll;
+	position: fixed;
+	z-index: 98;
+	display: none;
+}
+
+#UnderHeaderSpace { display: inline-block; }
+
+#SearchBar{ width: calc(100% - 100px); }
+
+#MainSide { width: 100%; padding: 0px; margin: -10px 0px 0px 0px; }
+#LeftSide { width: 100%; display: block; padding: 0px; margin: 0px; }
+#RightSide { width: 100%; display: block; padding: 0px; margin: 0px; }
+
+
 header { width: 100%; }
 main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
 #blog-pager, .comments-area .nav-links {font-size: 11pt;}
@@ -1081,8 +1199,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 			}
 
 			function searchbar(){
-				if(document.getElementById("menu1").style.display == "none"){
-  					document.getElementById("menu1").style.display = "inline-block";
+				if(document.getElementById("menu2").style.display == "none"){
 					document.getElementById("menu2").style.display = "inline-block";
 					document.getElementById("SearchBar").style.display = "none";
 					document.getElementById("search").value = "";
@@ -1090,7 +1207,6 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 					document.getElementById("backBtn").style.display = "none";
 				}
 				else{
-    				document.getElementById("menu1").style.display = "none";
 					document.getElementById("menu2").style.display = "none";
 					document.getElementById("SearchBar").style.display = "inline-block";
 					document.getElementById("search").focus();
@@ -1103,11 +1219,15 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 				var cat = document.getElementById("UnderHeader");
 				if(cat.style.display == "none"){
    		   			cat.style.display = "block";
-					window.location='#spaceBlock';
 				}
 				else{
 		    		cat.style.display = "none";
-					window.location='#spaceBlock';
+				}
+			}
+
+			function FixAll(){
+				if(document.getElementById("UnderHeader").style.display == "none"){
+					catbar();
 				}
 			}
 
@@ -1163,17 +1283,17 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 
 
-<body>
+<body onresize='FixAll();'>
 
 
 <header>
-	<div class='slideInLeft' id='menu1' onclick='catbar(); return false'>
+	<div class='slideInLeft' id='menu1' onclick='catbar(); return false;'>
     	<span>Meun</span>
 	</div>
 	<div class='slideInLeft' id='menu2'>
 		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
 	</div>
-	<div id='menu3' onclick='searchbar();return false'>
+	<div id='menu3' onclick='searchbar(); return false;'>
 		<div class='slideInLeft' id='searchBtn'><span>Search</span></div>
 		<div class='slideInRight' id='backBtn'><span>Back</span></div>
 	</div>
@@ -1202,8 +1322,12 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </header>
 
 <div class='spaceBlock' id='spaceBlock'/>
+<div class='MainSide' id='MainSide'>
+<b:section class='Top' id='Top' name='Top' showaddelement='true'/>
 
+<div class='LeftSide' id='LeftSide'>
 <div class='UnderHeader slideInDown' id='UnderHeader'>
+<div class='UnderHeaderBox' id='UnderHeaderBox'>
 <b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
   <b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
     <b:widget-settings>
@@ -1376,6 +1500,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:includable>
   </b:widget>
 </b:section>
+</div><div class='UnderHeaderSpace' id='UnderHeaderSpace' onclick='catbar(); return false'/>
 </div>
 
 <script type='text/javascript'>
@@ -1435,8 +1560,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
+</div>
 
-
+<div class='RightSide' id='RightSide'>
 <aside>
 	<b:section class='AboveMain' id='AboveMain' name='Above Main' showaddelement='true'/>
 </aside>
@@ -1444,15 +1570,16 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <main>
 <b:section class='Content' id='Content' name='Content' showaddelement='no'>
-  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+  <b:widget id='Blog1' locked='true' title='블로그 게시물' type='Blog' version='1'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
       <b:widget-setting name='authorLabel'>By</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#dddddd</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#4d4d4d</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
+      <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
@@ -1505,6 +1632,19 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
+											<!--
+											<b:if cond='data:post.firstImageUrl'>
+            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
+													<div class='post-index-image'>
+               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
+                                           		 	</div>
+                  								</b:with>
+                							<b:else/>
+													<div class='post-index-image'>
+														<img alt='Post Image' src=''/>
+													</div>
+											</b:if>
+											-->
 											<div class='post-index-info'>
 												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
 												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
@@ -1562,6 +1702,19 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
+											<!--
+											<b:if cond='data:post.firstImageUrl'>
+            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
+													<div class='post-index-image'>
+               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
+                                           		 	</div>
+                  								</b:with>
+                							<b:else/>
+													<div class='post-index-image'>
+														<img alt='Post Image' src=''/>
+													</div>
+											</b:if>
+											-->
 											<div class='post-index-info'>
 												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
 												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
@@ -2422,7 +2575,11 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
   </b:widget>
 </b:section>
 </aside>
+</div>
 
+<b:section class='Bottom' id='Bottom' name='Bottom' showaddelement='true'/>
+
+</div> <!-- MainSide end -->
 
 <footer>
 <div id='footer-inner'>
