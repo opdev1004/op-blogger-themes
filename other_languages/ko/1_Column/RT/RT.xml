@@ -1493,6 +1493,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
+						<nav>
+							<b:include name='nextprev'/>
+               			</nav>
 						<h2>최신 포스트</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
@@ -1530,6 +1533,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 								</b:if>
 							</article>
       					</b:loop>
+								<nav>
+									<b:include name='nextprev'/>
+		               			</nav>								
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>

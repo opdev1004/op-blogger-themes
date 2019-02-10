@@ -1089,6 +1089,9 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
+						<nav>
+							<b:include name='nextprev'/>
+               			</nav>
 						<h2>Recent posts</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
@@ -1126,6 +1129,9 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 								</b:if>
 							</article>
       					</b:loop>
+								<nav>
+									<b:include name='nextprev'/>
+		               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
