@@ -3,11 +3,11 @@
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 1 Column, Today
+* Name: OP Blogger Themes - 1 Column, RT
 * Version: 1.0
 * Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.treezi.org/
-* E-mail: treezi1004@gmail.com
+* Blog: https://www.falsesage.com/
+* E-mail: falsesage1004@gmail.com
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
@@ -73,14 +73,14 @@ Version: 		1.0
 	<Variable name="search.font.color" description="Search Font Color" type="color" default="#fff" value="#ffffff"/>
 </Group>
 
-<Group description="UnderHeaderBox">
-	<Variable name="underheaderbox.background.color" description="UnderHeaderBox Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="underheaderbox.hover.background.color" description="UnderHeaderBox Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="underheaderbox.selected.background.color" description="UnderHeaderBox Selected Background Color" type="color" default="#999"  value="#999999"/>
-	<Variable name="underheaderbox.border.color" description="UnderHeaderBox Border Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="underheaderbox.font.color" description="UnderHeaderBox Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="underheaderbox.font.hover.color" description="UnderHeaderBox Hover Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="underheaderbox.font" description="UnderHeaderBox Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
+<Group description="UnderHeader">
+	<Variable name="underheader.background.color" description="UnderHeader Background Color" type="color" default="#fff"  value="#ffffff"/>
+	<Variable name="underheader.hover.background.color" description="UnderHeader Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheader.selected.background.color" description="UnderHeader Selected Background Color" type="color" default="#999"  value="#999999"/>
+	<Variable name="underheader.border.color" description="UnderHeader Border Color" type="color" default="#ccc"  value="#cccccc"/>
+	<Variable name="underheader.font.color" description="UnderHeader Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheader.font.hover.color" description="UnderHeader Hover Font Color" type="color" default="#000" value="#000000"/>
+	<Variable name="underheader.font" description="UnderHeader Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
 </Group>
 
 <Group description="Main">
@@ -423,65 +423,52 @@ header span {
 #spaceBlock{ width: 100%; height: 50px; margin: 0; padding: 0;}
 
 #UnderHeader{
-	font: $(underheaderbox.font);
-	width: 100%;
-	height: calc(100vh - 50px);
+	font: $(underheader.font);
+	width: auto;
+	padding: 10px 0px 0px 10px;
 	margin: 0px;
-	padding: 0px;
-	background-color: rgba(0, 0, 0, 0.7);
-	overflow-y: scroll;
-	position: fixed;
-	z-index: 98;
-}
-
-#UnderHeaderBox {
-	padding: 10px 0px 0px 0px;
-	margin: 0px;
-	color: $(underheaderbox.font.color);
-	background-color: $(underheaderbox.background.color);
-	width: 400px;
-	height: auto;
-	min-height: calc(100vh - 50px);
-	box-shadow: 0px 10px 15px #000;
-	display: inline-block;
+	color: $(underheader.font.color);
+	background-color: $(underheader.background.color);
+	display: none;
 	vertical-align: top;
+	box-shadow: 0px 10px 15px #000;
 }
 
-#UnderHeaderBox a,
-#UnderHeaderBox a:link,
-#UnderHeaderBox a:visited,
-#UnderHeaderBox a:active {
-		color: $(underheaderbox.font.color);
+#UnderHeader a,
+#UnderHeader a:link,
+#UnderHeader a:visited,
+#UnderHeader a:active {
+		color: $(underheader.font.color);
 }
 
-#UnderHeaderBox a:hover {
-		color: $(underheaderbox.font.hover.color);
+#UnderHeader a:hover {
+		color: $(underheader.font.hover.color);
 }
 
-#UnderHeaderBox h1,
-#UnderHeaderBox h3,
-#UnderHeaderBox h4,
-#UnderHeaderBox h5,
-#UnderHeaderBox h6 {
-	color: $(underheaderbox.font.color);
+#UnderHeader h1,
+#UnderHeader h3,
+#UnderHeader h4,
+#UnderHeader h5,
+#UnderHeader h6 {
+	color: $(underheader.font.color);
 }
 
-#UnderHeaderBox h2 {
-	color: $(underheaderbox.font.color);
-	border-bottom: 5px dotted $(underheaderbox.border.color);
+#UnderHeader h2 {
+	color: $(underheader.font.color);
+	border-bottom: 5px dotted $(underheader.border.color);
 	margin: 0px;
 	padding: 0px;
 }
 
-#UnderHeaderBox .widget {
+#UnderHeader .widget {
 	width: 100%;
 	margin: 10px 0px;
 	padding: 5px 0px;
-	border-bottom: 1px solid $(underheaderbox.border.color);
+	border-bottom: 1px solid $(underheader.border.color);
 }
 
 #Category {
-	border-bottom: 1px solid $(underheaderbox.border.color);
+	border-bottom: 1px solid $(underheader.border.color);
 	width: calc(100% - 10px);
 	margin: 10px 5px;
 	padding: 5px 0px;
@@ -499,21 +486,21 @@ header span {
 	padding: 0px;
 }
 
-.Label h1 { color: $(underheaderbox.font.color); }
-.Label h2 { color: $(underheaderbox.font.color); }
-.Label h3 { color: $(underheaderbox.font.color); }
-.Label h4 { color: $(underheaderbox.font.color); }
-.Label h5 { color: $(underheaderbox.font.color); }
-.Label h6 { color: $(underheaderbox.font.color); }
-#UnderHeaderBox .Label a { color: $(underheaderbox.font.color); }
+.Label h1 { color: $(underheader.font.color); }
+.Label h2 { color: $(underheader.font.color); }
+.Label h3 { color: $(underheader.font.color); }
+.Label h4 { color: $(underheader.font.color); }
+.Label h5 { color: $(underheader.font.color); }
+.Label h6 { color: $(underheader.font.color); }
+#UnderHeader .Label a { color: $(underheader.font.color); }
 
-.Label h1:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-.Label h2:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-.Label h3:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-.Label h4:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-.Label h5:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-.Label h6:hover { color: $(underheaderbox.font.color); background-color: $(underheaderbox.hover.background.color); cursor: pointer;}
-#UnderHeaderBox .Label a:hover { color: $(underheaderbox.font.color); }
+.Label h1:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+.Label h2:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+.Label h3:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+.Label h4:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+.Label h5:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+.Label h6:hover { color: $(underheader.font.color); background-color: $(underheader.hover.background.color); cursor: pointer;}
+#UnderHeader .Label a:hover { color: $(underheader.font.color); }
 
 .Label img{display: none;}
 
@@ -536,19 +523,11 @@ header span {
 	display: block;
 	margin: 0px;
 	padding: 0px;
-	background-color: $(underheaderbox.selected.background.color);
+	background-color: $(underheader.selected.background.color);
 }
-.Label ul li a { color: $(underheaderbox.font.color); display: block; margin: 0px; padding: 0px; }
-.Label ul li a:hover { color: $(underheaderbox.font.color); }
-.Label ul li:hover { background-color: $(underheaderbox.hover.background.color);}
-
-#UnderHeaderSpace {
-	padding: 0px;
-	margin: 0px;
-	height: calc(100vh - 50px);
-	width: calc(100% - 400px);
-	display: inline-block;
-}
+.Label ul li a { color: $(underheader.font.color); display: block; margin: 0px; padding: 0px; }
+.Label ul li a:hover { color: $(underheader.font.color); }
+.Label ul li:hover { background-color: $(underheader.hover.background.color);}
 
 
 main {
@@ -1055,10 +1034,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: $(footer.line.
 footer #footer-line  {width: 100%;}
 }
 
-@media all and (min-width: 0px) and (max-width: 500px) {
-#UnderHeaderBox { width: 100%; }
-}
-
 @media all and (min-width: 0px) and (max-width: calc($(width) + 16px) ) {
 header { width: 100%; }
 main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; width: calc(100% - 10px); padding-right: 5px; padding-left: 5px; }
@@ -1128,11 +1103,11 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 				var cat = document.getElementById("UnderHeader");
 				if(cat.style.display == "none"){
    		   			cat.style.display = "block";
-					document.documentElement.style.overflowY = 'hidden';
+					window.location='#spaceBlock';
 				}
 				else{
 		    		cat.style.display = "none";
-					document.documentElement.style.overflowY = 'auto';
+					window.location='#spaceBlock';
 				}
 			}
 
@@ -1193,14 +1168,14 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <header>
 	<div class='slideInLeft' id='menu1' onclick='catbar(); return false'>
-    	<span>메뉴</span>
+    	<span>Meun</span>
 	</div>
 	<div class='slideInLeft' id='menu2'>
 		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
 	</div>
 	<div id='menu3' onclick='searchbar();return false'>
-		<div class='slideInLeft' id='searchBtn'><span>검색</span></div>
-		<div class='slideInRight' id='backBtn'><span>뒤로</span></div>
+		<div class='slideInLeft' id='searchBtn'><span>Search</span></div>
+		<div class='slideInRight' id='backBtn'><span>Back</span></div>
 	</div>
 
 <b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
@@ -1216,7 +1191,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       						<div expr:id='data:widget.instanceId + &quot;_form&quot;'>
         						<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
           							<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-        							<input autocomplete='off' autofocus='autofocus' class='search' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder=' 검색' size='10' title='search' type='text'/>
+        							<input autocomplete='off' autofocus='autofocus' class='search' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder=' Search' size='10' title='search' type='text'/>
         						</form>
       						</div>
     					</div>
@@ -1228,10 +1203,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <div class='spaceBlock' id='spaceBlock'/>
 
-<div class='UnderHeader slideInDown' id='UnderHeader' style='display: none;' >
-<div class='UnderHeaderBox' id='UnderHeaderBox'>
+<div class='UnderHeader slideInDown' id='UnderHeader'>
 <b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
-  <b:widget id='Stats1' locked='false' title='Page views' type='Stats' version='1'>
+  <b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
     <b:widget-settings>
       <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
       <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
@@ -1248,17 +1222,17 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       <b:if cond='data:showSparkline'>
         <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
       </b:if>
-      <h3>페이지뷰: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
+      <h3>Pageviews: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
       <b:include name='quickedit'/>
     </div>
   </div>
 </b:includable>
   </b:widget>
 </b:section>
-<b:section class='Category' id='Category' name='카테고리' showaddelement='true'>
+<b:section class='Category' id='Category' name='Category' showaddelement='true'>
   <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -1321,7 +1295,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
   </b:widget>
 </b:section>
 <b:section class='BoxBottom' id='BoxBottom' name='Box Bottom' showaddelement='true'>
-  <b:widget id='BlogArchive1' locked='false' title='아카이브' type='BlogArchive'>
+  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
     <b:widget-settings>
       <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
       <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -1402,7 +1376,6 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:includable>
   </b:widget>
 </b:section>
-</div><div class='UnderHeaderSpace' id='UnderHeaderSpace' onclick='catbar(); return false'/>
 </div>
 
 <script type='text/javascript'>
@@ -1459,6 +1432,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
         }
     }
 	fixLabels();
+	catbar();
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>
@@ -1476,19 +1450,19 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>작성자: </b:widget-setting>
+      <b:widget-setting name='authorLabel'>By</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#dddddd</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
       <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>카테고리:</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -1515,12 +1489,12 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
+			<div class='centerbox'><h2>Page not found</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
-						<h2>최신 포스트</h2>
+						<h2>Recent posts</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1532,22 +1506,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
-											<!--
-											<b:if cond='data:post.firstImageUrl'>
-            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
-													<div class='post-index-image'>
-               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
-                                           		 	</div>
-                  								</b:with>
-                							<b:else/>
-													<div class='post-index-image'>
-														<img alt='Post Image' src=''/>
-													</div>
-											</b:if>
-											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1567,7 +1528,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1577,17 +1538,17 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "'" + searchWords + "'의 검색 결과";
+											searchWords = "Search result of '" + searchWords + "'"
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
+								<div class='centerbox'><h2>No search result</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>아카이브</h2>
+							<h2>Archive</h2>
 						<b:else/>
 						</b:if>
 
@@ -1602,22 +1563,9 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
     							<b:if cond='data:post.title'>
 									<a expr:href='data:post.link ? data:post.link : data:post.url'>
 										<div class='post-index-item'>
-											<!--
-											<b:if cond='data:post.firstImageUrl'>
-            	      							<b:with value='resizeImage(data:post.firstImageUrl, 200, &quot;1:1&quot;)' var='image'>
-													<div class='post-index-image'>
-               	     									<img alt='Post Image' border='0' expr:src='data:image'/>
-                                           		 	</div>
-                  								</b:with>
-                							<b:else/>
-													<div class='post-index-image'>
-														<img alt='Post Image' src=''/>
-													</div>
-											</b:if>
-											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2415,7 +2363,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 <b:section class='BottomRight' id='BottomRight' name='Bottom Right' showaddelement='yes'/>
 
 <b:section class='AboveFooter' id='AboveFooter' name='Above Footer' showaddelement='yes'>
-  <b:widget id='PopularPosts1' locked='false' title='인기 포스트' type='PopularPosts' version='1'>
+  <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='1'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2484,8 +2432,8 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 <b:section class='FooterPageSection' id='FooterPageSection' name='Footer Page Section' showaddelement='yes'>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2507,7 +2455,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:section>
 	<div id='footer-line'> </div>
 	<div id='footer-info'>
-       		<p>디자인: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
+       		<p>Design: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
 			<p>&#169;<a expr:href='data:blog.homepageUrl'><data:blog.title/></a></p>
     </div>
 </div>
