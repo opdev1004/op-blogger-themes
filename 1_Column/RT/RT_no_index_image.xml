@@ -1432,7 +1432,6 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
         }
     }
 	fixLabels();
-	catbar();
 //]]>
 </script>
 <noscript>JavaScript cannot be run. Please configure your setting.</noscript>

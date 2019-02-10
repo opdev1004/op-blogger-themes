@@ -1168,14 +1168,14 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <header>
 	<div class='slideInLeft' id='menu1' onclick='catbar(); return false'>
-    	<span>Meun</span>
+    	<span>메뉴</span>
 	</div>
 	<div class='slideInLeft' id='menu2'>
 		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
 	</div>
 	<div id='menu3' onclick='searchbar();return false'>
-		<div class='slideInLeft' id='searchBtn'><span>Search</span></div>
-		<div class='slideInRight' id='backBtn'><span>Back</span></div>
+		<div class='slideInLeft' id='searchBtn'><span>검색</span></div>
+		<div class='slideInRight' id='backBtn'><span>뒤로</span></div>
 	</div>
 
 <b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
@@ -1191,7 +1191,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       						<div expr:id='data:widget.instanceId + &quot;_form&quot;'>
         						<form class='gsc-search-box' expr:action='data:blog.searchUrl'>
           							<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-        							<input autocomplete='off' autofocus='autofocus' class='search' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder=' Search' size='10' title='search' type='text'/>
+        							<input autocomplete='off' autofocus='autofocus' class='search' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' id='search' name='q' placeholder=' 검색' size='10' title='search' type='text'/>
         						</form>
       						</div>
     					</div>
@@ -1222,7 +1222,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       <b:if cond='data:showSparkline'>
         <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
       </b:if>
-      <h3>Pageviews: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
+      <h3>페이지뷰: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
       <b:include name='quickedit'/>
     </div>
   </div>
@@ -1232,7 +1232,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 <b:section class='Category' id='Category' name='Category' showaddelement='true'>
   <b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -1295,7 +1295,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
   </b:widget>
 </b:section>
 <b:section class='BoxBottom' id='BoxBottom' name='Box Bottom' showaddelement='true'>
-  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+  <b:widget id='BlogArchive1' locked='false' title='아카이브' type='BlogArchive'>
     <b:widget-settings>
       <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
       <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -1444,24 +1444,24 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <main>
 <b:section class='Content' id='Content' name='Content' showaddelement='no'>
-  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+  <b:widget id='Blog1' locked='true' title='블로그 게시물' type='Blog' version='1'>
     <b:widget-settings>
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#999999</b:widget-setting>
       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+      <b:widget-setting name='authorLabel'>작성자: </b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#dddddd</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
       <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
       <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>카테고리:</b:widget-setting>
       <b:widget-setting name='showTimestamp'>true</b:widget-setting>
       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
@@ -1488,12 +1488,12 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>Page not found</h2></div>
+			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
 					<div class='indexpostlist'>
-						<h2>Recent posts</h2>
+						<h2>최신 포스트</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1519,8 +1519,8 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1540,7 +1540,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1550,17 +1550,17 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "Search result of '" + searchWords + "'"
+											searchWords = "'" + searchWords + "'의 검색 결과";
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>No search result</h2></div>
+								<div class='centerbox'><h2>검색 결과를 찾을 수 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>Archive</h2>
+							<h2>아카이브</h2>
 						<b:else/>
 						</b:if>
 
@@ -1589,8 +1589,8 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2457,8 +2457,8 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 <b:section class='FooterPageSection' id='FooterPageSection' name='Footer Page Section' showaddelement='yes'>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2480,7 +2480,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 </b:section>
 	<div id='footer-line'> </div>
 	<div id='footer-info'>
-       		<p>Design: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
+       		<p>디자인: <a href='https://github.com/treezi1004' target='_blank'>Victor Chanil Park</a></p>
 			<p>&#169;<a expr:href='data:blog.homepageUrl'><data:blog.title/></a></p>
     </div>
 </div>
