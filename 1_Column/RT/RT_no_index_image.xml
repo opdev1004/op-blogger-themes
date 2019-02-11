@@ -1168,7 +1168,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 <header>
 	<div class='slideInLeft' id='menu1' onclick='catbar(); return false'>
-    	<span>Meun</span>
+    	<span>Menu</span>
 	</div>
 	<div class='slideInLeft' id='menu2'>
 		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
@@ -1522,7 +1522,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       					</b:loop>
 								<nav>
 									<b:include name='nextprev'/>
-		               			</nav>								
+		               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
