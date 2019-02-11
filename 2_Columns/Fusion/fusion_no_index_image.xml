@@ -83,7 +83,7 @@ Version: 		1.0
 </Group>
 
 <Group description="UnderHeaderBox">
-	<Variable name="underheaderbox.width" description="UnderHeaderBox Width" type="length" min="200px" max="450px" default="300px"  value="300px"/>
+	<Variable name="underheaderbox.width" description="UnderHeaderBox Width" type="length" min="200px" max="450px" default="350px"  value="350px"/>
 	<Variable name="underheaderbox.background.color" description="UnderHeaderBox Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="underheaderbox.hover.background.color" description="UnderHeaderBox Hover Background Color" type="color" default="#ccc"  value="#cccccc"/>
 	<Variable name="underheaderbox.selected.background.color" description="UnderHeaderBox Selected Background Color" type="color" default="#999"  value="#999999"/>
@@ -91,6 +91,12 @@ Version: 		1.0
 	<Variable name="underheaderbox.font.color" description="UnderHeaderBox Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="underheaderbox.font.hover.color" description="UnderHeaderBox Hover Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="underheaderbox.font" description="UnderHeaderBox Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 21px &#39;Jua&#39;, sans-serif"/>
+	<Variable name="sidebar.margin" description="SideBar Margin" type="length" min="0px" max="100px" default="10px"  value="10px"/>
+	<Variable name="sidebar.padding.vertical" description="SideBar Padding Vertical" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="sidebar.padding.horizontal" description="SideBar Padding Horizontal" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="sidebar.border.radius" description="SideBar Border Radius" type="length" min="0px" max="100px" default="5px"  value="5px"/>
+	<Variable name="sidebar.border.width" description="SideBar Border Width" type="length" min="0px" max="100px" default="1px"  value="1px"/>
+	<Variable name="sidebar.border.color" description="SideBar Border Color" type="color" default="#999"  value="#999999"/>
 </Group>
 
 <Group description="Main">
@@ -469,9 +475,14 @@ header span {
 	margin: 0px;
 	color: $(underheaderbox.font.color);
 	background-color: $(underheaderbox.background.color);
-	width: 100%;
+	width: calc(100% - $(sidebar.border.width) * 2 - $(sidebar.padding.horizontal) * 2);
 	height: auto;
 	vertical-align: top;
+	margin: $(sidebar.margin) auto;
+	padding: $(sidebar.padding.vertical) $(sidebar.padding.horizontal);
+	border: $(sidebar.border.width) solid $(sidebar.border.color);
+    border-radius: $(sidebar.border.radius);
+	box-shadow: $(shadow.x) $(shadow.y) $(shadow.color);
 }
 
 #UnderHeaderBox a,
@@ -500,6 +511,12 @@ header span {
 	padding: 0px;
 }
 
+#UnderHeaderBox .section {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
 #UnderHeaderBox .widget {
 	width: 100%;
 	margin: 10px 0px;
@@ -509,8 +526,8 @@ header span {
 
 #Category {
 	border-bottom: 1px solid $(underheaderbox.border.color);
-	width: calc(100% - 10px);
-	margin: 10px 5px;
+	width: 100%;
+	margin: 10px 0px;
 	padding: 5px 0px;
 }
 
@@ -1102,6 +1119,9 @@ footer #footer-line  {width: 100%;}
 	box-shadow: 0px 10px 15px #000;
 	display: inline-block;
 	vertical-align: top;
+	border: 0px solid $(sidebar.border.color);
+    border-radius: 0px;
+	box-shadow: none;
 }
 
 }
@@ -1119,6 +1139,9 @@ footer #footer-line  {width: 100%;}
 	box-shadow: 0px 10px 15px #000;
 	display: inline-block;
 	vertical-align: top;
+	border: 0px solid $(sidebar.border.color);
+    border-radius: 0px;
+	box-shadow: none;
 }
 
 }
@@ -1216,18 +1239,21 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 			}
 
 			function catbar(){
-				var cat = document.getElementById("UnderHeader");
-				if(cat.style.display == "none"){
-   		   			cat.style.display = "block";
+				var UnderHeaderMenu = document.getElementById("UnderHeader");
+				if(UnderHeaderMenu.style.display == "none"){
+   		   			UnderHeaderMenu.style.display = "block";
 				}
 				else{
-		    		cat.style.display = "none";
+		    		UnderHeaderMenu.style.display = "none";
 				}
 			}
 
-			function FixAll(){
-				if(document.getElementById("UnderHeader").style.display == "none"){
-					catbar();
+			function FixSidebar(){
+				var UnderHeaderMenu = document.getElementById("UnderHeader");
+				var MenuButton = document.getElementById("menu1");
+				var MBStyle = window.getComputedStyle(MenuButton);
+				if(UnderHeaderMenu.style.display == "none" && MBStyle.display == "none"){
+					UnderHeaderMenu.style.display = "block";
 				}
 			}
 
@@ -1283,7 +1309,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 
 
-<body onresize='FixAll();'>
+<body onresize='FixSidebar();'>
 
 
 <header>
@@ -1649,7 +1675,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       					</b:loop>
 								<nav>
 									<b:include name='nextprev'/>
-		               			</nav>											
+		               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
