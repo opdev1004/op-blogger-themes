@@ -73,15 +73,6 @@ Version: 		1.0
 	<Variable name="search.font.color" description="Search Font Color" type="color" default="#fff" value="#ffffff"/>
 </Group>
 
-<Group description="Search2">
-	<Variable name="search2.background.color" description="Search 2 Background Color" type="color" default="#fff"  value="#ffffff"/>
-	<Variable name="search2.border.color" description="Search 2 Border Color" type="color" default="#ccc"  value="#cccccc"/>
-	<Variable name="search2.font.color" description="Search 2 Font Color" type="color" default="#000" value="#000000"/>
-	<Variable name="search2.button.background.color" description="Search 2 Button Background Color" type="color" default="#444"  value="#444444"/>
-	<Variable name="search2.button.hover.background.color" description="Search 2 Button Hover Background Color" type="color" default="#000"  value="#000000"/>
-	<Variable name="search2.button.font.color" description="Search 2 Button Font Color" type="color" default="#fff" value="#ffffff"/>
-</Group>
-
 <Group description="UnderHeaderBox">
 	<Variable name="underheaderbox.width" description="UnderHeaderBox Width" type="length" min="200px" max="450px" default="350px"  value="350px"/>
 	<Variable name="underheaderbox.background.color" description="UnderHeaderBox Background Color" type="color" default="#fff"  value="#ffffff"/>
@@ -593,12 +584,6 @@ header span {
 	width: calc(100% - 400px);
 	display: none;
 }
-#BlogSearch2 { margin: 0px; padding: 0px; width: 100%; display: block; }
-#BlogSearch2 .gsc-search-box { margin: 10px; auto; padding: 0px; width: auto; }
-#BlogSearch2 .gsc-input { background-color: $(search2.background.color); color: $(search2.font.color); border-color: $(search2.border.color); margin: 0px; padding: 10px; width: calc(100% - 100px); height: 30px; }
-#BlogSearch2 .gsc-search-button { background-color: $(search2.button.background.color); color: $(search2.button.font.color); margin: 0px; padding: 0px; width: 74px; height: 52px; }
-#BlogSearch2 .gsc-search-button:hover { background-color: $(search2.button.hover.background.color); }
-#BlogSearch2 .widget { margin: 0px; }
 
 main {
 	font: $(main.font);
