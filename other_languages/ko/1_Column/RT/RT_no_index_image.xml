@@ -1247,7 +1247,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Label1' locked='false' title='All' type='Label'>
+  <b:widget id='Label1' locked='false' title='전체 카테고리' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
       <b:widget-setting name='display'>LIST</b:widget-setting>
@@ -1522,7 +1522,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
       					</b:loop>
 								<nav>
 									<b:include name='nextprev'/>
-		               			</nav>								
+		               			</nav>
                 	</div>
 	</b:includable>
     <b:includable id='aIndex' var='posts'>
