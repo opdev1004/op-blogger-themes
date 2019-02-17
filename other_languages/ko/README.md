@@ -17,8 +17,8 @@ OP 구글 블로그 테마는 추가적인 테마 개발 없이 바로 블로그
 8. 썸네일 (추가 설정을 해주어야 합니다)/썸네일 기능을 뺀 테마도 있습니다.
 
 ## 테마 설치하는 법:
-유튜브: https://www.youtube.com/watch?v=7MffCYMZEkA
-블로그: https://www.treezi.org/2019/02/how-to-install-op-blogger-theme.html
+### 유튜브: https://www.youtube.com/watch?v=7MffCYMZEkA
+### 블로그: https://www.treezi.org/2019/02/how-to-install-op-blogger-theme.html
 
 1. 블로그 설정에서:
   * 블로그 설명 설정
