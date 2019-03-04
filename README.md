@@ -44,6 +44,10 @@ Each directories contains a different blogger theme.
 ## License:
 MIT
 
+## Donation
+* [Click here for donation page](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R5EKF6TRDDXE8&currency_code=USD&source=url)
+It would be nice if you can make donation for this kind of project.
+
 ## Author:
 * Name: Chanil Park
 * E-mail: falsesage1004@gmail.com
