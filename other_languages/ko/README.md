@@ -46,6 +46,11 @@ OP 구글 블로그 테마는 추가적인 테마 개발 없이 바로 블로그
 ## 라이센스:
 MIT
 
+## 후원
+* [후원 페이지](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R5EKF6TRDDXE8&currency_code=USD&source=url)
+
+후원을 해주시면 저같은 오픈소스 소프트웨어 개발자에게 도움이 됩니다.
+
 ## 저작자:
 * 이름: 트리지
 * 이메일: treezi1004@gmail.com
