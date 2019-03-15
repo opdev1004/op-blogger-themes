@@ -2,15 +2,13 @@
 
 ## Notice
 
-It is found that fusion theme is not SEO for google search. The theme is working fine and gives great experience for reader and blog owner. However since it is using javascript to change some of design in webpage, the google search console won't render what we actually experience. It is strongly advised not to use any op blogger theme that use JS to change its mobile design. Don't use themes listed below.
-* Fusion
-* RT
+It is found that themes are not SEO for google search for now. The themes are working fine and gives great experience for reader and blog owner. The real problem is new google search console is not rendering mobile version of website properly. It is advised not to use any op blogger theme if you are concerned about SEO problem. However I believe they do have a problem in their system
 
-We no longer supprt customised widgets and "no_index_image" version of theme.
+We no longer support customized widgets and "no_index_image" version of theme.
 
 ## Description:
 OP Blogger Themes are for blogger theme development.
-Main purpose of this project is to have clean base blogger theme for people to develope theme easily.
+Main purpose of this project is to have clean base blogger theme for people to develop theme easily.
 There is no problem using the OP Blogger Themes without extra theme development.
 Each directories contains a different blogger theme.
 
