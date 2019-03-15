@@ -5,7 +5,8 @@
 It is found that fusion theme is not SEO for google search. The theme is working fine and gives great experience for reader and blog owner. However since it is using javascript to change some of design in webpage, the google search console won't render what we actually experience. It is strongly advised not to use any op blogger theme that use JS to change its mobile design. Don't use themes listed below.
 * Fusion
 * RT
-* Today
+
+We no longer supprt customised widgets and "no_index_image" version of theme.
 
 ## Description:
 OP Blogger Themes are for blogger theme development.

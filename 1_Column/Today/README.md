@@ -1,8 +1,6 @@
 # Today
 
-Better not use this theme because of the blogger theme's widget layout system follows what is showing on.
-
-It is impossible to configure hidden section from layout setting.
+The developer recommends to use this theme.
 
 Check out the theme in blogger: [https://op-today.blogspot.com/](https://op-today.blogspot.com/)
 
