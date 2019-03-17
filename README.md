@@ -2,7 +2,7 @@
 
 ## Notice
 
-It is found that themes are not SEO for google search for now. The themes are working fine and gives great experience for reader and blog owner. The real problem is new google search console is not rendering mobile version of website properly. It is advised not to use any op blogger theme if you are concerned about SEO problem. However I believe they do have a problem in their system
+It is found that themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about SEO problem. (It was considered as a problem of Search Console, however in another test it is found that it can be fixed.)
 
 We no longer support customized widgets and "no_index_image" version of theme.
 
