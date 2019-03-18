@@ -2,7 +2,9 @@
 
 ## Notice
 
-It is found that themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about SEO problem. (It was considered as a problem of Search Console, however in another test it is found that it can be fixed.)
+It is found that mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about SEO problem.
+
+Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
 We no longer support customized widgets and "no_index_image" version of theme.
 
@@ -58,5 +60,5 @@ It would be nice if you can make donation for this kind of project.
 ## Author:
 * Name: Chanil Park
 * E-mail: falsesage1004@gmail.com
-* Blog: https://www.falsesage.com/
-* Youtube: https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw
+* Blog: [https://www.falsesage.com/](https://www.falsesage.com/)
+* Youtube: [https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw](https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw)
