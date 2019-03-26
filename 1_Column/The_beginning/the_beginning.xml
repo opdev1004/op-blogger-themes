@@ -56,7 +56,7 @@ Description:    Responsive Blogger Theme
 Version: 		1.0
 -----------------------------------------------
 */
-
+/*
 <Group description="Body">
 	<Variable name="body.background.color" description="Body Background Color" type="color" default="#fff"  value="#ffffff"/>
 	<Variable name="body.font.color1" description="Body Font Color" type="color" default="#000" value="#000000"/>
@@ -208,6 +208,8 @@ Version: 		1.0
 <Group description="Width">
 	<Variable name="width" description="Width" type="length" min="650px" max="1920px" default="840px"  value="840px"/>
 </Group>
+*/
+
 
 html {
 	height: auto;
