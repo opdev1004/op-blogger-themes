@@ -2,7 +2,7 @@
 
 ## Notice
 
-### Recent Blogger Theme Editor Issue with Firefox or others
+### Recent Blogger Theme Editor issues with Firefox or other web browsers
 Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page is unstable at the moment.
 
 ### Mobile SEO Problem
