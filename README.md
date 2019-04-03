@@ -2,13 +2,17 @@
 
 ## Notice
 
-Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page flags the normal custom theme to have a problem in Firefox somehow.
+### Recent Blogger Theme Editor Issue with Firefox or others
+Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page is unstable at the moment.
 
-It is found that mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about mobile SEO problem.
+### Mobile SEO Problem
+It is found that mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use some of op blogger themes if you are concerned about mobile SEO problem.
 
 Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
-We no longer support customized widgets and "no_index_image" version of theme.
+### Recommended Theme
+* New Day: 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
+* The Beginning: 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
 
 ## Description:
 OP Blogger Themes are for blogger theme development.
@@ -24,7 +28,6 @@ Each directories contains a different blogger theme.
 5. Resizing iframe media(Youtube) for responsive web design
 6. Better Categories
 7. Pretty google search
-8. Thumbnails (Requires some modification)/No Thumbnails
 
 ## Setting up:
 
