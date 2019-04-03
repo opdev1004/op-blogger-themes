@@ -11,8 +11,8 @@ It is found that mobile version of themes are not SEO for google search. The the
 Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
 ### Recommended Theme
-* New Day: 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
-* The Beginning: 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
+* [New Day](https://github.com/treezi1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
+* [The Beginning](https://github.com/treezi1004/op-blogger-themes/tree/master/1_Column/The_beginning): 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
 
 ## Description:
 OP Blogger Themes are for blogger theme development.
