@@ -2,7 +2,9 @@
 
 ## Notice
 
-It is found that mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about SEO problem.
+Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page flags the normal custom theme to have a problem in Firefox somehow.
+
+It is found that mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use any op blogger theme if you are concerned about mobile SEO problem.
 
 Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
