@@ -17,7 +17,7 @@ They might have minor problems like mobile SEO from Google Search Console. Howev
 Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page is unstable at the moment.
 
 ### Mobile SEO Problem
-It is found that some of mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use some of op blogger themes if you are concerned about mobile SEO problem.
+It is found that some of mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use some of op blogger themes if you are concerned about mobile SEO problem. You can still use recommended themes above.
 
 Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
