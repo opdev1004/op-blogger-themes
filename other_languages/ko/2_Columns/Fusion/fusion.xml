@@ -1700,7 +1700,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>No search result</h2></div>
+								<div class='centerbox'><h2>일치하는 검색결과가 없습니다.</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
 							<h2>아카이브</h2>
