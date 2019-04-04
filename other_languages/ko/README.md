@@ -12,8 +12,8 @@
 관련 비디오: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
 ### 추천하는 테마
-* New Day: 2단형의 최신 테마로, 모바일 SEO 문제점을 해결하고 CSS 변수를 색과 폰트로 간략화했습니다.
-* The Beginning: 1단 프로토타입 테마로, 모바일 SEO 문제점이 없습니다.
+* [New Day](https://github.com/treezi1004/op-blogger-themes/tree/master/other_languages/ko/2_Columns/New_Day): 2단형의 최신 테마로, 모바일 SEO 문제점을 해결하고 CSS 변수를 색과 폰트로 간략화했습니다.
+* [The Beginning](https://github.com/treezi1004/op-blogger-themes/tree/master/other_languages/ko/1_Column/The_beginning): 1단 프로토타입 테마로, 모바일 SEO 문제점이 없습니다.
 
 ### 추천하지 않는 테마
 * Today: 레이아웃 페이지에서 사이드바 사용불가
