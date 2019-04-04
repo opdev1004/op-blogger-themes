@@ -56,11 +56,6 @@ Each directories contains a different blogger theme.
   * Setting URL for home in PageList1 widget
     * Default is blogger.com, it does not make any problem and it will work properly even though it is not edited. However it seems it supposed to be the current blog's home url.
 
-
-## Problems & Solve:
-1. Blogger CSS variable, margin in Comments :
-  * It does not support for now. However it is not really an issue for using the themes.
-
 ## License:
 MIT
 
