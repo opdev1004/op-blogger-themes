@@ -851,7 +851,7 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
 
 
 			function init(){
-				resizeIframes();
+				
 			}
 
 
@@ -1699,6 +1699,12 @@ header, main, aside, aside .widget, aside #Category, #footer-inner { border-widt
       <data:post.body/>
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
+
+		<script type='text/javascript'>
+			resizeIframes();
+		</script>
+		<noscript>JavaScript cannot be run. Please configure your setting.</noscript>		
+		
 </div>
 </article>
 	<b:if cond='data:blog.pageType != &quot;static_page&quot;'>

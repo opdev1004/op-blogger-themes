@@ -1091,7 +1091,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
 
 			function init(){
-				resizeIframes();
+				
 			}
 
 
@@ -1909,6 +1909,11 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
       <data:post.body/>
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
+
+		<script type='text/javascript'>
+			resizeIframes();
+		</script>
+		<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
 
 </div>
 </article>
