@@ -1,6 +1,6 @@
 # OP Blogger Themes
 
-## Notice
+## Notice:
 
 ### Recommended Themes
 * [New Day](https://github.com/treezi1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
