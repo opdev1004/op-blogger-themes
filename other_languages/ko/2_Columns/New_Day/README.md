@@ -1,3 +1,3 @@
 # New Day
 
-Check out the theme in blogger: [https://op-newday.blogspot.com/](https://op-newday.blogspot.com/)
+블로그 직접 보기: [https://op-newday.blogspot.com/](https://op-newday.blogspot.com/)
