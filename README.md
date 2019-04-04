@@ -2,14 +2,6 @@
 
 ## Notice
 
-### Recent Blogger Theme Editor issues with Firefox or other web browsers
-Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page is unstable at the moment.
-
-### Mobile SEO Problem
-It is found that some of mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use some of op blogger themes if you are concerned about mobile SEO problem.
-
-Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
-
 ### Recommended Themes
 * [New Day](https://github.com/treezi1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
 * [The Beginning](https://github.com/treezi1004/op-blogger-themes/tree/master/1_Column/The_beginning): 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
@@ -17,6 +9,17 @@ Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=4
 ### Not Recommended Themes
 * Today: Cannot configure categories from layout page.
 * RT: Cannot configure categories from layout page.
+
+### Other themes
+They might have minor problems like mobile SEO from Google Search Console. However it is not really a problem to use them. Read under 'Mobile SEO Problem' and watch the video.
+
+### Recent Blogger Theme Editor issues with Firefox or other web browsers
+Please use Google Chrome as a web browser when you edit blogger theme if you have a problem. Blogger's theme edit page is unstable at the moment.
+
+### Mobile SEO Problem
+It is found that some of mobile version of themes are not SEO for google search. The themes are working fine in the test. However, There is some issues with OP Blogger Theme to be rendered properly in Googlebot smartphone. It is advised not to use some of op blogger themes if you are concerned about mobile SEO problem.
+
+Related video: [https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49](https://www.youtube.com/watch?v=vugCZMGY3L8&feature=youtu.be&t=49)
 
 ## Description:
 OP Blogger Themes are for blogger theme development.
