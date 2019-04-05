@@ -731,6 +731,13 @@ article .postTitle {
 }
 
 
+.post-body h1 { padding:0px; margin: 32px 0px; }
+.post-body h2 { padding:0px; margin: 28px 0px; }
+.post-body h3 { padding:0px; margin: 24px 0px; }
+.post-body h4 { padding:0px; margin: 20px 0px; }
+.post-body h5 { padding:0px; margin: 18px 0px; }
+.post-body h6 { padding:0px; margin: 16px 0px; }
+
 .indexpostlist h2 {
 	overflow-wrap: break-word;
 	margin: 0px 5px 15px 5px;
