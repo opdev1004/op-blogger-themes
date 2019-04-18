@@ -56,6 +56,13 @@ Each directories contains a different blogger theme.
   * Setting URL for home in PageList1 widget
     * Default is blogger.com, it does not make any problem and it will work properly even though it is not edited. However it seems it supposed to be the current blog's home url.
 
+## Problem & Solve
+
+Q: Image doesn't fit into the container.
+
+A: It is caused by style that is generated automatically from the post editor. Edit post and remove ' style="margin-left: 1em; margin-right: 1em;" ' from the photo.
+
+
 ## License:
 MIT
 
