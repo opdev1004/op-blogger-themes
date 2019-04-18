@@ -60,7 +60,7 @@ Each directories contains a different blogger theme.
 
 Q: Image doesn't fit into the container.
 
-A: It is caused by the style that is generated automatically from the post editor. Edit post and remove ' style="margin-left: 1em; margin-right: 1em;" ' from the photo.
+A: It is caused by the style that is generated automatically from the post editor. Edit post and remove ' style="margin-left: 1em; margin-right: 1em;" ' from the photo. Firefox/Chrome's replace extensions are recommended.
 
 
 ## License:
