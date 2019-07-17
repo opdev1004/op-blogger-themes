@@ -998,7 +998,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 /* Responsive Web */
 
 
-@media all and (min-width: 400px)  and (max-width: 1450px) {
+@media all and (min-width: 400px)  and (max-width: 1350px) {
 	#menu1{ display: inline-block; }
 	#menu2{ width: calc(100% - 100px); display: inline-block; }
 	#menu3{	display: inline-block; }
@@ -1058,8 +1058,8 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 	}
 
     #MainBlock #RightSide {
-        margin: 0px;
-		display: block;
+      margin: 0px;
+		  display: block;
     }
 
 	#MainBlock #RightSide #mainContentContainer #mainContent {
@@ -1166,7 +1166,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 				var sidebar = document.getElementById("LeftSide");
 				var MenuButton = document.getElementById("menu1");
 				var MBStyle = window.getComputedStyle(MenuButton);
-				if(sidebar.style.display == "none" && MBStyle.display == "none"){
+				if(sidebar.style.display != "inline-block" && MBStyle.display == "none"){
 					sidebar.style.display = "inline-block";
 				}
 			}
@@ -2262,6 +2262,66 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 			</div>
     	</div>
 	</div>
-</div><!--
---></body>
+</div>
+
+
+<script type='text/javascript'>
+//<![CDATA[
+// Functions for categories
+	function OCLabels(n){
+   		if(checkClass('Label')){
+			var labels = document.getElementsByClassName('Label');
+        	var labelContent = labels[n].getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
+            if (labelContent.style.display == 'block'){
+				labelContent.style.display = 'none';
+            } else {
+				labelContent.style.display = 'block';
+            }
+        }
+	}
+
+	function fixLabels(){
+    	if(checkClass('Label')){
+			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
+			//var titleTag = 'h3';
+			// The 'labels' used as multible label widgets. label as a 1 label widget.
+			var labels = document.getElementsByClassName('Label');
+			for(var i = 0; i < labels.length; i++){
+        		var label = labels[i];
+				// change tag of title.
+                //if(titleTag != 'h3') {
+					//label.getElementsByTagName('h3')[0].outerHTML = '<' + titleTag + '>' + label.getElementsByTagName('h3')[0].innerHTML + '</' + titleTag + '>';
+                //}
+				// adding attributes to tag
+				var title = label.getElementsByClassName('title')[0];
+				title.setAttribute('onclick', 'OCLabels(' + i + ');');
+				var labelContent = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
+				labelContent.className += 'slideInDown';
+				// fixing each list items for number of posts in label.
+				// Use 'category' as a single category list item.
+				var categories = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+              	for(var j = 0; j < categories.length; j++){
+					var category = categories[j];
+                  	if(category.getElementsByTagName('a')[0] !== undefined){
+						if(category.getElementsByTagName('span')[0] !== undefined){
+							category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
+							category.getElementsByTagName('span')[0].outerHTML = '';
+                        }
+					}
+                  	else {
+						if(category.getElementsByTagName('span')[1] !== undefined){
+							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
+							category.getElementsByTagName('span')[1].outerHTML = '';
+                        }
+					}
+				}
+			}
+        }
+    }
+	fixLabels();
+//]]>
+</script>
+<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
+
+</body>
 </html>
