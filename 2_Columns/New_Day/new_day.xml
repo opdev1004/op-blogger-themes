@@ -3,11 +3,11 @@
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <!--
-* Name: OP Blogger Themes - 1 Column, New Day
+* Name: OP Blogger Themes - 2 Column, New Day
 * Version: 1.0
-* Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
+* Copyright (c) OP Dev, Victor Chanil Park, since 2018
+* Blog: https://www.opdev.xyz/
+* E-mail: opdev1004@gmail.com
 * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
 * License: MIT
 * Description: Responsive Blogger Theme
@@ -228,6 +228,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu1:hover{
 	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
@@ -247,6 +248,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu2 a:hover{text-decoration: none;}
 #menu2:hover{
@@ -277,6 +279,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu3:hover{
 	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
@@ -1098,7 +1101,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
 
 			function init(){
-				
+
 			}
 
 
@@ -1224,7 +1227,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		<div class='slideInRight' id='backBtn'><span>Back</span></div>
 	</div>
 
-<b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
+	<b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
   <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='1'>
     <b:includable id='main'>
 						<!-- only display title if it's non-empty -->
@@ -1306,7 +1309,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
      	</b:if>
 </main>
 
-</b:includable>
+		</b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
 			<div class='centerbox'><h2>404: Page not found</h2></div>

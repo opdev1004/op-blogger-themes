@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
-<!--
-* Name: OP Blogger Themes - 1 Column, New Day
-* Version: 1.0
-* Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
-* Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
-* License: MIT
-* Description: Responsive Blogger Theme
-*
--->
+  <!--
+  * Name: OP Blogger Themes - 2 Column, Classic
+  * Version: 1.0
+  * Copyright (c) OP Dev, Victor Chanil Park, since 2018
+  * Blog: https://www.opdev.xyz/
+  * E-mail: opdev1004@gmail.com
+  * Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
+  * License: MIT
+  * Description: Responsive Blogger Theme
+  *
+  -->
 
 	<head>
         <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet'/>
@@ -49,7 +49,7 @@
 /*
 -----------------------------------------------
 Blogger Template Style
-Name:     		New Day
+Name:     		Classic
 Designer: 		Victor Chanil Park
 URL:      		https://github.com/treezi1004/op-blogger-themes
 License:  		MIT
@@ -170,7 +170,7 @@ header {
 	background-color: $(header.background.color);
 	position: fixed;
 	z-index: 99;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 header a:link,
@@ -228,6 +228,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu1:hover{
 	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
@@ -247,6 +248,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu2 a:hover{text-decoration: none;}
 #menu2:hover{
@@ -277,6 +279,7 @@ header span {
 	margin: 0px;
 	padding: 0px;
 	font-weight:bold;
+	user-select: none;
 }
 #menu3:hover{
 	background:linear-gradient(to bottom, $(header.background.gradient.color) 5%, $(header.background.color) 100%);
@@ -318,34 +321,33 @@ header span {
 
 #spaceBlock{ width: 100%; height: 50px; margin: 0px; padding: 0px;}
 
-#MainSide {
+#MainBlock {
+	width: 1340px;
+	min-height: 100vh;
+	padding: 0px;
+	margin: 20px auto;
+    font-size: 0px;
+}
+
+#MainBlock #RightSide {
+	background-color: $(background.color);
+	display: inline-block;
+	min-height: 100vh;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+    font-size: 0px;
+}
+
+#MainBlock #RightSide #mainContentContainer {
 	width: 100%;
+	background-color: $(background.color);
 	min-height: 100vh;
 	padding: 0px;
 	margin: 0px;
     font-size: 0px;
 }
 
-#MainSide #RightSide {
-	background-color: $(background.color);
-	display: flex;
-	min-height: 100vh;
-	padding: 0px;
-	margin: 0px 0px 0px 352px;
-    font-size: 0px;
-	position: relative;
-}
-
-#MainSide #RightSide #mainContentContainer {
-	width: 100%;
-	background-color: $(background.color);
-	min-height: 100vh;
-	padding: 0px;
-	margin: 0px;
-    font-size: 0px;
-}
-
-#MainSide #RightSide #mainContentContainer #mainContent {
+#MainBlock #RightSide #mainContentContainer #mainContent {
 	background-color: $(container.background.color);
 	width: 960px;
 	min-height: 100vh;
@@ -356,21 +358,21 @@ header span {
 }
 
 
-#LeftSide {
+#MainBlock #LeftSide {
 	background-color: $(container.background.color);
+	display: inline-block;
 	font-size: 0px;
 	width: 350px;
-	position: absolute;
 	vertical-align: top;
 	padding: 0px;
-	margin: 0px 0px 0px 0px;
+	margin: 0px 22px 0px 0px;
 	top: 50px;
 	left: 0px;
 	right: auto;
 	border: 2px solid $(container.border.color);
 }
 
-#LeftSide #LeftSideBox {
+#MainBlock #LeftSide #LeftSideBox {
 	background-color: $(container.background.color);
     font-size: 17px;
 	margin: 0px;
@@ -379,7 +381,7 @@ header span {
 	font: $(sidebar.font)
 }
 
-#LeftSide #LeftSideSpace {
+#MainBlock #LeftSide #LeftSideSpace {
 	width: calc(100% - 350px);
 	height: calc(100vh - 50px);
 	display: none;
@@ -684,10 +686,10 @@ article .postTitle {
 
 
 
-#MainSide #RightSide #mainContentContainer #mainContent #PageList1 {text-align: center;}
-#MainSide #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul {margin: 0px; padding: 0px; list-style: none; display: inline-block;}
-#MainSide #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul li {margin: 0px; padding: 0px; display: inline-block;}
-#MainSide #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul li a:hover {
+#MainBlock #RightSide #mainContentContainer #mainContent #PageList1 {text-align: center;}
+#MainBlock #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul {margin: 0px; padding: 0px; list-style: none; display: inline-block;}
+#MainBlock #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul li {margin: 0px; padding: 0px; display: inline-block;}
+#MainBlock #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul li a:hover {
 	color: $(font.hover.color);
 	text-decoration: none;
 }
@@ -838,6 +840,7 @@ article .postTitle {
 
 
 footer {
+	min-height: 200px;
 	color: $(font.color);
 	font:$(font);
 	background-color: $(container.background.color);
@@ -995,22 +998,29 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 /* Responsive Web */
 
 
-@media all and (min-width: 400px)  and (max-width: 1352px) {
+@media all and (min-width: 400px)  and (max-width: 1450px) {
 	#menu1{ display: inline-block; }
 	#menu2{ width: calc(100% - 100px); display: inline-block; }
 	#menu3{	display: inline-block; }
 	#SearchBar{ width: calc(100% - 100px); }
 
-    #MainSide #RightSide {
+	#MainBlock {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+
+    #MainBlock #RightSide {
         margin: 0px;
+		display: block;
     }
 
-	#MainSide #RightSide #mainContentContainer #mainContent {
+	#MainBlock #RightSide #mainContentContainer #mainContent {
 		width: 100%;
 		border-width: 0px;
 	}
 
-    #LeftSide {
+    #MainBlock #LeftSide {
 		background-color: rgba(0, 0, 0, 0.5);
 		width: 100%;
         display: none;
@@ -1023,14 +1033,14 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		z-index: 98;
     }
 
-	#LeftSide #LeftSideBox {
+	#MainBlock #LeftSide #LeftSideBox {
 		width: 350px;
 		display:inline-block;
 		margin: 0px;
 		min-height: 100%;
 	}
 
-	#LeftSide #LeftSideSpace {
+	#MainBlock #LeftSide #LeftSideSpace {
 		display:inline-block;
 	}
 }
@@ -1041,16 +1051,23 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 	#menu3{	display: inline-block; }
 	#SearchBar{ width: calc(100% - 100px); }
 
-    #MainSide #RightSide {
+	#MainBlock {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+
+    #MainBlock #RightSide {
         margin: 0px;
+		display: block;
     }
 
-	#MainSide #RightSide #mainContentContainer #mainContent {
+	#MainBlock #RightSide #mainContentContainer #mainContent {
 		width: 100%;
 		border-width: 0px;
 	}
 
-    #LeftSide {
+    #MainBlock #LeftSide {
 		background-color: rgba(0, 0, 0, 0.5);
 		width: 100%;
 		height: calc(100vh - 50px);
@@ -1063,14 +1080,14 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		z-index: 98;
     }
 
-	#LeftSide #LeftSideBox {
+	#MainBlock #LeftSide #LeftSideBox {
 		width: 100%;
 		display: block;
 		margin: 0px;
 		min-height: 100%;
 	}
 
-	#LeftSide #LeftSideSpace {
+	#MainBlock #LeftSide #LeftSideSpace {
 		display: none;
 	}
 
@@ -1082,7 +1099,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
 
 ]]></b:skin>
-
 
 		<!--
 		* This is where we put main javascript.
@@ -1098,7 +1114,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
 
 			function init(){
-				
+
 			}
 
 
@@ -1151,7 +1167,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 				var MenuButton = document.getElementById("menu1");
 				var MBStyle = window.getComputedStyle(MenuButton);
 				if(sidebar.style.display == "none" && MBStyle.display == "none"){
-					sidebar.style.display = "block";
+					sidebar.style.display = "inline-block";
 				}
 			}
 
@@ -1206,22 +1222,18 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
   	</head>
 
-
-
-
 <body onresize='FixSidebar();'>
-
 
 <header>
 	<div class='slideInLeft' id='menu1' onclick='menuBtn(); return false;'>
-    	<span>메뉴</span>
+    	<span>Menu</span>
 	</div>
 	<div class='slideInLeft' id='menu2'>
 		<a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
 	</div>
 	<div id='menu3' onclick='searchbar(); return false;'>
-		<div class='slideInLeft' id='searchBtn'><span>검색</span></div>
-		<div class='slideInRight' id='backBtn'><span>뒤로</span></div>
+		<div class='slideInLeft' id='searchBtn'><span>Search</span></div>
+		<div class='slideInRight' id='backBtn'><span>Back</span></div>
 	</div>
 
 <b:section class='SearchBar' id='SearchBar' name='Search Bar' showaddelement='no'>
@@ -1250,39 +1262,233 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 
 <div class='spaceBlock' id='spaceBlock'/>
 
-<div class='MainSide' id='MainSide'>
+
+<div class='MainBlock' id='MainBlock'>
+
+<aside class='LeftSide slideInDown' id='LeftSide'>
+	<div class='LeftSideBox' id='LeftSideBox'>
+		<div class='nothing' id='nothing'/>
+		<b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
+<b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
+  <b:widget-settings>
+    <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
+    <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
+    <b:widget-setting name='showSparkline'>false</b:widget-setting>
+    <b:widget-setting name='sparklineStyle'>BLACK_TRANSPARENT</b:widget-setting>
+    <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <!-- <b:if cond='data:title != &quot;&quot;'><h3><data:title/></h3></b:if> -->
+  <div class='widget-content'>
+    <!-- Content is going to be visible when data will be fetched from server. -->
+    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
+      <!-- Counter and image will be injected later via AJAX call. -->
+      <b:if cond='data:showSparkline'>
+        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
+      </b:if>
+      <h3>Pageviews: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
+      <b:include name='quickedit'/>
+    </div>
+  </div>
+	</b:includable>
+</b:widget>
+</b:section>
+		<b:section class='Category' id='Category' name='Category' showaddelement='true'>
+<b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
+  <b:widget-settings>
+    <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>Category</h2>]]></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+
+  <!-- <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if> -->
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+<b:widget id='Label1' locked='false' title='All' type='Label' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+    <b:widget-setting name='display'>LIST</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+  <b:includable id='cloud'>
+  <b:loop values='data:labels' var='label'>
+    <span class='label-size'>
+      <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
+      <a class='label-name' expr:href='data:label.url'>
+        <data:label.name/>
+        <b:if cond='data:this.showFreqNumbers'>
+          <span class='label-count'><data:label.count/></span>
+        </b:if>
+      </a>
+    </span>
+  </b:loop>
+</b:includable>
+  <b:includable id='content'>
+  <div class='widget-content'>
+    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
+    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
+    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
+  </div>
+</b:includable>
+  <b:includable id='list'>
+  <ul>
+    <b:loop values='data:labels' var='label'>
+      <li>
+        <a class='label-name' expr:href='data:label.url'>
+          <data:label.name/>
+          <b:if cond='data:this.showFreqNumbers'>
+            <span class='label-count'><data:label.count/></span>
+          </b:if>
+        </a>
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+</b:widget>
+</b:section>
+		<b:section class='BoxBottom' id='BoxBottom' name='Box Bottom' showaddelement='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+    <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+    <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+    <b:widget-setting name='monthPattern'>MM</b:widget-setting>
+    <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+    <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+    <b:widget-setting name='chronological'>false</b:widget-setting>
+    <b:widget-setting name='showPosts'>true</b:widget-setting>
+    <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+  <div id='ArchiveList'>
+  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+  </div>
+  </div>
+  <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  <b:includable id='content'>
+  <div class='widget-content'>
+    <div id='ArchiveList'>
+      <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+        <b:include cond='data:this.style == &quot;HIERARCHY&quot;' name='hierarchy'/>
+        <b:include cond='data:this.style in {&quot;FLAT&quot;, &quot;MENU&quot;}' name='flat'/>
+      </div>
+    </div>
+  </div>
+</b:includable>
+  <b:includable id='flat' var='data'>
+  <ul class='flat'>
+    <b:loop values='data:data' var='i'>
+      <li class='archivedate'>
+        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='hierarchy'>
+  <b:include data='data' name='interval'/>
+</b:includable>
+  <b:includable id='interval' var='intervalData'>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
+  </b:loop>
+</b:includable>
+  <b:includable id='menu' var='data'>
+  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+    <option value=''><data:title/></option>
+    <b:loop values='data:data' var='i'>
+      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+    </b:loop>
+  </select>
+</b:includable>
+  <b:includable id='posts' var='posts'>
+  <ul class='posts'>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='toggle' var='interval'>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
+</b:includable>
+</b:widget>
+</b:section>
+		<div class='nothing' id='nothing'/>
+	</div><div class='LeftSideSpace' id='LeftSideSpace' onclick='menuBtn(); return false;'/>
+</aside>
+
+
 	<div class='RightSide' id='RightSide'>
 		<div class='mainContentContainer' id='mainContentContainer'>
 			<div class='mainContent' id='mainContent'>
+
 				<div class='nothing' id='nothing'/>
-
-
-
 <b:section class='Content' id='Content' name='Content' showaddelement='yes'>
-  <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+  <b:widget id='Blog1' locked='true' title='블로그 게시물' type='Blog' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
-      <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-      <b:widget-setting name='authorLabel'>작성자:</b:widget-setting>
-      <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-      <b:widget-setting name='timestampLabel'>날짜:</b:widget-setting>
-      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='showLocation'>false</b:widget-setting>
-      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
-      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+      <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
       <b:widget-setting name='style.textcolor'>#72ab72</b:widget-setting>
+      <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+      <b:widget-setting name='authorLabel'>Author:</b:widget-setting>
       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
       <b:widget-setting name='style.urlcolor'>#659865</b:widget-setting>
       <b:widget-setting name='showAuthor'>true</b:widget-setting>
+      <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
       <b:widget-setting name='style.linkcolor'>#003c37</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='timestampLabel'>Date:</b:widget-setting>
+      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
       <b:widget-setting name='showLabels'>true</b:widget-setting>
-      <b:widget-setting name='postLabelsLabel'>카테고리:</b:widget-setting>
+      <b:widget-setting name='showLocation'>false</b:widget-setting>
+      <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
       <b:widget-setting name='showInlineAds'>false</b:widget-setting>
       <b:widget-setting name='showReactions'>false</b:widget-setting>
     </b:widget-settings>
@@ -1309,7 +1515,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 </b:includable>
     <b:includable id='aError'>
 		<div class='indexpostlist'>
-			<div class='centerbox'><h2>페이지를 찾을 수가 없습니다.</h2></div>
+			<div class='centerbox'><h2>404: Page not found</h2></div>
         </div>
 	</b:includable>
     <b:includable id='aHome' var='posts'>
@@ -1317,7 +1523,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 						<nav>
 							<b:include name='nextprev'/>
                			</nav>
-						<h2>최신 포스트</h2>
+						<h2>Recent Posts</h2>
 						<b:loop index='i' values='data:posts' var='post'>
 							<article>
    	 							<b:if cond='data:post.firstImageUrl'>
@@ -1343,8 +1549,8 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 											</b:if>
 											-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -1367,7 +1573,7 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 						<!-- Title of index page -->
 						<b:if cond='data:blog.searchLabel'>
 							<b:if cond='data:posts[0].labels'>
-       	     					<h2>카테고리: <b:eval expr='data:posts[0].labels[0].name'/></h2>
+       	     					<h2>Category: <b:eval expr='data:posts[0].labels[0].name'/></h2>
 							</b:if>
                 	    <b:elseif cond='data:blog.searchQuery'/>
 							<b:if cond='data:posts[0]'>
@@ -1377,17 +1583,17 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 											var searchWords = $_GET('q');
 											searchWords = searchWords.split('+').join(' ');
 											searchWords = decodeURIComponent(searchWords);
-											searchWords = "'" + searchWords + "'의 검색 결과";
+											searchWords = "Search result of '" + searchWords + "'";
 											document.write(searchWords);
 										//]]>
 									</script>
 									<noscript>Please enable javascript</noscript>
 								</h2>
             				<b:else/>
-								<div class='centerbox'><h2>일치하는 검색결과가 없습니다.</h2></div>
+								<div class='centerbox'><h2>No search result</h2></div>
           					</b:if>
 						<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
-							<h2>아카이브</h2>
+							<h2>Archive</h2>
 						<b:else/>
 						</b:if>
 
@@ -1416,8 +1622,8 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 											</b:if>
 										-->
 											<div class='post-index-info'>
-												<div id='post-index-info-date'>날짜: <data:post.timestamp/></div>
-												<div id='post-index-info-title'>제목: <span itemprop='name'><data:post.title/></span></div>
+												<div id='post-index-info-date'>Date: <data:post.timestamp/></div>
+												<div id='post-index-info-title'>Title: <span itemprop='name'><data:post.title/></span></div>
 								  				<div id='post-index-info-content'>
                                     	        	<b:eval expr='snippet(data:post.body, { length: 150, links: false, linebreaks: false })'/>
 												</div>
@@ -2023,8 +2229,8 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
   </b:widget>
   <b:widget id='PageList1' locked='false' title='Page' type='PageList' version='1'>
     <b:widget-settings>
-      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': '홈', 'position': 0}}]]></b:widget-setting>
-      <b:widget-setting name='homeTitle'>홈</b:widget-setting>
+      <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogger.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
+      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <div class='widget-content'>
@@ -2044,9 +2250,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 </b:includable>
   </b:widget>
 </b:section>
-
-
-
 <footer>
 <div id='footer-inner'>
 	<div id='footer-line'> </div>
@@ -2056,264 +2259,9 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
     </div>
 </div>
 </footer>
-
-
-<div class='nothing' id='nothing'/>
-        	</div>
+			</div>
     	</div>
 	</div>
-</div>
-
-<aside class='LeftSide slideInDown' id='LeftSide'>
-	<div class='LeftSideBox' id='LeftSideBox'>
-		<div class='nothing' id='nothing'/>
-		<b:section class='BoxTop' id='BoxTop' name='Box Top' showaddelement='true'>
-<b:widget id='Stats1' locked='false' title='Pageviews' type='Stats' version='1'>
-  <b:widget-settings>
-    <b:widget-setting name='showGraphicalCounter'>false</b:widget-setting>
-    <b:widget-setting name='showAnimatedCounter'>false</b:widget-setting>
-    <b:widget-setting name='showSparkline'>false</b:widget-setting>
-    <b:widget-setting name='sparklineStyle'>BLACK_TRANSPARENT</b:widget-setting>
-    <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
-  </b:widget-settings>
-  <b:includable id='main'>
-  <!-- <b:if cond='data:title != &quot;&quot;'><h3><data:title/></h3></b:if> -->
-  <div class='widget-content'>
-    <!-- Content is going to be visible when data will be fetched from server. -->
-    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
-      <!-- Counter and image will be injected later via AJAX call. -->
-      <b:if cond='data:showSparkline'>
-        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
-      </b:if>
-      <h3>페이지뷰: <span expr:class='(data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/></h3>
-      <b:include name='quickedit'/>
-    </div>
-  </div>
-	</b:includable>
-</b:widget>
-</b:section>
-		<b:section class='Category' id='Category' name='Category' showaddelement='true'>
-<b:widget id='HTML999' locked='false' title='Category Title' type='HTML' version='1'>
-  <b:widget-settings>
-    <b:widget-setting name='content'><![CDATA[<h2 id='categoryTitle'>카테고리</h2>]]></b:widget-setting>
-  </b:widget-settings>
-  <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-
-  <!-- <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if> -->
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-</b:widget>
-<b:widget id='Label1' locked='false' title='전체 카테고리' type='Label' version='2' visible='true'>
-  <b:widget-settings>
-    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-    <b:widget-setting name='display'>LIST</b:widget-setting>
-    <b:widget-setting name='selectedLabelsList'/>
-    <b:widget-setting name='showType'>ALL</b:widget-setting>
-    <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
-  </b:widget-settings>
-  <b:includable id='main' var='this'>
-  <b:include name='widget-title'/>
-  <b:include name='content'/>
-</b:includable>
-  <b:includable id='cloud'>
-  <b:loop values='data:labels' var='label'>
-    <span class='label-size'>
-      <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
-      <a class='label-name' expr:href='data:label.url'>
-        <data:label.name/>
-        <b:if cond='data:this.showFreqNumbers'>
-          <span class='label-count'><data:label.count/></span>
-        </b:if>
-      </a>
-    </span>
-  </b:loop>
-</b:includable>
-  <b:includable id='content'>
-  <div class='widget-content'>
-    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
-    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
-    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
-  </div>
-</b:includable>
-  <b:includable id='list'>
-  <ul>
-    <b:loop values='data:labels' var='label'>
-      <li>
-        <a class='label-name' expr:href='data:label.url'>
-          <data:label.name/>
-          <b:if cond='data:this.showFreqNumbers'>
-            <span class='label-count'><data:label.count/></span>
-          </b:if>
-        </a>
-      </li>
-    </b:loop>
-  </ul>
-</b:includable>
-</b:widget>
-</b:section>
-		<b:section class='BoxBottom' id='BoxBottom' name='Box Bottom' showaddelement='true'>
-<b:widget id='BlogArchive1' locked='false' title='아카이브' type='BlogArchive' version='2' visible='true'>
-  <b:widget-settings>
-    <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
-    <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
-    <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
-    <b:widget-setting name='monthPattern'>MM</b:widget-setting>
-    <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
-    <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
-    <b:widget-setting name='chronological'>false</b:widget-setting>
-    <b:widget-setting name='showPosts'>true</b:widget-setting>
-    <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
-  </b:widget-settings>
-  <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-  <div id='ArchiveList'>
-  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
-  </div>
-  </div>
-  <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  <b:includable id='content'>
-  <div class='widget-content'>
-    <div id='ArchiveList'>
-      <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-        <b:include cond='data:this.style == &quot;HIERARCHY&quot;' name='hierarchy'/>
-        <b:include cond='data:this.style in {&quot;FLAT&quot;, &quot;MENU&quot;}' name='flat'/>
-      </div>
-    </div>
-  </div>
-</b:includable>
-  <b:includable id='flat' var='data'>
-  <ul class='flat'>
-    <b:loop values='data:data' var='i'>
-      <li class='archivedate'>
-        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
-      </li>
-    </b:loop>
-  </ul>
-</b:includable>
-  <b:includable id='hierarchy'>
-  <b:include data='data' name='interval'/>
-</b:includable>
-  <b:includable id='interval' var='intervalData'>
-  <b:loop values='data:intervalData' var='interval'>
-    <ul class='hierarchy'>
-      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-        <a class='post-count-link' expr:href='data:interval.url'>
-          <data:interval.name/>
-        </a>
-        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
-        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
-        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-      </li>
-    </ul>
-  </b:loop>
-</b:includable>
-  <b:includable id='menu' var='data'>
-  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-    <option value=''><data:title/></option>
-    <b:loop values='data:data' var='i'>
-      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
-    </b:loop>
-  </select>
-</b:includable>
-  <b:includable id='posts' var='posts'>
-  <ul class='posts'>
-    <b:loop values='data:posts' var='post'>
-      <li><a expr:href='data:post.url'><data:post.title/></a></li>
-    </b:loop>
-  </ul>
-</b:includable>
-  <b:includable id='toggle' var='interval'>
-  <a class='toggle' href='javascript:void(0)'>
-    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
-      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-        &#9660;&#160;
-      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
-        &#9668;&#160;
-      <b:else/>
-        &#9658;&#160;
-      </b:if>
-    </span>
-  </a>
-</b:includable>
-</b:widget>
-</b:section>
-		<div class='nothing' id='nothing'/>
-	</div><div class='LeftSideSpace' id='LeftSideSpace' onclick='menuBtn(); return false;'/>
-</aside>
-
-<script type='text/javascript'>
-//<![CDATA[
-// Functions for categories
-	function OCLabels(n){
-   		if(checkClass('Label')){
-			var labels = document.getElementsByClassName('Label');
-        	var labelContent = labels[n].getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
-            if (labelContent.style.display == 'block'){
-				labelContent.style.display = 'none';
-            } else {
-				labelContent.style.display = 'block';
-            }
-        }
-	}
-
-	function fixLabels(){
-    	if(checkClass('Label')){
-			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
-			//var titleTag = 'h3';
-			// The 'labels' used as multible label widgets. label as a 1 label widget.
-			var labels = document.getElementsByClassName('Label');
-			for(var i = 0; i < labels.length; i++){
-        		var label = labels[i];
-				// change tag of title.
-                //if(titleTag != 'h3') {
-					//label.getElementsByTagName('h3')[0].outerHTML = '<' + titleTag + '>' + label.getElementsByTagName('h3')[0].innerHTML + '</' + titleTag + '>';
-                //}
-				// adding attributes to tag
-				var title = label.getElementsByClassName('title')[0];
-				title.setAttribute('onclick', 'OCLabels(' + i + ');');
-				var labelContent = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0];
-				labelContent.className += 'slideInDown';
-				// fixing each list items for number of posts in label.
-				// Use 'category' as a single category list item.
-				var categories = label.getElementsByClassName('widget-content')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
-              	for(var j = 0; j < categories.length; j++){
-					var category = categories[j];
-                  	if(category.getElementsByTagName('a')[0] !== undefined){
-						if(category.getElementsByTagName('span')[0] !== undefined){
-							category.getElementsByTagName('a')[0].innerHTML = category.getElementsByTagName('a')[0].innerHTML + ' ' + category.getElementsByTagName('span')[0].innerHTML;
-							category.getElementsByTagName('span')[0].outerHTML = '';
-                        }
-					}
-                  	else {
-						if(category.getElementsByTagName('span')[1] !== undefined){
-							category.getElementsByTagName('span')[0].innerHTML = category.getElementsByTagName('span')[0].innerHTML + ' ' + category.getElementsByTagName('span')[1].innerHTML;
-							category.getElementsByTagName('span')[1].outerHTML = '';
-                        }
-					}
-				}
-			}
-        }
-    }
-	fixLabels();
-//]]>
-</script>
-<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
-
-</body>
+</div><!--
+--></body>
 </html>

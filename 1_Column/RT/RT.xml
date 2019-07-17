@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html b:version='2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
-<!--
-* Name: OP Blogger Themes - 1 Column, RT
-* Version: 1.0
-* Copyright (c) OP, Victor Chanil Park, since 2018
-* Blog: https://www.falsesage.com/
-* E-mail: falsesage1004@gmail.com
-* Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
-* License: MIT
-* Description: Responsive Blogger Theme
-*
--->
+	<!--
+	* Name: OP Blogger Themes - 1 Column, RT
+	* Version: 1.0
+	* Copyright (c) OP Dev, Victor Chanil Park, since 2018
+	* Blog: https://www.opdev.xyz/
+	* E-mail: opdev1004@gmail.com
+	* Git-hub Repository: https://github.com/treezi1004/op-blogger-themes
+	* License: MIT
+	* Description: Responsive Blogger Theme
+	*
+	-->
 
 	<head>
         <link href='https://fonts.googleapis.com/css?family=Jua' rel='stylesheet'/>
@@ -1066,7 +1066,7 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 
 
 			function init(){
-				
+
 			}
 
 
@@ -2114,8 +2114,8 @@ main, aside, aside .widget, aside #Category, #footer-inner { border-width: 0px; 
 		<script type='text/javascript'>
 			resizeIframes();
 		</script>
-		<noscript>JavaScript cannot be run. Please configure your setting.</noscript>		
-		
+		<noscript>JavaScript cannot be run. Please configure your setting.</noscript>
+
 </div>
 </article>
 	<b:if cond='data:blog.pageType != &quot;static_page&quot;'>

@@ -72,7 +72,7 @@ MIT
 It would be nice if you can make donation for this kind of project.
 
 ## Author:
-* Name: Chanil Park
-* E-mail: falsesage1004@gmail.com
-* Blog: [https://www.falsesage.com/](https://www.falsesage.com/)
+* Name: Victor Chanil Park
+* E-mail: opdev1004@gmail.com
+* Blog: [https://www.opdev.xyz/](https://www.opdev.xyz/)
 * Youtube: [https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw](https://www.youtube.com/channel/UCOWFk2-Y4yuwVxK0yo6ABmw)
