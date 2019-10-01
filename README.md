@@ -3,9 +3,9 @@
 ## Notice:
 
 ### Recommended Themes
-* [Classic](https://github.com/treezi1004/op-blogger-themes/tree/master/2_Column/Classic): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
-* [New Day](https://github.com/treezi1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
-* [The Beginning](https://github.com/treezi1004/op-blogger-themes/tree/master/1_Column/The_beginning): 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
+* [Classic](https://github.com/opdev1004/op-blogger-themes/tree/master/2_Columns/Classic): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
+* [New Day](https://github.com/opdev1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
+* [The Beginning](https://github.com/opdev1004/op-blogger-themes/tree/master/1_Column/The_beginning): 1 column, No Mobile SEO Problem, prototype version of other OP Blogger Themes
 
 ### Not Recommended Themes
 * Today: Cannot configure categories from layout page.
