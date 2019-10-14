@@ -2,6 +2,9 @@
 
 ## Notice:
 
+### Preparing for new update!
+There will be new update and some of themes might get removed. New themes and new system will minimize installation instructions and performance.
+
 ### Recommended Themes
 * [Classic](https://github.com/opdev1004/op-blogger-themes/tree/master/2_Columns/Classic): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
 * [New Day](https://github.com/opdev1004/op-blogger-themes/tree/master/2_Columns/New_Day): 2 column, No Mobile SEO Problem, minimized control of theme design to font and color.
