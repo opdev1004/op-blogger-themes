@@ -41,4 +41,3 @@ MIT
 * Name: Victor Chanil Park
 * E-mail: opdev1004@gmail.com
 * Blog: [https://www.opdev.xyz/](https://www.opdev.xyz/)
-*
