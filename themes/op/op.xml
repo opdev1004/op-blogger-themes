@@ -4,13 +4,7 @@
 
   <head>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-  	<b:if cond='data:blog.postImageUrl'>
-  	<b:else/>
-      <b:comment>This is meta tag for open graph image that you may want to set up for default. Remove comment tag for use.</b:comment>
-  		<b:comment><meta content='https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=w1200' property='og:image'/></b:comment>
-  	</b:if>
 
-    <b:comment>if it is post page, show these tags for possible SEO</b:comment>
     <b:if cond='data:view.isPost '>
       <meta expr:content='data:blog.title' name='author'/>
       <meta expr:content='data:blog.title' name='writer'/>
@@ -21,10 +15,8 @@
     <meta expr:content='data:blog.title' property='og:site_name'/>
 
     <title><data:view.title.escaped/></title>
-    <b:comment>Blogger head content</b:comment>
     <b:include data='blog' name='all-head-content'/>
 
-    <b:comment>Style for all</b:comment>
     <b:skin><![CDATA[
 
         /*
