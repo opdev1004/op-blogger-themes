@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
@@ -73,7 +74,6 @@ Version: 		1.0
 	<Variable name="button.background.color" description="Button Background Color" type="color" default="#fff"  value="#f0f6f0"/>
 	<Variable name="button.hover.background.color" description="Button Hover Background Color" type="color" default="#ddd"  value="#dddddd"/>
 </Group>
-
 <Group description="Font">
 	<Variable name="font.color" description="Font Color" type="color" default="#000" value="#000000"/>
 	<Variable name="font.hover.color" description="Hover Font Color" type="color" default="#999" value="#999999"/>
@@ -86,12 +86,10 @@ Version: 		1.0
 	<Variable name="sidebar.font" description="Sidebar Font" type="font" default="normal normal 21px 'Jua', sans-serif"  value="normal normal 22px &#39;Jua&#39;, sans-serif"/>
 </Group>
 */
-
 html {
 	padding: 0px;
     margin: 0px;
 }
-
 body{
 	font: $(font);
 	font-size: 0px;
@@ -105,11 +103,9 @@ body{
 	word-break: normal;
 	overflow-wrap: break-word;
 }
-
 abbr {
 	text-decoration: none;
 }
-
 ul,
 ol{
 	padding:0px;
@@ -133,7 +129,6 @@ a:hover {
 input { border: none;}
 img { border: 0px; max-width: 100%; max-height: 100%; width: auto; height: auto; }
 iframe, object, embed{max-width: 100%;}
-
 h1,
 h2,
 h3,
@@ -145,19 +140,16 @@ h5
 	margin:0px;
 	overflow-wrap: break-word;
 }
-
 h1 a,
 h2 a,
 h3 a,
 h4 a,
 h5 a { color: $(font.color); overflow-wrap: break-word; }
-
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 h4 a:hover,
 h5 a:hover { color: $(font.hover.color); text-decoration: none;}
-
 header {
 	font-size: 0px;
 	width: 100%;
@@ -172,7 +164,6 @@ header {
 	z-index: 99;
 	box-sizing: border-box;
 }
-
 header a:link,
 header a:visited,
 header a:active {
@@ -183,7 +174,6 @@ header a:hover {
 	color: $(header.font.color);
 	text-decoration: none;
 }
-
 header h1,
 header h2,
 header h3,
@@ -198,23 +188,19 @@ header h5
 	margin:0px;
 	overflow-wrap: break-word;
 }
-
 header h1 a,
 header h2 a,
 header h3 a,
 header h4 a,
 header h5 a { color: $(header.font.color); overflow-wrap: break-word; }
-
 header h1 a:hover,
 header h2 a:hover,
 header h3 a:hover,
 header h4 a:hover,
 header h5 a:hover { color: $(header.font.color); text-decoration: none;}
-
 header span {
 	line-height: 50px;
 }
-
 #menu1{
 	font: $(header.font);
 	font-size: 10pt;
@@ -293,7 +279,6 @@ header span {
 	margin: 0px;
 	padding: 0px;
 }
-
 #menu3 #backBtn{
 	display: none;
 	width: 50px;
@@ -301,11 +286,9 @@ header span {
 	margin: 0px;
 	padding: 0px;
 }
-
 #SearchBar{ margin: 0px; padding: 0px; width: calc(100% - 50px); display: none; }
 .SearchBar .gsc-input { width:100%; margin: 0px; padding: 0px;}
 .SearchBar .widget {margin: 0px;}
-
 #SearchBar #search{
 	padding:0px;
 	margin: 0px;
@@ -317,10 +300,7 @@ header span {
 	font-size:30px;
 	font-weight:bold;
 }
-
-
 #spaceBlock{ width: 100%; height: 50px; margin: 0px; padding: 0px;}
-
 #MainBlock {
 	width: 1340px;
 	min-height: 100vh;
@@ -328,7 +308,6 @@ header span {
 	margin: 20px auto;
     font-size: 0px;
 }
-
 #MainBlock #RightSide {
 	background-color: $(background.color);
 	display: inline-block;
@@ -337,7 +316,6 @@ header span {
 	margin: 0px 0px 0px 0px;
     font-size: 0px;
 }
-
 #MainBlock #RightSide #mainContentContainer {
 	width: 100%;
 	background-color: $(background.color);
@@ -346,7 +324,6 @@ header span {
 	margin: 0px;
     font-size: 0px;
 }
-
 #MainBlock #RightSide #mainContentContainer #mainContent {
 	background-color: $(container.background.color);
 	width: 960px;
@@ -356,8 +333,6 @@ header span {
     font-size: 17px;
 	border: 2px solid $(container.border.color);
 }
-
-
 #MainBlock #LeftSide {
 	background-color: $(container.background.color);
 	display: inline-block;
@@ -371,7 +346,6 @@ header span {
 	right: auto;
 	border: 2px solid $(container.border.color);
 }
-
 #MainBlock #LeftSide #LeftSideBox {
 	background-color: $(container.background.color);
     font-size: 17px;
@@ -380,7 +354,6 @@ header span {
 	vertical-align: top;
 	font: $(sidebar.font)
 }
-
 #MainBlock #LeftSide #LeftSideSpace {
 	width: calc(100% - 350px);
 	height: calc(100vh - 50px);
@@ -389,11 +362,6 @@ header span {
 	padding: 0px;
 	position: fixed;
 }
-
-
-
-
-
 main {
 	font: $(font);
 	color: $(font.color);
@@ -401,7 +369,6 @@ main {
 	padding: 0px;
 	min-height: 100vh;
 }
-
 main a:link,
 main a:visited,
 main a:active {
@@ -412,7 +379,6 @@ main a:hover {
 	color: $(font.hover.color);
 	text-decoration: none;
 }
-
 main h1,
 main h2,
 main h3,
@@ -424,26 +390,22 @@ main h5
 	margin:0px;
 	overflow-wrap: break-word;
 }
-
 main h1 a,
 main h2 a,
 main h3 a,
 main h4 a,
 main h5 a { color: $(font.color); overflow-wrap: break-word; }
-
 main h1 a:hover,
 main h2 a:hover,
 main h3 a:hover,
 main h4 a:hover,
 main h5 a:hover { color: $(font.hover.color); text-decoration: none;}
-
 nav {
 	height: auto;
 	width: 100%;
 	margin: 10px auto;
 	padding: 0px;
 }
-
 nav #blog-pager {
 	height: auto;
 	width: 100%;
@@ -452,7 +414,6 @@ nav #blog-pager {
 	display: flex;
 	justify-content: space-between;
 }
-
 nav #blog-pager div{
 	display: inline-block;
 	margin: 0px;
@@ -463,37 +424,29 @@ nav #blog-pager div{
 	border: 1px solid $(button.border.color);
     border-radius: 5px;
 }
-
 nav #blog-pager div:hover {
 	background-color: $(button.hover.background.color);
 	border-color: $(button.border.hover.color);
 	color: $(button.font.hover.color);
 }
-
-
 article {
 	margin: 5px 0px;
 	padding: 0px;
 	min-height: 250px;
 }
-
 article .postTitle {
 	border-bottom: 1px solid $(line.border.color);
 }
-
-
 .post-body {
 	margin: 10px auto;
 	padding: 0px;
 }
-
 .post-body h1 { padding:0px; margin: 32px 0px; }
 .post-body h2 { padding:0px; margin: 28px 0px; }
 .post-body h3 { padding:0px; margin: 24px 0px; }
 .post-body h4 { padding:0px; margin: 20px 0px; }
 .post-body h5 { padding:0px; margin: 18px 0px; }
 .post-body h6 { padding:0px; margin: 16px 0px; }
-
 .indexpostlist h2 {
 	overflow-wrap: break-word;
 	margin: 0px 5px 15px 5px;
@@ -504,12 +457,10 @@ article .postTitle {
 	margin: 0px;
 	min-height: 0px;
 }
-
 .indexpostlist .post-index-item {
 	padding: 7px 3px;
 	border-bottom: 1px dotted $(line.border.color);
 }
-
 .indexpostlist .post-index-item .post-index-image {
 	width: 20%;
 	margin: 0px;
@@ -518,7 +469,6 @@ article .postTitle {
 	display: inline-block;
 	vertical-align: top;
 }
-
 .indexpostlist .post-index-item .post-index-image img {
 	width: 100%;
 	height: auto;
@@ -546,10 +496,8 @@ article .postTitle {
 .indexpostlist .post-index-item .post-index-info #post-index-info-content{
 	overflow-wrap: break-word;
 }
-
 .indexpostlist a:hover {color: $(font.color);}
 .indexpostlist a div:hover {background-color: $(hover.background.color);}
-
 #comments{
 	border-top:1px dashed rgba(0,0,0,.54);
 	margin-top:20px;
@@ -600,7 +548,6 @@ article .postTitle {
 #comments .comment .thread-expanded {
 	margin: 10px 0px;
 }
-
 #comments .comment .thread-expanded .comment-block{
 	padding-bottom:20px
 }
@@ -651,9 +598,6 @@ article .postTitle {
 	opacity:0;
 	overflow:hidden
 }
-
-
-
 #comments{
 	border-top:none;
 	padding:0
@@ -683,9 +627,6 @@ article .postTitle {
 	width:1px;
 	overflow:hidden
 }
-
-
-
 #MainBlock #RightSide #mainContentContainer #mainContent #PageList1 {text-align: center;}
 #MainBlock #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul {margin: 0px; padding: 0px; list-style: none; display: inline-block;}
 #MainBlock #RightSide #mainContentContainer #mainContent #PageList1 .widget-content ul li {margin: 0px; padding: 0px; display: inline-block;}
@@ -693,42 +634,34 @@ article .postTitle {
 	color: $(font.hover.color);
 	text-decoration: none;
 }
-
-
 #BoxTop .widget {
 	width: calc(100% - 10px);
 	margin: 10px 5px;
 	padding: 5px 0px;
 	border-bottom: 1px solid #cccccc;
 }
-
 #BoxBottom .widget {
 	width: calc(100% - 10px);
 	margin: 10px 5px;
 	padding: 5px 0px;
 	border-bottom: 1px solid #cccccc;
 }
-
-
 #Category {
 	border-bottom: 1px solid $(line.border.color);
 	width: calc(100% - 10px);
 	margin: 10px 5px;
 	padding: 5px 0px;
 }
-
 #Category #HTML999 {
 	border-width: 0px;
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
 }
-
 #Category .Label {
 	border-width: 0px;
 	margin: 0px;
 	padding: 0px;
 }
-
 .Label h1,
 .Label h2,
 .Label h3,
@@ -736,20 +669,15 @@ article .postTitle {
 .Label h5,
 .Label h6,
 .Label a { color: $(font.color); }
-
 .Label h1:hover,
 .Label h2:hover,
 .Label h3:hover,
 .Label h4:hover,
 .Label h5:hover,
 .Label h6:hover { color: $(font.color); background-color: $(hover.background.color); cursor: pointer;}
-
 .Label a:hover { color: $(font.color); }
-
 .Label img{display: none;}
-
 .Label a:hover{text-decoration:none;}
-
 .Label ul{
 	display: none;
 	width: 100%;
@@ -772,36 +700,25 @@ article .postTitle {
 .Label ul li a { color: $(font.color); display: block; margin: 0px; padding: 0px; }
 .Label ul li a:hover { color: $(font.color); }
 .Label ul li:hover { background-color: $(hover.background.color);}
-
-
-
-
-
-
 #ArchiveList .toggle {
 	cursor:pointer;
 }
-
 #ArchiveList .zippy {
 	font-size: 30px;
 	color: $(font.color);
 }
-
 #ArchiveList .toggle-open {
 	font-size: 20px;
 	color: $(font.color);
 }
-
 #ArchiveList {
 	text-align:left;
 }
-
 #ArchiveList a.post-count-link,
 #ArchiveList a.post-count-link:link,
 #ArchiveList a.post-count-link:visited {
 	text-decoration:none;
 }
-
 #ArchiveList a.toggle,
 #ArchiveList a.toggle:link,
 #ArchiveList a.toggle:visited,
@@ -836,9 +753,6 @@ article .postTitle {
 #ArchiveList .collapsed ul {
 	display:none
 }
-
-
-
 footer {
 	min-height: 200px;
 	color: $(font.color);
@@ -848,13 +762,11 @@ footer {
 	margin: 20px 0px 0px 0px;
     bottom: 0px;
 }
-
 #footer-inner {
 	width: calc(100% - 10px);
 	margin: 0px auto;
 	padding: 0px;
 }
-
 footer #footer-inner a,
 footer #footer-inner a:link,
 footer #footer-inner a:visited,
@@ -868,158 +780,125 @@ footer #footer-inner #footer-site-info p a { color:#fff;}
 footer #footer-inner .site-nav .menu ul li a:hover,
 footer #footer-site-info p a:hover { color:$(font.hover.color);}
 footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(line.border.color); width: 300px; }
-
 #footer-info {
  text-align: center;
 }
-
 .nothing {
 	margin: 0px;
 	padding: 0px;
 	height: 5px;
 }
-
 .centerbox {width: 100%; text-align: center; margin: 0px auto;}
-
 .quickedit,
 .hidden{
 	display:none;
 }
-
 /* Animations */
-
 .slideInLeft{
   -webkit-animation-name: slideInLeft;
   -webkit-animation-duration: 0.1s;
   animation-name: slideInLeft;
   animation-duration: 0.1s
 }
-
 @-webkit-keyframes slideInLeft {
   from {
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes slideInLeft {
   from {
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInRight{
   -webkit-animation-name: slideInRight;
   -webkit-animation-duration: 0.1s;
   animation-name: slideInRight;
   animation-duration: 0.1s
 }
-
 @-webkit-keyframes slideInRight {
   from {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes slideInRight {
   from {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
-
-
 .slideInDown {
   -webkit-animation-name: slideInDown;
   -webkit-animation-duration: 0.1s;
   animation-name: slideInDown;
   animation-duration: 0.1s
 }
-
 @-webkit-keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: 0.4}
   to {opacity: 1}
 }
-
-
 /* Responsive Web */
-
-
 @media all and (min-width: 400px)  and (max-width: 1350px) {
 	#menu1{ display: inline-block; }
 	#menu2{ width: calc(100% - 100px); display: inline-block; }
 	#menu3{	display: inline-block; }
 	#SearchBar{ width: calc(100% - 100px); }
-
 	#MainBlock {
 		width: 100%;
 		margin: 0px;
 		padding: 0px;
 	}
-
     #MainBlock #RightSide {
         margin: 0px;
 		display: block;
     }
-
 	#MainBlock #RightSide #mainContentContainer #mainContent {
 		width: 100%;
 		border-width: 0px;
 	}
-
     #MainBlock #LeftSide {
 		background-color: rgba(0, 0, 0, 0.5);
 		width: 100%;
@@ -1032,41 +911,34 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		display: none;
 		z-index: 98;
     }
-
 	#MainBlock #LeftSide #LeftSideBox {
 		width: 350px;
 		display:inline-block;
 		margin: 0px;
 		min-height: 100%;
 	}
-
 	#MainBlock #LeftSide #LeftSideSpace {
 		display:inline-block;
 	}
 }
-
 @media all and (min-width: 0px)  and (max-width: 400px) {
 	#menu1{ display: inline-block; }
 	#menu2{ width: calc(100% - 100px); display: inline-block; }
 	#menu3{	display: inline-block; }
 	#SearchBar{ width: calc(100% - 100px); }
-
 	#MainBlock {
 		width: 100%;
 		margin: 0px;
 		padding: 0px;
 	}
-
     #MainBlock #RightSide {
       margin: 0px;
 		  display: block;
     }
-
 	#MainBlock #RightSide #mainContentContainer #mainContent {
 		width: 100%;
 		border-width: 0px;
 	}
-
     #MainBlock #LeftSide {
 		background-color: rgba(0, 0, 0, 0.5);
 		width: 100%;
@@ -1079,25 +951,17 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		display: none;
 		z-index: 98;
     }
-
 	#MainBlock #LeftSide #LeftSideBox {
 		width: 100%;
 		display: block;
 		margin: 0px;
 		min-height: 100%;
 	}
-
 	#MainBlock #LeftSide #LeftSideSpace {
 		display: none;
 	}
-
 	footer #footer-line  {width: auto;}
-
 }
-
-
-
-
 ]]></b:skin>
 
 		<!--
@@ -1111,13 +975,8 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		-->
 
 		<script type='text/javascript'>//<![CDATA[
-
-
 			function init(){
-
 			}
-
-
 			function resizeIframes(){
 				if(checkClass('post-body')){
 					var iframeContainer = document.getElementsByClassName('post-body')[0];
@@ -1134,7 +993,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					}
 				}
 			}
-
 			function searchbar(){
 				if(document.getElementById("menu2").style.display == "none"){
 					document.getElementById("menu2").style.display = "inline-block";
@@ -1151,7 +1009,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					document.getElementById("backBtn").style.display = "inline-block";
 				}
 			}
-
 			function menuBtn(){
 				var sidebar = document.getElementById("LeftSide");
 				if(sidebar.style.display == "none"){
@@ -1161,7 +1018,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 		    		sidebar.style.display = "none";
 				}
 			}
-
 			function FixSidebar(){
 				var sidebar = document.getElementById("LeftSide");
 				var MenuButton = document.getElementById("menu1");
@@ -1170,7 +1026,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					sidebar.style.display = "inline-block";
 				}
 			}
-
 			function $_GET(param) {
 				var vars = {};
 				window.location.href.replace( location.hash, '' ).replace(
@@ -1179,14 +1034,11 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 						vars[key] = value !== undefined ? value : '';
 					}
 				);
-
 				if ( param ) {
 					return vars[param] ? vars[param] : null;
 				}
 				return vars;
 			}
-
-
 			function checkClass(x){
 				var theClass = document.getElementsByClassName(x);
 				if (theClass.length > 0) {
@@ -1196,7 +1048,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					return false;
 				}
 			}
-
 			function checkID(x){
 				var theID = document.getElementById(x);
 				if (theID === null) {
@@ -1206,7 +1057,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					return true;
 				}
 			}
-
 			function checkTag(x){
 				var theTag = document.getElementsByTagName(x);
 				if (theTag.length > 0) {
@@ -1216,7 +1066,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
 					return false;
 				}
 			}
-
 			window.onload = init;
 		//]]></script>
 
@@ -2279,7 +2128,6 @@ footer #footer-line  { margin: 10px auto 0px auto; border-bottom: 1px solid $(li
             }
         }
 	}
-
 	function fixLabels(){
     	if(checkClass('Label')){
 			// Title tag will change into the element of tag name. eg.) h3 will turn h2 tag to h3. Default = 'h2'
