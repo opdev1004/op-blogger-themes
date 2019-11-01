@@ -4,13 +4,6 @@
 
   <head>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-  	<b:if cond='data:blog.postImageUrl'>
-  	<b:else/>
-      <b:comment>This is meta tag for open graph image that you may want to set up for default. Remove comment tag for use.</b:comment>
-  		<b:comment><meta content='https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=w1200' property='og:image'/></b:comment>
-  	</b:if>
-
-    <b:comment>if it is post page, show these tags for possible SEO</b:comment>
     <b:if cond='data:view.isPost '>
       <meta expr:content='data:blog.title' name='author'/>
       <meta expr:content='data:blog.title' name='writer'/>
@@ -21,16 +14,14 @@
     <meta expr:content='data:blog.title' property='og:site_name'/>
 
     <title><data:view.title.escaped/></title>
-    <b:comment>Blogger head content</b:comment>
     <b:include data='blog' name='all-head-content'/>
 
-    <b:comment>Style for all</b:comment>
     <b:skin><![CDATA[
 
         /*
         -----------------------------------------------
         Blogger Template Style
-        Name:     OP
+        Name:     OP Side
         Designer: Victor Chanil Park
         License:  MIT
         URL:      https://github.com/opdev1004/op-blogger-themes
@@ -114,6 +105,7 @@
 			background-color: $(header.color);
 			height: 50px;
 			width: 50px;
+			display: none;
 		}
 
 		header #header-menu:hover
@@ -139,7 +131,7 @@
 		{
 			background-color: $(header.color);
 			height: 50px;
-			width: calc(100% - 100px);
+			width: calc(100% - 50px);
 			text-align: center;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -236,7 +228,7 @@
 		header #SearchBar
 		{
 			height: 50px;
-			width: calc(100% - 100px);
+			width: calc(100% - 50px);
 			display: none;
 		}
 
@@ -269,17 +261,20 @@
 		}
 
 
+		/* Wrapper */
+		#MainPageWrapper
+		{
+			display: flex;
+			justify-content: center;
+		}
+
 		/* Sidebar */
 		#sidebar
 		{
+			width: 400px;
 			font: $(main.font);
 			color: $(main.font.color);
-			position: fixed;
-			overflow-y: scroll;
-			width: 100%;
-			z-index: 100;
-			display: none;
-			justify-content: flex-start;
+			margin: 77px 10px 0px 0px;;
 		}
 
 		#sidebar h2,
@@ -305,8 +300,8 @@
 		{
 			width: 380px;
 			padding: 10px;
-			min-height: calc(100vh - 70px);
 			background-color: $(main.color);
+			border-radius: 2px;
 		}
 
 		#sidebar #sidebarLeft #SidebarTop .widget,
@@ -382,6 +377,7 @@
 			width: calc(100% - 400px);
 			min-height: calc(100vh - 50px);
 			background-color: rgba(0, 0, 0, 0.5);
+			display: none;
 		}
 
 		/* Main */
@@ -390,8 +386,8 @@
 			font: $(main.font);
 			color: $(main.font.color);
 			min-height: calc(100vh - 50px);
-			width: 940px;
-			margin: 10px auto;
+			width: 920px;
+			margin: 0px 10px 10px 10px;
 		}
 
 		main a
@@ -416,7 +412,7 @@
 		main .post-feeds
 		{
 			background-color: $(main.color);
-			margin: 10px;
+			margin: 10px 0px;
 			padding: 10px;
 			border-radius: 2px;
 		}
@@ -488,7 +484,7 @@
 		{
 			width: 200px;
 			height: 200px;
-			border-radius: 100px;
+			border-radius: 300px;
 		}
 
 
@@ -732,22 +728,61 @@
 		}
 
 
-        @media all and (min-width: 0px)  and (max-width: 960px) {
-			#sidebar
-      {
-                font-size: 1em;
-      }
+        @media all and (min-width: 0px)  and (max-width: 1400px) {
+            header #header-title
+            {
+                width: calc(100% - 100px);
+            }
 
-      #sidebar #sidebarLeft #SidebarTop .widget,
-      #sidebar #sidebarLeft #SidebarBottom .widget
-      {
-        			padding: 5px 0px;
-      }
+            header #header-menu
+            {
+				display: block;
+            }
+
+            header #SearchBar
+            {
+                width: calc(100% - 100px);
+            }
+
+			#MainPageWrapper
+            {
+                display: block;
+            }
+
+			#sidebar
+            {
+                position: fixed;
+                overflow-y: scroll;
+                width: 100%;
+                z-index: 100;
+                display: none;
+                justify-content: flex-start;
+				margin:0px;
+            }
+
+            #sidebar #sidebarLeft
+            {
+				min-height: calc(100vh - 70px);
+                border-radius: 0px;
+            }
+
+            #sidebar #sidebarLeft #SidebarTop .widget,
+        	#sidebar #sidebarLeft #SidebarBottom .widget
+        	{
+        		padding: 5px 0px;
+        	}
+
+			#sidebar #sidebarRight
+			{
+				width: calc(100% - 400px);
+				display: block;
+			}
+
 
 			main
 			{
 				width: 100%;
-				font-size: 1em;
+				margin: 0px;
 			}
 
 			main .Content {
@@ -791,12 +826,6 @@
             {
                 margin: 10px 5px;
             }
-
-			footer
-			{
-				font-size: 0.9em;
-			}
-
         }
 
         @media all and (min-width: 0px)  and (max-width: 450px) {
@@ -818,17 +847,6 @@
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1115,6 +1133,22 @@
 			}
         }
 
+		function FixSidebar(){
+			const sidebar = document.getElementById('sidebar');
+			const MBStyle = window.getComputedStyle(document.getElementById('header-menu'));
+			if(sidebar.style.display != 'flex' && MBStyle.display == 'block'){
+				sidebar.style.display = 'flex';
+			} else if(sidebar.style.display != 'block' && MBStyle.display == 'none'){
+                const block1 = document.getElementById('menu-block1');
+                const block2 = document.getElementById('menu-block2');
+                const block3 = document.getElementById('menu-block3');
+        		block1.setAttribute('class', 'rotateLeft');
+                block2.setAttribute('class', 'rotateMiddle');
+                block3.setAttribute('class', 'rotateRight');
+				sidebar.style.display = 'block';
+			}
+		}
+
         function fixLabels(){
 			const labels = document.getElementById('LabelSection').getElementsByClassName('Label');
 			if(labels.length > 0) {
@@ -1220,10 +1254,10 @@
 
   </head>
 
-  <body class='fade-in'>
+  <body class='fade-in' onresize='FixSidebar(); event.preventDefault();'>
 
     <header>
-      <div class='slideInLeft' id='header-menu' onclick='menu(); return false;'>
+      <div class='slideInLeft' id='header-menu' onclick='menu(); event.preventDefault();'>
         <div class='header-empty'/>
         <div class='blocks'>
           <div class='rotateLeftReturn' id='menu-block1'/>
@@ -1234,7 +1268,7 @@
       <div class='slideInLeft' id='header-title'>
           <a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><h1><data:blog.title/></h1></a>
       </div>
-      <div id='header-search' onclick='search(); return false;'>
+      <div id='header-search' onclick='search(); event.preventDefault();'>
           <div class='slideInLeft' id='searchBtn'>
             <div class='header-empty'/>
             <div id='search-block1'/>
@@ -1275,6 +1309,7 @@
 
 	<div class='space-50'/>
 
+    <div class='MainPageWrapper' id='MainPageWrapper'>
 	<aside class='slideInDown' id='sidebar'>
       <div id='sidebarLeft'>
       	<div class='empty'/>
@@ -1436,10 +1471,10 @@
 
 
 
-	<main>
+	<main class='slideInDown'>
 		<div class='empty'/>
     	<b:section class='Content' id='Content' name='Content' showaddelement='yes'>
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+<b:widget id='Blog1' locked='true' title='블로그 게시물' type='Blog' version='2' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
     <b:widget-setting name='showShareButtons'>true</b:widget-setting>
@@ -1456,11 +1491,11 @@
     <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
     <b:widget-setting name='backlinksLabel'>Backlinks:</b:widget-setting>
     <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-    <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+    <b:widget-setting name='style.textcolor'>#72ab72</b:widget-setting>
     <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-    <b:widget-setting name='style.urlcolor'>#cccccc</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>#659865</b:widget-setting>
     <b:widget-setting name='showAuthor'>false</b:widget-setting>
-    <b:widget-setting name='style.linkcolor'>#cccccc</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>#003c37</b:widget-setting>
     <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
     <b:widget-setting name='showLabels'>true</b:widget-setting>
     <b:widget-setting name='postLabelsLabel'>Label:</b:widget-setting>
@@ -2190,14 +2225,14 @@
 </b:widget>
 </b:section>
 	</main>
-
+	</div>
 
 
     <footer>
       	<b:section class='Footer-Content' id='Footer-Content' name='Footer Content' showaddelement='no'>
 <b:widget id='PageList1' locked='false' title='' type='PageList' version='2' visible='true'>
   <b:widget-settings>
-    <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://13oo13.blogspot.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
+    <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://blogspot.com/', 'title': 'Home', 'position': 0}}]]></b:widget-setting>
     <b:widget-setting name='homeTitle'>Home</b:widget-setting>
   </b:widget-settings>
   <b:includable id='main'>
@@ -2305,32 +2340,32 @@
 	<b:if cond='data:view.isPost'>
     	<script type='text/javascript'>
         //<![CDATA[
-        function shareButtons() {
-            const elements = document.getElementsByClassName('sharing-platform-button');
-            if(elements.length > 0) {
-                for(var i = 0; i < elements.length; i++) {
-                    if(elements[i].getAttribute('class') == 'sharing-platform-button sharing-element-link') {
-                        const link = elements[i].getAttribute('data-url');
-                        elements[i].parentElement.addEventListener('click', function (event) {
-                            toClipboard(link);
-                            event.preventDefault();
-                        });
-                    } else if(elements[i].getAttribute('class') == 'sharing-platform-button sharing-element-other') {
-                        elements[i].parentElement.style.display = 'none';
-                    } else {
-                        const link = elements[i].getAttribute('data-href');
-                        elements[i].parentElement.addEventListener('click', function (event) {
-                            window.open(link, '_blank', 'height=430, width=640' );
-                            event.preventDefault();
-                        });
+            function shareButtons() {
+                const elements = document.getElementsByClassName('sharing-platform-button');
+                if(elements.length > 0) {
+                    for(var i = 0; i < elements.length; i++) {
+                        if(elements[i].getAttribute('class') == 'sharing-platform-button sharing-element-link') {
+                            const link = elements[i].getAttribute('data-url');
+                            elements[i].parentElement.addEventListener('click', function (event) {
+                                toClipboard(link);
+								event.preventDefault();
+                            });
+                        } else if(elements[i].getAttribute('class') == 'sharing-platform-button sharing-element-other') {
+                            elements[i].parentElement.style.display = 'none';
+                        } else {
+                            const link = elements[i].getAttribute('data-href');
+                            elements[i].parentElement.addEventListener('click', function (event) {
+                                window.open(link, '_blank', 'height=430, width=640' );
+								event.preventDefault();
+                            });
+                        }
                     }
+                    return true;
+                } else {
+                    return false;
                 }
-                return true;
-            } else {
-                return false;
             }
-        }
-        shareButtons();
+            shareButtons();
 
 			function resizeIframes(){
 				const iframeContainer = document.getElementsByClassName('post-body');
