@@ -2,7 +2,7 @@
 
 ## Notice:
 ### New version!
-New version come with most recent default theme unlike past themes.
+New version come with most recent default theme unlike past themes. Bugs have been found in op.xml so please use opside.xml if you really need to use OP Blogger Theme.
 
 ## Description:
 OP Blogger Themes are for blogger theme development.
@@ -27,7 +27,8 @@ Each directories contains a different blogger theme.
   * Disable Mobile version in theme (OP blogger theme supports responsive web design) - current release version doesn't need to do this any more
 
 2. In blogger theme HTML edit:
-  * Copy and Paste the theme and all good to go! - unless you want to change something in theme
+  * Apply Contempo theme to blog
+  * Then copy and Paste OP Blogger Theme and all good to go!
 
 ## Problem & Solve
  * Q: Image doesn't fit into the container.
