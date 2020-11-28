@@ -1,5 +1,8 @@
 # OP 구글 블로그 (블로거) 테마
 
+## 다른 언어:
+[English](https://github.com/opdev1004/op-blogger-themes)
+
 ## 설명:
 OP 블로거 테마는 구글 블로그 테마 개발과 실질적 사용을 위해 개발되고 있습니다.
 기본적으로 가장 최신의 테마(Contempo)와 시스템을 베이스로 이용하고 있습니다.
