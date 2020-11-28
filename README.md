@@ -1,4 +1,5 @@
 # OP Blogger Theme
+[한국어](/others/ko)
 
 ## Description:
 OP Blogger Theme is for blogger theme development or real case use.
