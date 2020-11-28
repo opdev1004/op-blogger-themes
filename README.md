@@ -10,6 +10,9 @@ OP Blogger Theme is for blogger theme development or real case use.
 This theme is based on most recent default blogger theme (Contempo theme).
 I support only 1 theme now.
 
+## Download
+[https://github.com/opdev1004/op-blogger-themes/releases](https://github.com/opdev1004/op-blogger-themes/releases)
+
 ## Features:
 1. Responsive Web design
 2. Sensible CSS variables - Only few configuration for different color and font

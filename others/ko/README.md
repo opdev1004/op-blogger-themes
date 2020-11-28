@@ -11,6 +11,9 @@ OP 블로거 테마는 구글 블로그 테마 개발과 실질적 사용을 위
 기본적으로 가장 최신의 테마(Contempo)와 시스템을 베이스로 이용하고 있습니다.
 예전에는 여러개의 테마를 지원했지만 이제 1개만 지원합니다.
 
+## 다운로드
+[https://github.com/opdev1004/op-blogger-themes/releases](https://github.com/opdev1004/op-blogger-themes/releases)
+
 ## 기능:
 1. 반응형 웹 디자인
 2. 현명한 CSS 변수 선택 - 최소의 수정만 가능하여 편합니다. 색상과 폰트의 변경을 합니다
