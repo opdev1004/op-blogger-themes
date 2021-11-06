@@ -2468,12 +2468,12 @@
                         <b:if cond='data:view.isSingleItem'>
                           <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
                             <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-                              <data:post.date/>
+                              <data:post.date.year/>/<data:post.date.month/>/<data:post.date.day/>
                             </time>
                           </a>
                         <b:else/>
                           <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-                            <data:post.date/>
+                            <data:post.date.year/>/<data:post.date.month/>/<data:post.date.day/>
                           </time>
                         </b:if>
                       </b:if>
