@@ -1,5 +1,8 @@
 # OP 구글 블로그 (블로거) 테마
 
+## 공지
+이 테마는 더 이상 유집보수 되지 않습니다. 그래도 풀 리퀘스트는 환영합니다.
+
 ## 다른 언어:
 [English](https://github.com/opdev1004/op-blogger-themes)
 
