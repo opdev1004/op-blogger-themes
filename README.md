@@ -1,4 +1,7 @@
 # OP Blogger Theme
+## Notice
+This theme is no longer maintained. It is welcome to have a pull request.
+
 ## Other language:
 [한국어](/others/ko)
 
