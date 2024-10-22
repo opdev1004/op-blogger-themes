@@ -2,7 +2,7 @@
 
 ## Other language:
 
-[한국어](/others/ko)
+[한국어](/lang/ko)
 
 ## 💻 Example
 
