@@ -14,7 +14,14 @@ OP Blogger Theme is built for theme development and blogging. This theme is base
 
 ## 📢 Notice:
 
-Please use the latest one. Deprecated code is replaced and the theme is redesigned from the scratch.
+### 👍 Release v1.0.1
+
+- Sharing buttons responsive design fixed
+- Page list responsive design fixed
+- main iframe responsive design fixed - other iframes wouldn't be affected
+- Sidebar z-index fixed
+
+Please use the latest version.
 
 ## 📁 Download
 

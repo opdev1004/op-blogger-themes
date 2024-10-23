@@ -306,11 +306,18 @@
 		
 		main {
 			margin: 10px 0px;
-			padding: 32px 24px;
+			padding: 20px 16px;
 			background-color: $(main.background.color);
 			color: $(main.font.color);
 			border-radius: 4px;
 		}
+
+       main iframe {
+          width: 100%;
+          height: calc((100vw - 48px) / 16 * 9);
+          max-width: 668px;
+          max-height: 376px;
+       }
 
 		main a {
 			color: $(main.font.color);
@@ -357,6 +364,7 @@
 			margin: 18px 10px 10px 10px;
 			width: 100%;
 			max-width: 236px;
+			z-index: 2147483643;
 		}
 
 		#sidebar-left {
@@ -366,6 +374,7 @@
 			max-width: 220px;
 			padding: 8px;
 			border-radius: 4px;
+			z-index: 2147483645;
 		}
 
  		#sidebar-left a {
@@ -477,6 +486,7 @@
 			display: flex;
             align-items: center;
             justify-content: center;
+			flex-wrap: wrap;
 		}
 
 		.share-buttons li {
@@ -491,6 +501,7 @@
             align-items: center;
             justify-content: center;
 			background-color: $(main.button.background.color);
+			flex-basis: auto;
 		}
 
 		.share-buttons li:hover {
@@ -656,11 +667,13 @@
           margin: 0;
           display: flex;
           justify-content: center;
+		  flex-wrap: wrap;
         }
 
         .Footer-Head .widget-content li {
           margin: 0 10px;
           font-size: 16px;
+		  flex-basis: auto;
         }
 
         #footer-info {
@@ -669,18 +682,8 @@
           font-size: 14px;
         }
 
-
-        @media all and (min-width: 0px) and (max-width: 320px) {
-          .share-buttons {
-			flex-direction: column;
-          }
-
-          .share-buttons li {
-			margin: 4px auto;
-          }
-        }
-
         @media all and (min-width: 0px) and (max-width: 1280px) {
+
         	#header-menu-button {
             	display: flex;
         	}
@@ -689,10 +692,6 @@
 			{
 				display: block;
 			}
-
-            main {
-                padding: 16px 12px;
-            }
 
 			.pagination-text {
 				display: none;
@@ -724,12 +723,12 @@
 				width: 100%;
 				background-color: $(sidebar.right.background.color);
 				opacity: 0.7;
-				z-index: -1;
+				z-index: 2147483644;
 			}
 
 			#Main-Content-Wrapper {
 				width: calc(100% - 8px);
-				margin: 4px auto;
+				margin: 8px auto;
 			}
         }
 
@@ -2087,47 +2086,11 @@
             }
             shareButtons();
 
-			function resizeIframes(){
-				const iframeContainer = document.getElementsByClassName('post-body');
-				if(iframeContainer.length > 0){
-					const resRatio = 9/16;
-					const windowSize = iframeContainer[0].offsetWidth;
-					const allIFrames = iframeContainer[0].getElementsByTagName('iframe');
-					for (var i = 0; i < allIFrames.length; i++) {
-						if(allIFrames[i].getAttribute('allow') != null){
-							if(allIFrames[i].getAttribute('allow').includes('autoplay')){
-								allIFrames[i].setAttribute('width', windowSize);
-								allIFrames[i].setAttribute('height', windowSize*resRatio);
-							}
-						}
-					}
-				}
-			}
-       		resizeIframes();
-
         //]]>
     	</script>
     <b:elseif cond='data:view.isPage'/>
     	<script type='text/javascript'>
         //<![CDATA[
-			function resizeIframes(){
-				const iframeContainer = document.getElementsByClassName('post-body');
-				if(iframeContainer.length > 0){
-					const resRatio = 9/16;
-					const windowSize = iframeContainer[0].offsetWidth;
-					const allIFrames = iframeContainer[0].getElementsByTagName('iframe');
-					for (var i = 0; i < allIFrames.length; i++) {
-						if(allIFrames[i].getAttribute('allow') != null){
-							if(allIFrames[i].getAttribute('allow').includes('autoplay')){
-								allIFrames[i].setAttribute('width', windowSize);
-								allIFrames[i].setAttribute('height', windowSize*resRatio);
-							}
-						}
-					}
-				}
-			}
-       		resizeIframes();
-
 
         //]]>
     	</script>
