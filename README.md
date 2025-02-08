@@ -14,12 +14,9 @@ OP Blogger Theme is built for theme development and blogging. This theme is base
 
 ## 📢 Notice:
 
-### 👍 Release v1.0.1
+### 👍 Release v1.0.2
 
-- Sharing buttons responsive design fixed
-- Page list responsive design fixed
-- main iframe responsive design fixed - other iframes wouldn't be affected
-- Sidebar z-index fixed
+- Added blogger page button for easy access to blogger dashboard
 
 Please use the latest version.
 
